@@ -1,0 +1,126 @@
+{
+  "runId": "7dc80867-da65-4e53-b637-b7407ccdaaaa",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-07T15:26:01.231Z",
+  "generatedAt": "2026-02-07T15:26:09.514Z",
+  "summary": {
+    "totalProducts": 1,
+    "withCategory": 1,
+    "productsWithBundles": 1,
+    "bundlesBuilt": 3,
+    "bundlesFailed": 0,
+    "avgBundlesPerProduct": 3,
+    "avgTargetsPerBundle": 3,
+    "avgFallbackAttempts": 0,
+    "graphPickProbability": 0.7,
+    "templateTargets": 3,
+    "bundlesPerProductTarget": 3
+  },
+  "bundles": [
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 1,
+      "templateId": "aa-1-13-8-p3",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-2-17",
+          "productId": "8689738154174",
+          "title": "MOUNTAIN",
+          "source": "pool",
+          "weight": 0.6745,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "productId": "8689763778750",
+          "title": "GRAVEL KNIT",
+          "source": "pool",
+          "weight": 0.1407,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "productId": "8689739169982",
+          "title": "CROSS RUN",
+          "source": "pool",
+          "weight": 0.5503,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 2,
+      "templateId": "aa-1-13-8-p2",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "productId": "8689700929726",
+          "title": "SPEEDCROSS J",
+          "source": "pool",
+          "weight": 0.1159,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "productId": "8689737629886",
+          "title": "SENSE AERO",
+          "source": "pool",
+          "weight": 0.4538,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "productId": "8689759617214",
+          "title": "COFFEE RUNNER",
+          "source": "pool",
+          "weight": 0.4897,
+          "tier": 1
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 3,
+      "templateId": "aa-1-13-8-p4",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-18",
+          "productId": "8689762173118",
+          "title": "XA SONIC",
+          "source": "pool",
+          "weight": 0,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "productId": "8689745559742",
+          "title": "CHIYO",
+          "source": "pool",
+          "weight": 0.0386,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689766793406",
+          "title": "BONATTI TRAIL",
+          "source": "pool",
+          "weight": 0.6428,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    }
+  ]
+}

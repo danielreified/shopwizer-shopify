@@ -1,0 +1,126 @@
+{
+  "runId": "285d09c9-507b-4cbd-a794-ef2053275461",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-07T14:42:31.230Z",
+  "generatedAt": "2026-02-07T14:42:39.125Z",
+  "summary": {
+    "totalProducts": 1,
+    "withCategory": 1,
+    "productsWithBundles": 1,
+    "bundlesBuilt": 3,
+    "bundlesFailed": 0,
+    "avgBundlesPerProduct": 3,
+    "avgTargetsPerBundle": 3,
+    "avgFallbackAttempts": 0,
+    "graphPickProbability": 0.7,
+    "templateTargets": 3,
+    "bundlesPerProductTarget": 3
+  },
+  "bundles": [
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 1,
+      "templateId": "aa-1-13-8-p3",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-18",
+          "productId": "8689759617214",
+          "title": "COFFEE RUNNER",
+          "source": "pool",
+          "weight": 0.4897,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "productId": "8689731633342",
+          "title": "SENSE AERO 7\"",
+          "source": "pool",
+          "weight": 0.1283,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689735336126",
+          "title": "OUTLINE ALL SEASON HYBRID",
+          "source": "pool",
+          "weight": 0.6883,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 2,
+      "templateId": "aa-1-13-8-p2",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "productId": "8689701748926",
+          "title": "PATROL PLAY J",
+          "source": "pool",
+          "weight": 0.3324,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "productId": "8689763778750",
+          "title": "GRAVEL KNIT",
+          "source": "pool",
+          "weight": 0.1407,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "productId": "8689719705790",
+          "title": "OUTERPATH UTILITY",
+          "source": "pool",
+          "weight": 0.7752,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 3,
+      "templateId": "aa-1-13-8-p5",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689733238974",
+          "title": "BONATTI AERO WIND",
+          "source": "pool",
+          "weight": 0.469,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "productId": "8689739792574",
+          "title": "CROSS RUN",
+          "source": "pool",
+          "weight": 0.4759,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "productId": "8689739006142",
+          "title": "SHAKEOUT",
+          "source": "pool",
+          "weight": 0.2814,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    }
+  ]
+}

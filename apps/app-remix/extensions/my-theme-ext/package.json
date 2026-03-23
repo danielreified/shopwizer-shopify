@@ -1,0 +1,29 @@
+{
+  "name": "@repo/shopwise-reco-theme-ext",
+  "private": true,
+  "type": "module",
+
+  "scripts": {
+    "dev": "run-p dev:pdp dev:home dev:cart",
+    "build": "run-p build:pdp build:home build:cart",
+    "dev:pdp": "esbuild src/pdp-*.tsx --bundle --format=iife --outdir=assets --watch",
+    "build:pdp": "esbuild src/pdp-*.tsx --bundle --format=iife --outdir=assets --minify",
+    "dev:home": "esbuild src/home-*.tsx --bundle --format=iife --outdir=assets --watch",
+    "build:home": "esbuild src/home-*.tsx --bundle --format=iife --outdir=assets --minify",
+    "dev:cart": "esbuild src/cart-*.tsx --bundle --format=iife --outdir=assets --watch",
+    "build:cart": "esbuild src/cart-*.tsx --bundle --format=iife --outdir=assets --minify",
+
+    "typecheck": "tsc --noEmit"
+  },
+
+
+  "dependencies": {
+    "preact": "^10.22.0"
+  },
+
+  "devDependencies": {
+    "esbuild": "^0.25.3",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.4.0"
+  }
+}

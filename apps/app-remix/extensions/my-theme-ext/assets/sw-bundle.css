@@ -1,0 +1,389 @@
+/* Defensive Root Wrapper - Restoring global rail bleed while containing bundles */
+.sw-reco {
+  width: 100%;
+  clear: both;
+}
+
+.sw-bundle {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr); /* Prevents flex-pushing */
+  gap: 16px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0; 
+  padding: 4px 0;
+  box-sizing: border-box;
+  overflow: hidden; /* Contains bundle carousel within the section */
+}
+
+.sw-bundle__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 12px;
+  background: transparent;
+}
+
+.sw-bundle__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--sw-text-color, #111);
+}
+
+.sw-bundle__nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.sw-bundle__nav-info {
+  font-size: 12px;
+  font-weight: 600;
+  color: #999;
+  min-width: 32px;
+  text-align: center;
+}
+
+.sw-bundle__nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.sw-bundle__nav-btn:hover {
+  background: #fff;
+  color: #000;
+  border-color: #ccc;
+}
+
+/* Items Container */
+.sw-bundle__items {
+  display: flex;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* STACK LAYOUT */
+.sw-bundle--stack .sw-bundle__items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+/* CAROUSEL LAYOUT - The "Rail" look */
+.sw-bundle--carousel .sw-bundle__items {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  padding-bottom: 12px;
+  width: 100%;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sw-bundle--carousel .sw-bundle__items::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Individual Item Card */
+.sw-bundle__item-container {
+  position: relative;
+  display: flex;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Item layout in STACK */
+.sw-bundle--stack .sw-bundle__item-container {
+  align-items: center;
+  width: 100%;
+}
+
+/* Item layout in CAROUSEL */
+.sw-bundle--carousel .sw-bundle__item-container {
+  flex-direction: column;
+  flex: 0 0 calc(43% - 12px); /* Default: "2 and a 1/3" look */
+  min-width: 180px;
+  padding-bottom: 12px;
+}
+
+/* Specific adjustment for exactly 2 items: 50/50 split */
+.sw-bundle--carousel.sw-bundle--items-2 .sw-bundle__item-container {
+  flex: 0 0 calc(50% - 8px);
+}
+
+/* Specific adjustment for > 2 items: 2 and a 1/3 split (~43% width) */
+.sw-bundle--carousel:not(.sw-bundle--items-2):not(.sw-bundle--items-1) .sw-bundle__item-container {
+  flex: 0 0 calc(43% - 12px);
+}
+
+.sw-bundle__item {
+  flex: 1;
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  min-width: 0; /* Critical for truncation */
+}
+
+.sw-bundle--stack .sw-bundle__item {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.sw-bundle--carousel .sw-bundle__item {
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Info */
+.sw-bundle__item-info {
+  flex: 1; /* Take up all available space */
+  min-width: 0;
+}
+
+.sw-bundle__item-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #111;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+}
+
+/* Image & Wrapper */
+.sw-bundle__item-image-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.sw-bundle__item-image {
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f8f8;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.sw-bundle--stack .sw-bundle__item-image {
+  width: 64px;
+  height: 64px;
+}
+
+.sw-bundle--carousel .sw-bundle__item-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.sw-bundle__item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Quick Buy Button - Matching Premium Rail Style */
+.sw-bundle__quick-buy {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(0,0,0,0.04) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 50% !important;
+  cursor: pointer;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #111;
+  padding: 0;
+  z-index: 10;
+}
+
+.sw-bundle__quick-buy:hover {
+  background: #111 !important;
+  color: #fff !important;
+  border-color: #111 !important;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* CAROUSEL positioning: Over the image bottom-right */
+.sw-bundle--carousel .sw-bundle__quick-buy {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+/* STACK positioning: Simple flex item at the end of the row */
+.sw-bundle--stack .sw-bundle__item-container {
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.sw-bundle--stack .sw-bundle__quick-buy {
+  position: relative;
+  flex-shrink: 0;
+  margin-left: auto; /* Push to far right */
+}
+
+/* Price Section Adjustments */
+.sw-bundle__item-price-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sw-bundle--stack .sw-bundle__item-price-wrap {
+  align-items: flex-end;
+  margin-right: 8px;
+  min-width: 80px;
+}
+
+.sw-bundle--carousel .sw-bundle__item-price-wrap {
+  align-items: flex-start;
+  margin-top: auto;
+}
+
+.sw-bundle__item-prices {
+  display: flex;
+  flex-direction: column-reverse; /* Stacks compare price on top */
+  gap: 0;
+}
+
+.sw-bundle--stack .sw-bundle__item-prices {
+  align-items: flex-end;
+}
+
+.sw-bundle--carousel .sw-bundle__item-prices {
+  align-items: flex-start;
+}
+
+.sw-bundle__item-price {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+  letter-spacing: -0.01em;
+}
+
+.sw-bundle__item-compare-price {
+  font-size: 13px;
+  color: #999;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+/* ============================================================
+   Skeleton & Loading States
+   ============================================================ */
+
+/* Shimmer animation */
+.sw-skel-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: sw-bundle-shimmer 1.5s infinite ease-in-out;
+}
+
+@keyframes sw-bundle-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Loading state for variant switching (when products already loaded but switching) */
+.sw-bundle__items--loading {
+  opacity: 0.5;
+  pointer-events: none;
+  filter: grayscale(0.5) blur(1px);
+  transition: all 0.2s ease;
+}
+
+/* Title skeleton */
+.sw-bundle__title-skeleton {
+  width: 180px;
+  height: 22px;
+  border-radius: 6px;
+}
+
+/* Item skeleton image - STACK layout */
+.sw-bundle--stack .sw-bundle__item-image.sw-skel-shimmer {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+  border-radius: 8px;
+}
+
+/* Item skeleton image - CAROUSEL layout */
+.sw-bundle--carousel .sw-bundle__item-image.sw-skel-shimmer {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+}
+
+/* Title skeleton lines */
+.sw-bundle__item-title-skeleton {
+  width: 100%;
+  height: 14px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.sw-bundle__item-title-skeleton--short {
+  width: 60%;
+  margin-bottom: 0;
+}
+
+/* Price skeleton */
+.sw-bundle__item-price-skeleton {
+  width: 70px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+/* STACK layout: price skeleton on right */
+.sw-bundle--stack .sw-bundle__item-price-skeleton {
+  margin-left: auto;
+}
+
+/* Empty state */
+.sw-bundle--empty {
+  display: none;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+  .sw-bundle--carousel .sw-bundle__item-container {
+    flex: 0 0 150px;
+  }
+  
+  .sw-bundle--carousel .sw-bundle__item-image.sw-skel-shimmer {
+    min-height: 150px;
+  }
+}

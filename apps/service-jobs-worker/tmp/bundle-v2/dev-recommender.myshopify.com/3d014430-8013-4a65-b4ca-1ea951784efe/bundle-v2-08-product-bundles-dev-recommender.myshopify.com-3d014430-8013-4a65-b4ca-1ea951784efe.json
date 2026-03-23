@@ -1,0 +1,126 @@
+{
+  "runId": "3d014430-8013-4a65-b4ca-1ea951784efe",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-07T15:13:42.102Z",
+  "generatedAt": "2026-02-07T15:13:53.739Z",
+  "summary": {
+    "totalProducts": 1,
+    "withCategory": 1,
+    "productsWithBundles": 1,
+    "bundlesBuilt": 3,
+    "bundlesFailed": 0,
+    "avgBundlesPerProduct": 3,
+    "avgTargetsPerBundle": 3,
+    "avgFallbackAttempts": 0,
+    "graphPickProbability": 0.7,
+    "templateTargets": 3,
+    "bundlesPerProductTarget": 3
+  },
+  "bundles": [
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 1,
+      "templateId": "aa-1-13-8-p1",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-12",
+          "productId": "8689738350782",
+          "title": "RACE II",
+          "source": "pool",
+          "weight": 0.0193,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "productId": "8689736908990",
+          "title": "CROSS 5\" NO LINER",
+          "source": "pool",
+          "weight": 0.4055,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "productId": "8689701716158",
+          "title": "XA PRO V8 J",
+          "source": "pool",
+          "weight": 0.2993,
+          "tier": 1
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 2,
+      "templateId": "aa-1-13-8-p3",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "productId": "8689701748926",
+          "title": "PATROL PLAY J",
+          "source": "pool",
+          "weight": 0.3324,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689737793726",
+          "title": "RIVER RUN",
+          "source": "pool",
+          "weight": 0.1848,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "productId": "8689763778750",
+          "title": "GRAVEL KNIT",
+          "source": "pool",
+          "weight": 0.1407,
+          "tier": 1
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 3,
+      "templateId": "aa-1-13-8-p5",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-18",
+          "productId": "8689759617214",
+          "title": "COFFEE RUNNER",
+          "source": "pool",
+          "weight": 0.4897,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "productId": "8689733927102",
+          "title": "GRAPHIC PULL OVER",
+          "source": "pool",
+          "weight": 0.1559,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "productId": "8689681498302",
+          "title": "ACS + OG",
+          "source": "pool",
+          "weight": 0.5407,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    }
+  ]
+}

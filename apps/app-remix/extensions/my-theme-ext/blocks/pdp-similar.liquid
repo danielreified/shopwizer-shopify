@@ -1,0 +1,365 @@
+{% unless template contains 'product' %}
+  {% comment %} Hide this block on all non-product pages {% endcomment %}
+{% else %}
+
+<div
+  id="shopwise-reco-{{ block.id }}"
+  class="sw-reco"
+  data-placement="pdp"
+  data-recommender="similar"
+  data-money-format="{{ shop.money_format }}"
+  data-shop="{{ shop.permanent_domain }}"
+
+  data-products-to-show="{{ block.settings.limit }}"
+  data-show-vendor="{{ block.settings.show_vendor }}"
+  data-show-price="{{ block.settings.show_price }}"
+  data-show-compare-price="{{ block.settings.show_compare_price }}"
+  data-show-sale-badge="{{ block.settings.show_sale_badge }}"
+  data-show-wishlist="{{ block.settings.show_wishlist }}"
+  data-wishlist-app="{{ block.settings.wishlist_app }}"
+  data-show-reviews="{{ block.settings.show_reviews }}"
+  data-reviews-app="{{ block.settings.reviews_app }}"
+  data-image-ratio="{{ block.settings.image_ratio }}"
+  data-card-border-style="{{ block.settings.card_border_style }}"
+  data-card-radius="{{ block.settings.card_radius }}"
+
+  data-heading-title="{{ block.settings.heading_title }}"
+  data-heading-size="{{ block.settings.heading_size }}"
+  data-heading-tag="{{ block.settings.heading_tag }}"
+  data-heading-alignment="{{ block.settings.heading_alignment }}"
+  data-heading-spacing-desktop="{{ block.settings.heading_spacing_desktop }}"
+  data-heading-spacing-mobile="{{ block.settings.heading_spacing_mobile }}"
+
+  data-desktop-layout="{{ block.settings.desktop_layout }}"
+  data-desktop-columns="{{ block.settings.columns }}"
+  data-desktop-gap-x="{{ block.settings.grid_gap_x }}"
+  data-desktop-gap-y="{{ block.settings.grid_gap_y }}"
+  data-desktop-pad-top="{{ block.settings.pad_top_desktop }}"
+  data-desktop-pad-bottom="{{ block.settings.pad_bottom_desktop }}"
+  data-desktop-text-align="{{ block.settings.desktop_text_align }}"
+
+  data-mobile-columns="{{ block.settings.mobile_columns }}"
+  data-mobile-gap="{{ block.settings.mobile_gap }}"
+  data-mobile-pad-top="{{ block.settings.pad_top_mobile }}"
+  data-mobile-pad-bottom="{{ block.settings.pad_bottom_mobile }}"
+  data-mobile-text-align="{{ block.settings.mobile_text_align }}"
+
+  data-product-id="{{ product.id }}"
+  data-product-handle="{{ product.handle }}"
+  data-money-format="{{ shop.money_format | json | escape }}"
+></div>
+
+{% endunless %}
+
+{{ 'sw-base.css' | asset_url | stylesheet_tag }}
+{{ 'sw-card.css' | asset_url | stylesheet_tag }}
+{{ 'sw-grid.css' | asset_url | stylesheet_tag }}
+{{ 'sw-carousel.css' | asset_url | stylesheet_tag }}
+{{ 'sw-heading.css' | asset_url | stylesheet_tag }}
+{{ 'sw-section.css' | asset_url | stylesheet_tag }}
+{{ 'sw-skeleton.css' | asset_url | stylesheet_tag }}
+{{ 'sw-modal.css' | asset_url | stylesheet_tag }}
+
+{% comment %} Custom Stylsheet Editor (Granular) - Per-Theme CSS {% endcomment %}
+<link rel="stylesheet" href="/apps/sw/styles.css?shop={{ shop.permanent_domain }}&key=global&theme={{ theme.id }}&v={{ "now" | date: "%N" }}">
+<link rel="stylesheet" href="/apps/sw/styles.css?shop={{ shop.permanent_domain }}&key=product-rail&theme={{ theme.id }}&v={{ "now" | date: "%N" }}">
+<link rel="stylesheet" href="/apps/sw/styles.css?shop={{ shop.permanent_domain }}&key=pdp-similar&theme={{ theme.id }}&v={{ "now" | date: "%N" }}">
+<link rel="stylesheet" href="/apps/sw/styles.css?shop={{ shop.permanent_domain }}&key=modal&theme={{ theme.id }}&v={{ "now" | date: "%N" }}">
+
+{% schema %}
+{
+  "name": "Similar Products",
+  "target": "section",
+  "class": "section",
+  "javascript": "pdp-similar.js",
+
+  "settings": [
+    {
+      "type": "range",
+      "id": "limit",
+      "label": "Products to show",
+      "min": 2,
+      "max": 15,
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading_title",
+      "label": "Title",
+      "default": "You may also like"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Size",
+      "default": "medium",
+      "options": [
+        { "value": "xlarge", "label": "Extra Large" },
+        { "value": "large", "label": "Large" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "small", "label": "Small" },
+        { "value": "xsmall", "label": "Extra Small" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Element",
+      "default": "h3",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Alignment",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    },
+    { "type": "header", "content": "Card" },
+
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image aspect ratio",
+      "default": "4/5",
+      "options": [
+        { "value": "auto", "label": "Auto" },
+        { "value": "1/1", "label": "Square (1:1)" },
+        { "value": "4/5", "label": "Portrait (4:5)" },
+        { "value": "16/9", "label": "Landscape (16:9)" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "card_border_style",
+      "label": "Border style",
+      "default": "solid",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "solid", "label": "Solid" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Corner radius",
+      "min": 0,
+      "max": 42,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show vendor",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show price",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_compare_price",
+      "label": "Show compare at price",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sale_badge",
+      "label": "Show sale badge",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_wishlist",
+      "label": "Show wishlist button",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reviews",
+      "label": "Show review stars",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "wishlist_app",
+      "label": "Wishlist app",
+      "default": "none",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "growave", "label": "Growave" },
+        { "value": "swym", "label": "Swym Wishlist" },
+        { "value": "wishlist-king", "label": "Wishlist King" },
+        { "value": "hulk", "label": "Hulk Wishlist" },
+        { "value": "wishlist-hero", "label": "Wishlist Hero" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "reviews_app",
+      "label": "Reviews app",
+      "default": "none",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "growave", "label": "Growave" },
+        { "value": "judge-me", "label": "Judge.me" },
+        { "value": "okendo", "label": "Okendo" },
+        { "value": "yotpo", "label": "Yotpo" },
+        { "value": "stamped", "label": "Stamped.io" },
+        { "value": "loox", "label": "Loox" }
+      ]
+    },
+
+    { "type": "header", "content": "Desktop layout" },
+
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "Style",
+      "default": "grid",
+      "options": [
+        { "value": "grid", "label": "Grid" },
+        { "value": "carousel", "label": "Carousel" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "Columns",
+      "min": 2,
+      "max": 5,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "grid_gap_x",
+      "label": "Horizontal gap",
+      "min": 0,
+      "max": 40,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap_y",
+      "label": "Vertical gap",
+      "min": 0,
+      "max": 40,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing_desktop",
+      "label": "Heading spacing",
+      "min": 0,
+      "max": 60,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "pad_top_desktop",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "pad_bottom_desktop",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "desktop_text_align",
+      "label": "Text alignment",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    },
+
+    { "type": "header", "content": "Mobile layout" },
+
+    {
+      "type": "select",
+      "id": "mobile_columns",
+      "label": "Columns",
+      "default": "1",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 40,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing_mobile",
+      "label": "Heading spacing",
+      "min": 0,
+      "max": 40,
+      "default": 12,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "pad_top_mobile",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "pad_bottom_mobile",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "default": 16,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "mobile_text_align",
+      "label": "Text alignment",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    }
+  ]
+}
+{% endschema %}

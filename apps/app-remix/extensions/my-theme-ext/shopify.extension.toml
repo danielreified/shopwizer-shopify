@@ -1,0 +1,28 @@
+name = "shopwise-recommendations"
+uid = "a7e147e0-2771-3180-a9b8-c6c32ff4cbd33"
+type = "theme"
+
+[[extensions]]
+handle = "shopwise-recommendations"
+name = "Product Recommender"
+type = "theme"
+
+# Explicitly declare JS bundle
+[extensions.javascript]
+files = [
+  "assets/pdp-similar.js",
+  "assets/pdp-bundles.js"
+]
+
+# Explicitly declare CSS bundles
+[extensions.styles]
+files = [
+  "assets/sw-base.css",
+  "assets/sw-card.css",
+  "assets/sw-grid.css",
+  "assets/sw-carousel.css",
+  "assets/sw-heading.css",
+  "assets/sw-section.css",
+  "assets/sw-skeleton.css",
+  "assets/sw-bundle.css"
+]

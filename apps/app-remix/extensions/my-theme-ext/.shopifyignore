@@ -1,0 +1,15 @@
+src
+tsconfig.json
+package.json
+pnpm-lock.yaml
+yarn.lock
+node_modules/
+.eslint*
+.prettier*
+*.ts
+*.tsx
+vite.config.*
+esbuild.*.js
+README.md
+*.map
+.turbo

@@ -1,0 +1,17 @@
+name = "my-web-pixel"
+uid = "5dd0f111-62d8-91e2-8f50-8436afb95d0bfe12168a"
+type = "web_pixel_extension"
+
+
+runtime_context = "strict"
+
+[settings]
+type = "object"
+
+[settings.fields.accountID]
+name = "Account ID"
+description = "Account ID"
+type = "single_line_text_field"
+validations =  [
+  { name = "min", value = "1" }
+]

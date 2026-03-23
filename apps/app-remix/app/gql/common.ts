@@ -1,0 +1,1 @@
+export type UserError = { message: string; field?: string[] };

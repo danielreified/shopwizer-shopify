@@ -1,0 +1,30 @@
+{
+  "name": "@repo/shopify-category-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "generate": "node src/generate.js",
+    "ingest": "node src/ingest.js",
+    "embed:categories": "node src/make-embeddings.js",
+    "update:attributes": "node src/update-attributes.js",
+    "lint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@repo/eslint-config": "*"
+  },
+  "dependencies": {
+    "@repo/prisma": "*",
+    "@prisma/client": "6.18.0",
+    "dotenv": "^17.2.1",
+    "fast-glob": "^3.3.3",
+    "js-yaml": "^4.1.0",
+    "minimist": "^1.2.8",
+    "openai": "^5.11.0",
+    "prisma": "6.18.0"
+  }
+}

@@ -1,0 +1,33 @@
+name: Deploy Site
+
+on:
+  workflow_dispatch:
+
+env:
+  AWS_REGION: us-east-1
+  TURBO_TELEMETRY_DISABLED: '1'
+  S3_BUCKET: dev-ue1-shopwise-rec-site
+  BUILD_DIR: ./apps/site-next/out
+  CLOUDFRONT_DISTRIBUTION_ID: ELFYGP1J4NSCX
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - run: pnpm turbo run build
+
+      - name: Sync to S3
+        run: pnpm --filter ./apps/site-next run site:sync
+
+      - name: Invalidate CloudFront
+        run: pnpm --filter ./apps/site-next run site:invalidate

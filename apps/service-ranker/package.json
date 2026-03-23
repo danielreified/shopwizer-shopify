@@ -1,0 +1,11 @@
+{
+  "name": "@repo/service-ranker",
+  "version": "1.0.0",
+  "scripts": {
+    "start": ". .venv/bin/activate && uvicorn api.app:app --reload --port 8000",
+    "dev:generate": ". .venv/bin/activate && python utils/generate_fake_data.py",
+    "train": ". .venv/bin/activate && python train/train_xgboost.py",
+    "infer": ". .venv/bin/activate && python inference/inference_xgboost.py",
+    "test": ". .venv/bin/activate && pytest -v tests/"
+  }
+}

@@ -1,0 +1,88 @@
+name: Database Migration
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Migration action'
+        required: true
+        type: choice
+        options:
+          - plan
+          - deploy
+
+env:
+  AWS_REGION: us-east-1
+  CODEBUILD_PROJECT: dev-ue1-shopwizer-db-migrations
+  S3_BUCKET: dev-ue1-shopwizer-codebuild-source
+  S3_KEY: migrations/source.zip
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Package source for CodeBuild
+        run: |
+          zip -r source.zip \
+            packages/prisma \
+            package.json \
+            pnpm-lock.yaml \
+            pnpm-workspace.yaml \
+            .npmrc \
+            buildspec.yml
+
+      - name: Upload to S3
+        run: aws s3 cp source.zip "s3://$S3_BUCKET/$S3_KEY"
+
+      - name: Trigger CodeBuild
+        id: codebuild
+        run: |
+          BUILDSPEC=$(cat buildspec.yml)
+          BUILD_RESPONSE=$(aws codebuild start-build \
+            --project-name "$CODEBUILD_PROJECT" \
+            --buildspec-override "$BUILDSPEC" \
+            --source-type-override S3 \
+            --source-location-override "$S3_BUCKET/$S3_KEY" \
+            --environment-variables-override "name=MIGRATE_ACTION,value=${{ inputs.action }}")
+          BUILD_ID=$(echo "$BUILD_RESPONSE" | jq -r '.build.id')
+          echo "build_id=$BUILD_ID" >> "$GITHUB_OUTPUT"
+          echo "Build started: $BUILD_ID"
+
+      - name: Poll CodeBuild status
+        id: poll
+        run: |
+          BUILD_ID="${{ steps.codebuild.outputs.build_id }}"
+          while true; do
+            STATUS=$(aws codebuild batch-get-builds --ids "$BUILD_ID" | jq -r '.builds[0].buildStatus')
+            echo "Status: $STATUS"
+            if [ "$STATUS" = "SUCCEEDED" ] || [ "$STATUS" = "FAILED" ] || [ "$STATUS" = "STOPPED" ]; then
+              echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+              break
+            fi
+            sleep 10
+          done
+
+      - name: Fetch CloudWatch logs
+        if: always()
+        run: |
+          BUILD_ID="${{ steps.codebuild.outputs.build_id }}"
+          BUILD_INFO=$(aws codebuild batch-get-builds --ids "$BUILD_ID")
+          LOG_GROUP=$(echo "$BUILD_INFO" | jq -r '.builds[0].logs.groupName')
+          LOG_STREAM=$(echo "$BUILD_INFO" | jq -r '.builds[0].logs.streamName')
+          aws logs get-log-events \
+            --log-group-name "$LOG_GROUP" \
+            --log-stream-name "$LOG_STREAM" | jq -r '.events[].message'
+
+      - name: Check result
+        if: steps.poll.outputs.status != 'SUCCEEDED'
+        run: |
+          echo "CodeBuild finished with status: ${{ steps.poll.outputs.status }}"
+          exit 1

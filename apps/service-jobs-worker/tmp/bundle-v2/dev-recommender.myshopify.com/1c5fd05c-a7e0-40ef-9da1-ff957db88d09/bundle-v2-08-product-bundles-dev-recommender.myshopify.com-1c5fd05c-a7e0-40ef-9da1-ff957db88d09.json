@@ -1,0 +1,126 @@
+{
+  "runId": "1c5fd05c-a7e0-40ef-9da1-ff957db88d09",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-07T15:16:02.917Z",
+  "generatedAt": "2026-02-07T15:16:12.231Z",
+  "summary": {
+    "totalProducts": 1,
+    "withCategory": 1,
+    "productsWithBundles": 1,
+    "bundlesBuilt": 3,
+    "bundlesFailed": 0,
+    "avgBundlesPerProduct": 3,
+    "avgTargetsPerBundle": 3,
+    "avgFallbackAttempts": 0,
+    "graphPickProbability": 0.7,
+    "templateTargets": 3,
+    "bundlesPerProductTarget": 3
+  },
+  "bundles": [
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 1,
+      "templateId": "aa-1-13-8-p3",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-14",
+          "productId": "8689734353086",
+          "title": "WAYFARER",
+          "source": "pool",
+          "weight": 0.5021,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "productId": "8689755127998",
+          "title": "CHILL POLAR FLEECE",
+          "source": "pool",
+          "weight": 0.5255,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "productId": "8689757585598",
+          "title": "ADJUSTABLE",
+          "source": "pool",
+          "weight": 0.4069,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 2,
+      "templateId": "aa-1-13-8-p2",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689726030014",
+          "title": "ESSENTIAL LIGHTWARM",
+          "source": "pool",
+          "weight": 0.7724,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "productId": "8689734484158",
+          "title": "WAYFARER EASE",
+          "source": "pool",
+          "weight": 0.0483,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "productId": "8689749065918",
+          "title": "BEZZY",
+          "source": "pool",
+          "weight": 0.4483,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 3,
+      "templateId": "aa-1-13-8-p5",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-2-17",
+          "productId": "8689755783358",
+          "title": "OUTDOOR TRUCKER",
+          "source": "pool",
+          "weight": 0.08,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "productId": "8689701716158",
+          "title": "XA PRO V8 J",
+          "source": "pool",
+          "weight": 0.2993,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "productId": "8689690837182",
+          "title": "CROSS EVR",
+          "source": "pool",
+          "weight": 0.7986,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    }
+  ]
+}

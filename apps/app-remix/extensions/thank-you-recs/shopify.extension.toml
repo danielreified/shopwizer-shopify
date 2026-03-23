@@ -1,0 +1,41 @@
+# Thank You Page Recommendations Extension
+# https://shopify.dev/docs/api/checkout-ui-extensions/latest/configuration
+
+api_version = "2025-07"
+
+[[extensions]]
+name = "Thank You Recommendations"
+handle = "thank-you-recs"
+uid = "0e67f922-4db9-b957-1cf8-b336f1cd5e501355884c"
+type = "ui_extension"
+
+# Thank You Page target (after purchase complete)
+[[extensions.targeting]]
+module = "./src/ThankYouBlock.jsx"
+target = "purchase.thank-you.block.render"
+
+# Order Status Page target (when customer revisits order)
+[[extensions.targeting]]
+module = "./src/OrderStatusBlock.jsx"
+target = "customer-account.order-status.block.render"
+
+[extensions.capabilities]
+# Access to Storefront API for product data
+api_access = true
+
+# REQUIRED: Access to make external network calls to our recs API
+network_access = true
+
+# Settings for merchant customization
+[extensions.settings]
+[[extensions.settings.fields]]
+key = "heading_title"
+type = "single_line_text_field"
+name = "Heading"
+description = "Title displayed above recommendations"
+
+[[extensions.settings.fields]]
+key = "products_to_show"
+type = "number_integer"
+name = "Products to show"
+description = "Number of products to display (2-6)"

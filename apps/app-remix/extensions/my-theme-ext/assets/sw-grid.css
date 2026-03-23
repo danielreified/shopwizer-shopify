@@ -1,0 +1,136 @@
+/* --------------------------------------------------------------
+   CONTAINER
+-------------------------------------------------------------- */
+.sw-grid-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--page-width, 1200px);
+}
+
+/* --------------------------------------------------------------
+   DESKTOP GRID (1024+)
+   Desktop grid = NO GUTTER, page-width only
+-------------------------------------------------------------- */
+.sw-grid.is-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--reco-cols, 4), minmax(0, 1fr));
+  column-gap: var(--gap-grid-x, 16px);
+  row-gap: var(--gap-grid-y, 24px);
+  text-align: var(--grid-text-alignment, left);
+
+  padding-top: var(--grid-padding-top, 0px);
+  padding-bottom: var(--grid-padding-bottom, 0px);
+}
+
+/* --------------------------------------------------------------
+   TABLET (750 - 1023px)
+   Grid behaves like carousel, same look as .sw-carousel
+-------------------------------------------------------------- */
+@media (max-width: 1023px) {
+  .sw-grid.is-grid {
+    display: flex;
+    overflow-x: auto;
+
+    /* match carousel gap */
+    gap: var(--gap-grid-x, 16px);
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+
+    /* full viewport bleed */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    /* gutter from JS (same as sw-carousel) */
+    padding-inline-start: var(--actual-gutter-left, 24px);
+    padding-inline-end: var(--actual-gutter-left, 24px);
+  }
+
+  .sw-grid.is-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* same card sizing logic as carousel on tablet */
+  .sw-grid.is-grid > .sw-grid__item {
+    --_cards: calc(var(--mobile-cols, 1) + 1.5);
+    flex: 0 0 calc(
+      (100vw - 48px - (var(--_cards) - 1) * var(--gap-grid-x, 16px))
+      / var(--_cards)
+    );
+  }
+}
+
+/* --------------------------------------------------------------
+   MOBILE (0 - 749px)
+   Grid behaves like carousel, same look as .sw-carousel
+-------------------------------------------------------------- */
+@media (max-width: 749px) {
+  .sw-grid.is-grid {
+    display: flex;
+    overflow-x: auto;
+
+    gap: var(--gap-grid-x, 12px);
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    padding-inline-start: var(--actual-gutter-left, 16px);
+    padding-inline-end: var(--actual-gutter-left, 16px);
+  }
+
+  .sw-grid.is-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* same card sizing logic as carousel on mobile */
+  .sw-grid.is-grid > .sw-grid__item {
+    --_cards: calc(var(--mobile-cols, 1) + 0.2);
+    flex: 0 0 calc(
+      (100vw - 32px - (var(--_cards) - 1) * var(--gap-grid-x, 12px))
+      / var(--_cards)
+    );
+  }
+}
+
+/* --------------------------------------------------------------
+   ACCESSIBILITY
+-------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .sw-grid.is-grid {
+    scroll-behavior: auto;
+  }
+}
+
+/* --------------------------------------------------------------
+   DRAG STATE (shared with carousel)
+-------------------------------------------------------------- */
+.sw-grid.is-dragging {
+  cursor: grabbing;
+}
+
+.sw-grid.is-dragging .sw-card a,
+.sw-grid.is-dragging .sw-card__media,
+.sw-grid.is-dragging .sw-card__body,
+.sw-grid.is-dragging .sw-card__title,
+.sw-grid.is-dragging .sw-card__price {
+  pointer-events: none;
+}
+
+.sw-grid.is-dragging .sw-card__wishlist,
+.sw-grid.is-dragging .sw-card__wishlist * {
+  pointer-events: auto !important;
+}

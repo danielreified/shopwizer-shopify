@@ -1,0 +1,10 @@
+{
+  "name": "service-category-embeddings",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "docker:build": "../../scripts/docker/build.sh",
+    "docker:push": "../../scripts/docker/push.sh",
+    "docker:deploy": "../../scripts/docker/deploy-ecs.sh"
+  }
+}

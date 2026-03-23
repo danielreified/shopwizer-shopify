@@ -1,0 +1,16 @@
+-- CreateEnum
+CREATE TYPE "GlobalJobType" AS ENUM ('FEATURE_HOURLY', 'FEATURE_VALIDATE_DAILY_24H', 'FEATURE_VALIDATE_DAILY_7D', 'FEATURE_VALIDATE_DAILY_30D', 'FEATURE_BEST_SELLER', 'FEATURE_TRENDING', 'RAIL_HOURLY', 'RAIL_VALIDATE_DAILY_24H', 'RAIL_VALIDATE_DAILY_7D', 'RAIL_VALIDATE_DAILY_30D');
+
+-- CreateTable
+CREATE TABLE "GlobalJobCheckpoint" (
+    "id" TEXT NOT NULL,
+    "job" "GlobalJobType" NOT NULL,
+    "windowStart" TIMESTAMP(3),
+    "windowEnd" TIMESTAMP(3),
+    "lastRunAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "GlobalJobCheckpoint_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateIndex
+CREATE UNIQUE INDEX "GlobalJobCheckpoint_job_key" ON "GlobalJobCheckpoint"("job");

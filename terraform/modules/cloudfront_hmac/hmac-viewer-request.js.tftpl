@@ -1,0 +1,51 @@
+'use strict';
+
+// Uses Node's crypto (CloudFront Functions runtime js-2.0)
+var crypto = require('crypto');
+
+function handler(event) {
+  var request = event.request;
+  var qs = request.querystring;
+
+  // Injected at deploy-time by Terraform (JSON-safe)
+  var sharedSecret = ${shared_secret_json};
+
+  // Require presence
+  if (!qs.signature || !qs.shop) {
+    return { statusCode: 401, statusDescription: 'Unauthorized' };
+  }
+
+  // Extract and remove signature
+  var signature = qs.signature.value;
+  delete qs.signature;
+
+  // Build canonical string from sorted query params (key=value)
+  var keys = Object.keys(qs).sort();
+  var parts = [];
+
+  for (var i = 0; i < keys.length; i++) {
+    var k = keys[i];
+    var v = qs[k];
+    if (!v) continue;
+
+    // Support multiValue & single value forms
+    var value = v.multiValue
+      ? v.multiValue.map(function(m) { return decodeURIComponent(m.value); }).join(',')
+      : decodeURIComponent(v.value);
+
+    parts.push(k + '=' + value);
+  }
+
+  var data = parts.join('');
+
+  var expected = crypto.createHmac('sha256', sharedSecret)
+                       .update(data)
+                       .digest('hex');
+
+  if (expected !== signature) {
+    return { statusCode: 403, statusDescription: 'Forbidden' };
+  }
+
+  // OK — forward request to origin
+  return request;
+}

@@ -1,0 +1,23 @@
+.DS_Store
+node_modules
+.turbo
+*.log
+dist
+dist-ssr
+*.local
+.env
+.env.tunnel.*
+.cache
+server/dist
+public/dist
+archive
+
+apps/service-enrich/local_cache/local_cache
+# IDE / tool configs
+.cursor/
+.agent/
+.mcp.json
+
+# Generated
+.react-router/
+build

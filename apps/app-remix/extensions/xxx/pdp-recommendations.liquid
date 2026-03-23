@@ -1,0 +1,178 @@
+{% unless template.contains 'product' %}
+  {% return %}
+{% endunless %}
+
+<div
+  id="shopwise-reco-{{ block.id }}"
+  class="sw-reco"
+  data-placement="row"
+  data-domain="{{ shop.permanent_domain }}"
+  data-heading="{{ block.settings.heading | default: '' }}"
+  data-recommender="{{ block.settings.recommender | default: 'related' }}"
+  data-products-to-show="{{ block.settings.limit | default: 8 }}"
+  data-money-format="{{ shop.money_format | escape }}"
+  data-image-ratio="{{ block.settings.image_ratio | default: '1/1' }}"
+  data-grid-columns-desktop="{{ block.settings.columns | default: 4 }}"
+  data-grid-column-spacing="{{ block.settings.grid_col_gap | default: 16 }}"
+  data-grid-row-spacing="{{ block.settings.grid_row_gap | default: 16 }}"
+  data-carousel-column-spacing="{{ block.settings.carousel_gap | default: 12 }}"
+  data-grid-text-alignment="{{ block.settings.grid_text_align | default: 'left' }}"
+  data-carousel-text-alignment="{{ block.settings.carousel_text_align | default: 'left' }}"
+  data-grid-padding-top="{{ block.settings.grid_pad_top | default: 0 }}"
+  data-grid-padding-bottom="{{ block.settings.grid_pad_bottom | default: 0 }}"
+  data-carousel-padding-top="{{ block.settings.carousel_pad_top | default: 0 }}"
+  data-carousel-padding-bottom="{{ block.settings.carousel_pad_bottom | default: 0 }}"
+  data-show-vendor="{{ block.settings.show_vendor }}"
+  data-product-handle="{{ product.handle }}"
+  data-product-id="{{ product.id }}"
+  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+></div>
+
+{{ 'pdp.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Shopwizer Products",
+  "target": "section",
+  "class": "section",
+  "javascript": "pdp.js",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "You may also like" },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "default": "h3",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" }
+      ]
+    },
+
+    { "type": "header", "content": "Recommendation source" },
+    {
+      "type": "select",
+      "id": "recommender",
+      "label": "Intent",
+      "default": "similar",
+      "options": [
+        { "value": "similar", "label": "Similar" }, 
+        { "value": "color", "label": "Matching Color" },
+        { "value": "sellers", "label": "Best Sellers" },
+        { "value": "fbt", "label": "Frequently Bought Together" },
+        { "value": "trending", "label": "Trending" },
+        { "value": "recent", "label": "Recently Viewed" },
+        { "value": "arrivals", "label": "New Arrivals" }
+      ]
+    },
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "limit", "label": "Products to show", "min": 2, "max": 24, "step": 1, "default": 8 },
+    { "type": "range", "id": "columns", "label": "Desktop columns", "min": 2, "max": 6, "step": 1, "default": 4 },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image aspect ratio",
+      "default": "1/1",
+      "options": [
+        { "value": "1/1", "label": "Square (1:1)" },
+        { "value": "4/5", "label": "Portrait (4:5)" },
+        { "value": "3/4", "label": "Portrait (3:4)" },
+        { "value": "16/9", "label": "Landscape (16:9)" }
+      ]
+    },
+
+    { "type": "header", "content": "Spacing" },
+    {
+      "type": "range",
+      "id": "grid_col_gap",
+      "label": "Grid column gap (px)",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "grid_row_gap",
+      "label": "Grid row gap (px)",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "carousel_gap",
+      "label": "Carousel gap (px)",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "default": 12
+    },
+
+    { "type": "header", "content": "Padding" },
+    {
+      "type": "range",
+      "id": "grid_pad_top",
+      "label": "Grid padding top (px)",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "grid_pad_bottom",
+      "label": "Grid padding bottom (px)",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "carousel_pad_top",
+      "label": "Carousel padding top (px)",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "carousel_pad_bottom",
+      "label": "Carousel padding bottom (px)",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "default": 0
+    },
+
+    { "type": "header", "content": "Card content" },
+    { "type": "checkbox", "id": "show_vendor", "label": "Show vendor", "default": false },
+
+    { "type": "header", "content": "Text alignment" },
+    {
+      "type": "select",
+      "id": "grid_text_align",
+      "label": "Grid text alignment",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "carousel_text_align",
+      "label": "Carousel text alignment",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,3047 @@
+{
+  "runId": "129da342-f189-4851-bfa5-74e088d8a4af",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-06T11:51:56.671Z",
+  "generatedAt": "2026-02-06T11:52:01.967Z",
+  "summary": {
+    "totalSources": 69,
+    "sourcesWithResults": 65,
+    "avgResults": 5.14,
+    "topN": 10
+  },
+  "graph": [
+    {
+      "sourceCategoryId": "aa-8-1",
+      "sourceName": "Athletic Shoes",
+      "sourceFullName": "Apparel & Accessories > Shoes > Athletic Shoes",
+      "sourceCount": 143,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 539,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 345,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 325,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 323,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 282,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 162,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 145,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "count": 120,
+          "targetCount": 23,
+          "targetName": "Sneakers",
+          "targetFullName": "Apparel & Accessories > Shoes > Sneakers"
+        },
+        {
+          "targetCategoryId": "aa-6-3",
+          "count": 71,
+          "targetCount": 5,
+          "targetName": "Bracelets",
+          "targetFullName": "Apparel & Accessories > Jewelry > Bracelets"
+        },
+        {
+          "targetCategoryId": "aa-6-8",
+          "count": 65,
+          "targetCount": 10,
+          "targetName": "Necklaces",
+          "targetFullName": "Apparel & Accessories > Jewelry > Necklaces"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-1-13",
+      "sourceName": "Clothing Tops",
+      "sourceFullName": "Apparel & Accessories > Clothing > Clothing Tops",
+      "sourceCount": 139,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 548,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 368,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 254,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 239,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 195,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 150,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 132,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "count": 84,
+          "targetCount": 23,
+          "targetName": "Sneakers",
+          "targetFullName": "Apparel & Accessories > Shoes > Sneakers"
+        },
+        {
+          "targetCategoryId": "aa-8-7",
+          "count": 78,
+          "targetCount": 3,
+          "targetName": "Slippers",
+          "targetFullName": "Apparel & Accessories > Shoes > Slippers"
+        },
+        {
+          "targetCategoryId": "aa-2-18",
+          "count": 76,
+          "targetCount": 6,
+          "targetName": "Headwear",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Headwear"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-1-10",
+      "sourceName": "Outerwear",
+      "sourceFullName": "Apparel & Accessories > Clothing > Outerwear",
+      "sourceCount": 117,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 535,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 336,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 173,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 163,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 115,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 94,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-8",
+          "count": 91,
+          "targetCount": 13,
+          "targetName": "Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes"
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "count": 83,
+          "targetCount": 23,
+          "targetName": "Sneakers",
+          "targetFullName": "Apparel & Accessories > Shoes > Sneakers"
+        },
+        {
+          "targetCategoryId": "aa-6-8",
+          "count": 82,
+          "targetCount": 10,
+          "targetName": "Necklaces",
+          "targetFullName": "Apparel & Accessories > Jewelry > Necklaces"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 77,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-1-1",
+      "sourceName": "Activewear",
+      "sourceFullName": "Apparel & Accessories > Clothing > Activewear",
+      "sourceCount": 69,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 221,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 157,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 138,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 119,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 74,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "count": 68,
+          "targetCount": 23,
+          "targetName": "Sneakers",
+          "targetFullName": "Apparel & Accessories > Shoes > Sneakers"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 50,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-6-3",
+          "count": 49,
+          "targetCount": 5,
+          "targetName": "Bracelets",
+          "targetFullName": "Apparel & Accessories > Jewelry > Bracelets"
+        },
+        {
+          "targetCategoryId": "aa-8",
+          "count": 41,
+          "targetCount": 13,
+          "targetName": "Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes"
+        },
+        {
+          "targetCategoryId": "aa-2-18",
+          "count": 32,
+          "targetCount": 6,
+          "targetName": "Headwear",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Headwear"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "sg-4-2",
+      "sourceName": "Camping & Hiking",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking",
+      "sourceCount": 69,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-10",
+          "count": 215,
+          "targetCount": 28,
+          "targetName": "Hydration System Accessories",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories"
+        },
+        {
+          "targetCategoryId": "sg-4-7",
+          "count": 93,
+          "targetCount": 6,
+          "targetName": "Golf Shoes",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Golf > Golf Shoes"
+        },
+        {
+          "targetCategoryId": "sg-4-11",
+          "count": 88,
+          "targetCount": 5,
+          "targetName": "Hydration Systems",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hydration Systems"
+        },
+        {
+          "targetCategoryId": "sg-1",
+          "count": 82,
+          "targetCount": 4,
+          "targetName": "Athletics",
+          "targetFullName": "Sporting Goods > Athletics"
+        },
+        {
+          "targetCategoryId": "sg-4-9",
+          "count": 61,
+          "targetCount": 2,
+          "targetName": "Hunting & Shooting",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hunting & Shooting"
+        },
+        {
+          "targetCategoryId": "sg-4-3",
+          "count": 31,
+          "targetCount": 1,
+          "targetName": "Climbing Apparel & Accessories",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Climbing > Climbing Apparel & Accessories"
+        },
+        {
+          "targetCategoryId": "sg-4",
+          "count": 28,
+          "targetCount": 1,
+          "targetName": "Outdoor Recreation",
+          "targetFullName": "Sporting Goods > Outdoor Recreation"
+        },
+        {
+          "targetCategoryId": "sg-1-20",
+          "count": 23,
+          "targetCount": 1,
+          "targetName": "Tennis Shoes",
+          "targetFullName": "Sporting Goods > Athletics > Tennis > Tennis Shoes"
+        },
+        {
+          "targetCategoryId": "sg-4-4",
+          "count": 18,
+          "targetCount": 1,
+          "targetName": "Bicycle Parts",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Cycling > Bicycle Parts"
+        },
+        {
+          "targetCategoryId": "sg-4-1",
+          "count": 11,
+          "targetCount": 1,
+          "targetName": "Boating & Water Sports",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Boating & Water Sports"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-2-17",
+      "sourceName": "Hats",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Hats",
+      "sourceCount": 59,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 246,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 244,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 195,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 116,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 104,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 84,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 84,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-6-8",
+          "count": 80,
+          "targetCount": 10,
+          "targetName": "Necklaces",
+          "targetFullName": "Apparel & Accessories > Jewelry > Necklaces"
+        },
+        {
+          "targetCategoryId": "aa-8-7",
+          "count": 63,
+          "targetCount": 3,
+          "targetName": "Slippers",
+          "targetFullName": "Apparel & Accessories > Shoes > Slippers"
+        },
+        {
+          "targetCategoryId": "aa-7-5",
+          "count": 62,
+          "targetCount": 1,
+          "targetName": "Shoe Inserts",
+          "targetFullName": "Apparel & Accessories > Shoe Accessories > Shoe Inserts"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-1-14",
+      "sourceName": "Shorts",
+      "sourceFullName": "Apparel & Accessories > Clothing > Shorts",
+      "sourceCount": 45,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 209,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 188,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 174,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 132,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 95,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 89,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "count": 74,
+          "targetCount": 23,
+          "targetName": "Sneakers",
+          "targetFullName": "Apparel & Accessories > Shoes > Sneakers"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 57,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-8-6",
+          "count": 20,
+          "targetCount": 6,
+          "targetName": "Sandals",
+          "targetFullName": "Apparel & Accessories > Shoes > Sandals"
+        },
+        {
+          "targetCategoryId": "aa-1-2",
+          "count": 19,
+          "targetCount": 10,
+          "targetName": "Baby & Toddler Clothing",
+          "targetFullName": "Apparel & Accessories > Clothing > Baby & Toddler Clothing"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-1-18",
+      "sourceName": "Socks",
+      "sourceFullName": "Apparel & Accessories > Clothing > Socks",
+      "sourceCount": 41,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 224,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 163,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 147,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 105,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 105,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 97,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 83,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-8-6",
+          "count": 68,
+          "targetCount": 6,
+          "targetName": "Sandals",
+          "targetFullName": "Apparel & Accessories > Shoes > Sandals"
+        },
+        {
+          "targetCategoryId": "aa-6-8",
+          "count": 60,
+          "targetCount": 10,
+          "targetName": "Necklaces",
+          "targetFullName": "Apparel & Accessories > Jewelry > Necklaces"
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "count": 45,
+          "targetCount": 23,
+          "targetName": "Sneakers",
+          "targetFullName": "Apparel & Accessories > Shoes > Sneakers"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-1-12",
+      "sourceName": "Pants",
+      "sourceFullName": "Apparel & Accessories > Clothing > Pants",
+      "sourceCount": 38,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 240,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 165,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 144,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 94,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 83,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "count": 77,
+          "targetCount": 23,
+          "targetName": "Sneakers",
+          "targetFullName": "Apparel & Accessories > Shoes > Sneakers"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 72,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 68,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-6-8",
+          "count": 55,
+          "targetCount": 10,
+          "targetName": "Necklaces",
+          "targetFullName": "Apparel & Accessories > Jewelry > Necklaces"
+        },
+        {
+          "targetCategoryId": "aa-8",
+          "count": 53,
+          "targetCount": 13,
+          "targetName": "Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "sg-4-10",
+      "sourceName": "Hydration System Accessories",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories",
+      "sourceCount": 28,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-2",
+          "count": 364,
+          "targetCount": 69,
+          "targetName": "Camping & Hiking",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking"
+        },
+        {
+          "targetCategoryId": "sg-4-7",
+          "count": 54,
+          "targetCount": 6,
+          "targetName": "Golf Shoes",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Golf > Golf Shoes"
+        },
+        {
+          "targetCategoryId": "sg-1",
+          "count": 50,
+          "targetCount": 4,
+          "targetName": "Athletics",
+          "targetFullName": "Sporting Goods > Athletics"
+        },
+        {
+          "targetCategoryId": "sg-4-9",
+          "count": 39,
+          "targetCount": 2,
+          "targetName": "Hunting & Shooting",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hunting & Shooting"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-8-8",
+      "sourceName": "Sneakers",
+      "sourceFullName": "Apparel & Accessories > Shoes > Sneakers",
+      "sourceCount": 23,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 118,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 90,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 75,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 63,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 52,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 38,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 31,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-8",
+          "count": 24,
+          "targetCount": 13,
+          "targetName": "Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 22,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-6-8",
+          "count": 19,
+          "targetCount": 10,
+          "targetName": "Necklaces",
+          "targetFullName": "Apparel & Accessories > Jewelry > Necklaces"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-8",
+      "sourceName": "Shoes",
+      "sourceFullName": "Apparel & Accessories > Shoes",
+      "sourceCount": 13,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 94,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 54,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 38,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 38,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 37,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 31,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-6-6",
+          "count": 19,
+          "targetCount": 3,
+          "targetName": "Earrings",
+          "targetFullName": "Apparel & Accessories > Jewelry > Earrings"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 11,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "count": 11,
+          "targetCount": 23,
+          "targetName": "Sneakers",
+          "targetFullName": "Apparel & Accessories > Shoes > Sneakers"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 2,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-1-2",
+      "sourceName": "Baby & Toddler Clothing",
+      "sourceFullName": "Apparel & Accessories > Clothing > Baby & Toddler Clothing",
+      "sourceCount": 10,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 206,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 189,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 138,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 129,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 84,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-2-6",
+          "count": 71,
+          "targetCount": 1,
+          "targetName": "Belts",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Belts"
+        },
+        {
+          "targetCategoryId": "aa-8-2",
+          "count": 49,
+          "targetCount": 3,
+          "targetName": "Baby & Toddler Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Baby & Toddler Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 45,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-2-14",
+          "count": 45,
+          "targetCount": 2,
+          "targetName": "Headbands",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hair Accessories > Headbands"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-6-8",
+      "sourceName": "Necklaces",
+      "sourceFullName": "Apparel & Accessories > Jewelry > Necklaces",
+      "sourceCount": 10,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 51,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 44,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 39,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 31,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 24,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 23,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-6-3",
+          "count": 18,
+          "targetCount": 5,
+          "targetName": "Bracelets",
+          "targetFullName": "Apparel & Accessories > Jewelry > Bracelets"
+        },
+        {
+          "targetCategoryId": "aa-8-6",
+          "count": 18,
+          "targetCount": 6,
+          "targetName": "Sandals",
+          "targetFullName": "Apparel & Accessories > Shoes > Sandals"
+        },
+        {
+          "targetCategoryId": "aa-8",
+          "count": 11,
+          "targetCount": 13,
+          "targetName": "Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes"
+        },
+        {
+          "targetCategoryId": "aa-6-6",
+          "count": 2,
+          "targetCount": 3,
+          "targetName": "Earrings",
+          "targetFullName": "Apparel & Accessories > Jewelry > Earrings"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "lb-1",
+      "sourceName": "Hiking Backpacks",
+      "sourceFullName": "Luggage & Bags > Backpacks > Hiking Backpacks",
+      "sourceCount": 9,
+      "results": [
+        {
+          "targetCategoryId": "lb-9",
+          "count": 147,
+          "targetCount": 2,
+          "targetName": "Travel Pouches",
+          "targetFullName": "Luggage & Bags > Luggage Accessories > Travel Pouches"
+        },
+        {
+          "targetCategoryId": "lb-13",
+          "count": 81,
+          "targetCount": 2,
+          "targetName": "Tote Bags",
+          "targetFullName": "Luggage & Bags > Tote Bags"
+        },
+        {
+          "targetCategoryId": "lb-7",
+          "count": 62,
+          "targetCount": 1,
+          "targetName": "Fanny Packs",
+          "targetFullName": "Luggage & Bags > Fanny Packs"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-2-18",
+      "sourceName": "Headwear",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Headwear",
+      "sourceCount": 6,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 93,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 79,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 60,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 41,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 38,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "count": 38,
+          "targetCount": 23,
+          "targetName": "Sneakers",
+          "targetFullName": "Apparel & Accessories > Shoes > Sneakers"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 37,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 36,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 31,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-8-6",
+      "sourceName": "Sandals",
+      "sourceFullName": "Apparel & Accessories > Shoes > Sandals",
+      "sourceCount": 6,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 158,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 93,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 70,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 47,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 34,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-2-14",
+          "count": 30,
+          "targetCount": 2,
+          "targetName": "Headbands",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hair Accessories > Headbands"
+        },
+        {
+          "targetCategoryId": "aa-8",
+          "count": 22,
+          "targetCount": 13,
+          "targetName": "Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-2",
+          "count": 10,
+          "targetCount": 10,
+          "targetName": "Baby & Toddler Clothing",
+          "targetFullName": "Apparel & Accessories > Clothing > Baby & Toddler Clothing"
+        },
+        {
+          "targetCategoryId": "aa-5-4",
+          "count": 10,
+          "targetCount": 2,
+          "targetName": "Handbags",
+          "targetFullName": "Apparel & Accessories > Handbags, Wallets & Cases > Handbags"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "sg-4-7",
+      "sourceName": "Golf Shoes",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Golf > Golf Shoes",
+      "sourceCount": 6,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-2",
+          "count": 275,
+          "targetCount": 69,
+          "targetName": "Camping & Hiking",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking"
+        },
+        {
+          "targetCategoryId": "sg-4-10",
+          "count": 68,
+          "targetCount": 28,
+          "targetName": "Hydration System Accessories",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories"
+        },
+        {
+          "targetCategoryId": "sg-4-11",
+          "count": 59,
+          "targetCount": 5,
+          "targetName": "Hydration Systems",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hydration Systems"
+        },
+        {
+          "targetCategoryId": "sg-4-14",
+          "count": 50,
+          "targetCount": 1,
+          "targetName": "Badminton",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Outdoor Games > Badminton"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-6-3",
+      "sourceName": "Bracelets",
+      "sourceFullName": "Apparel & Accessories > Jewelry > Bracelets",
+      "sourceCount": 5,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 182,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 108,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 80,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 57,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 52,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 43,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 37,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-11",
+          "count": 21,
+          "targetCount": 1,
+          "targetName": "Outfit Sets",
+          "targetFullName": "Apparel & Accessories > Clothing > Outfit Sets"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 2,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "sg-4-11",
+      "sourceName": "Hydration Systems",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Hydration Systems",
+      "sourceCount": 5,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-2",
+          "count": 352,
+          "targetCount": 69,
+          "targetName": "Camping & Hiking",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking"
+        },
+        {
+          "targetCategoryId": "sg-4-10",
+          "count": 61,
+          "targetCount": 28,
+          "targetName": "Hydration System Accessories",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories"
+        },
+        {
+          "targetCategoryId": "sg-1",
+          "count": 50,
+          "targetCount": 4,
+          "targetName": "Athletics",
+          "targetFullName": "Sporting Goods > Athletics"
+        },
+        {
+          "targetCategoryId": "sg-4-7",
+          "count": 48,
+          "targetCount": 6,
+          "targetName": "Golf Shoes",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Golf > Golf Shoes"
+        },
+        {
+          "targetCategoryId": "sg-4-3",
+          "count": 43,
+          "targetCount": 1,
+          "targetName": "Climbing Apparel & Accessories",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Climbing > Climbing Apparel & Accessories"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "hg-12-1",
+      "sourceName": "Gardening",
+      "sourceFullName": "Home & Garden > Lawn & Garden > Gardening",
+      "sourceCount": 4,
+      "results": [
+        {
+          "targetCategoryId": "hg-3-40",
+          "count": 77,
+          "targetCount": 1,
+          "targetName": "Candles",
+          "targetFullName": "Home & Garden > Decor > Home Fragrances > Candles"
+        },
+        {
+          "targetCategoryId": "hg",
+          "count": 76,
+          "targetCount": 1,
+          "targetName": "Home & Garden",
+          "targetFullName": "Home & Garden"
+        },
+        {
+          "targetCategoryId": "hg-3-33",
+          "count": 72,
+          "targetCount": 1,
+          "targetName": "Flags & Windsocks",
+          "targetFullName": "Home & Garden > Decor > Flags & Windsocks"
+        },
+        {
+          "targetCategoryId": "hg-15-1",
+          "count": 68,
+          "targetCount": 1,
+          "targetName": "Bed Sheets",
+          "targetFullName": "Home & Garden > Linens & Bedding > Bedding > Bed Sheets"
+        },
+        {
+          "targetCategoryId": "hg-12-6",
+          "count": 67,
+          "targetCount": 1,
+          "targetName": "Watering & Irrigation",
+          "targetFullName": "Home & Garden > Lawn & Garden > Watering & Irrigation"
+        },
+        {
+          "targetCategoryId": "hg-3-64",
+          "count": 65,
+          "targetCount": 2,
+          "targetName": "Throw Pillows",
+          "targetFullName": "Home & Garden > Decor > Throw Pillows"
+        },
+        {
+          "targetCategoryId": "hg-13-5",
+          "count": 57,
+          "targetCount": 1,
+          "targetName": "Lamps",
+          "targetFullName": "Home & Garden > Lighting > Lamps"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "sg-1",
+      "sourceName": "Athletics",
+      "sourceFullName": "Sporting Goods > Athletics",
+      "sourceCount": 4,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-2",
+          "count": 373,
+          "targetCount": 69,
+          "targetName": "Camping & Hiking",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking"
+        },
+        {
+          "targetCategoryId": "sg-4-10",
+          "count": 109,
+          "targetCount": 28,
+          "targetName": "Hydration System Accessories",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories"
+        },
+        {
+          "targetCategoryId": "sg-4-11",
+          "count": 46,
+          "targetCount": 5,
+          "targetName": "Hydration Systems",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hydration Systems"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-6-6",
+      "sourceName": "Earrings",
+      "sourceFullName": "Apparel & Accessories > Jewelry > Earrings",
+      "sourceCount": 3,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 103,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 94,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 88,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 59,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 55,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-6-3",
+          "count": 20,
+          "targetCount": 5,
+          "targetName": "Bracelets",
+          "targetFullName": "Apparel & Accessories > Jewelry > Bracelets"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 11,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 2,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-8-2",
+      "sourceName": "Baby & Toddler Shoes",
+      "sourceFullName": "Apparel & Accessories > Shoes > Baby & Toddler Shoes",
+      "sourceCount": 3,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 221,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 121,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 77,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-8",
+          "count": 73,
+          "targetCount": 13,
+          "targetName": "Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 51,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 48,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 42,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-8-7",
+      "sourceName": "Slippers",
+      "sourceFullName": "Apparel & Accessories > Shoes > Slippers",
+      "sourceCount": 3,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 173,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 125,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 88,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 85,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 64,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 61,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 50,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-8",
+          "count": 45,
+          "targetCount": 13,
+          "targetName": "Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-2",
+          "count": 10,
+          "targetCount": 10,
+          "targetName": "Baby & Toddler Clothing",
+          "targetFullName": "Apparel & Accessories > Clothing > Baby & Toddler Clothing"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-1",
+      "sourceName": "Clothing",
+      "sourceFullName": "Apparel & Accessories > Clothing",
+      "sourceCount": 2,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 148,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 135,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 68,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 59,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 56,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 42,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 29,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-2-14",
+      "sourceName": "Headbands",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Hair Accessories > Headbands",
+      "sourceCount": 2,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 180,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 69,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 61,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 59,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 58,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 52,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-1-2",
+          "count": 21,
+          "targetCount": 10,
+          "targetName": "Baby & Toddler Clothing",
+          "targetFullName": "Apparel & Accessories > Clothing > Baby & Toddler Clothing"
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "count": 19,
+          "targetCount": 23,
+          "targetName": "Sneakers",
+          "targetFullName": "Apparel & Accessories > Shoes > Sneakers"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-5-4",
+      "sourceName": "Handbags",
+      "sourceFullName": "Apparel & Accessories > Handbags, Wallets & Cases > Handbags",
+      "sourceCount": 2,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 132,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 125,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 90,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 80,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 67,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-5-5",
+          "count": 39,
+          "targetCount": 1,
+          "targetName": "Wallets & Money Clips",
+          "targetFullName": "Apparel & Accessories > Handbags, Wallets & Cases > Wallets & Money Clips"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 20,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-6-3",
+          "count": 2,
+          "targetCount": 5,
+          "targetName": "Bracelets",
+          "targetFullName": "Apparel & Accessories > Jewelry > Bracelets"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-7-2",
+      "sourceName": "Gaiters",
+      "sourceFullName": "Apparel & Accessories > Shoe Accessories > Gaiters",
+      "sourceCount": 2,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 96,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 88,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 88,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 78,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 76,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 62,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 47,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-8",
+          "count": 27,
+          "targetCount": 13,
+          "targetName": "Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 18,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "fr-22",
+      "sourceName": "Sofas",
+      "sourceFullName": "Furniture > Sofas",
+      "sourceCount": 2,
+      "results": [
+        {
+          "targetCategoryId": "fr-15-6",
+          "count": 142,
+          "targetCount": 1,
+          "targetName": "Outdoor Tables",
+          "targetFullName": "Furniture > Outdoor Furniture > Outdoor Tables"
+        },
+        {
+          "targetCategoryId": "fr-7-1",
+          "count": 135,
+          "targetCount": 1,
+          "targetName": "Armchairs",
+          "targetFullName": "Furniture > Chairs > Armchairs, Recliners & Sleeper Chairs > Armchairs"
+        },
+        {
+          "targetCategoryId": "fr-22-4",
+          "count": 113,
+          "targetCount": 1,
+          "targetName": "Loveseat Sofas",
+          "targetFullName": "Furniture > Sofas > Loveseat Sofas"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "hg-3-64",
+      "sourceName": "Throw Pillows",
+      "sourceFullName": "Home & Garden > Decor > Throw Pillows",
+      "sourceCount": 2,
+      "results": [
+        {
+          "targetCategoryId": "hg-12-1",
+          "count": 133,
+          "targetCount": 4,
+          "targetName": "Gardening",
+          "targetFullName": "Home & Garden > Lawn & Garden > Gardening"
+        },
+        {
+          "targetCategoryId": "hg-3-40",
+          "count": 120,
+          "targetCount": 1,
+          "targetName": "Candles",
+          "targetFullName": "Home & Garden > Decor > Home Fragrances > Candles"
+        },
+        {
+          "targetCategoryId": "hg-12-6",
+          "count": 68,
+          "targetCount": 1,
+          "targetName": "Watering & Irrigation",
+          "targetFullName": "Home & Garden > Lawn & Garden > Watering & Irrigation"
+        },
+        {
+          "targetCategoryId": "hg-13-5",
+          "count": 54,
+          "targetCount": 1,
+          "targetName": "Lamps",
+          "targetFullName": "Home & Garden > Lighting > Lamps"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "lb-13",
+      "sourceName": "Tote Bags",
+      "sourceFullName": "Luggage & Bags > Tote Bags",
+      "sourceCount": 2,
+      "results": [
+        {
+          "targetCategoryId": "lb-1",
+          "count": 143,
+          "targetCount": 9,
+          "targetName": "Hiking Backpacks",
+          "targetFullName": "Luggage & Bags > Backpacks > Hiking Backpacks"
+        },
+        {
+          "targetCategoryId": "lb-7",
+          "count": 114,
+          "targetCount": 1,
+          "targetName": "Fanny Packs",
+          "targetFullName": "Luggage & Bags > Fanny Packs"
+        },
+        {
+          "targetCategoryId": "lb-9",
+          "count": 110,
+          "targetCount": 2,
+          "targetName": "Travel Pouches",
+          "targetFullName": "Luggage & Bags > Luggage Accessories > Travel Pouches"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "lb-9",
+      "sourceName": "Travel Pouches",
+      "sourceFullName": "Luggage & Bags > Luggage Accessories > Travel Pouches",
+      "sourceCount": 2,
+      "results": [
+        {
+          "targetCategoryId": "lb-1",
+          "count": 273,
+          "targetCount": 9,
+          "targetName": "Hiking Backpacks",
+          "targetFullName": "Luggage & Bags > Backpacks > Hiking Backpacks"
+        },
+        {
+          "targetCategoryId": "lb-7",
+          "count": 56,
+          "targetCount": 1,
+          "targetName": "Fanny Packs",
+          "targetFullName": "Luggage & Bags > Fanny Packs"
+        },
+        {
+          "targetCategoryId": "lb-13",
+          "count": 49,
+          "targetCount": 2,
+          "targetName": "Tote Bags",
+          "targetFullName": "Luggage & Bags > Tote Bags"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "sg-4-9",
+      "sourceName": "Hunting & Shooting",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Hunting & Shooting",
+      "sourceCount": 2,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-2",
+          "count": 160,
+          "targetCount": 69,
+          "targetName": "Camping & Hiking",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking"
+        },
+        {
+          "targetCategoryId": "sg-4-10",
+          "count": 143,
+          "targetCount": 28,
+          "targetName": "Hydration System Accessories",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa",
+      "sourceName": "Apparel & Accessories",
+      "sourceFullName": "Apparel & Accessories",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 123,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 82,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "count": 67,
+          "targetCount": 23,
+          "targetName": "Sneakers",
+          "targetFullName": "Apparel & Accessories > Shoes > Sneakers"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 56,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 34,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-1-11",
+      "sourceName": "Outfit Sets",
+      "sourceFullName": "Apparel & Accessories > Clothing > Outfit Sets",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 77,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-2-18",
+          "count": 76,
+          "targetCount": 6,
+          "targetName": "Headwear",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Headwear"
+        },
+        {
+          "targetCategoryId": "aa-8-6",
+          "count": 57,
+          "targetCount": 6,
+          "targetName": "Sandals",
+          "targetFullName": "Apparel & Accessories > Shoes > Sandals"
+        },
+        {
+          "targetCategoryId": "aa-8",
+          "count": 43,
+          "targetCount": 13,
+          "targetName": "Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 35,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 18,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 11,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-1-19",
+      "sourceName": "Tuxedos",
+      "sourceFullName": "Apparel & Accessories > Clothing > Suits > Tuxedos",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 108,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 77,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 74,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "count": 66,
+          "targetCount": 45,
+          "targetName": "Shorts",
+          "targetFullName": "Apparel & Accessories > Clothing > Shorts"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 55,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 29,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-2-13",
+      "sourceName": "Gloves & Mittens",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Gloves & Mittens",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 80,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 67,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 63,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 52,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 27,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 20,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-2",
+          "count": 10,
+          "targetCount": 10,
+          "targetName": "Baby & Toddler Clothing",
+          "targetFullName": "Apparel & Accessories > Clothing > Baby & Toddler Clothing"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-2-6",
+      "sourceName": "Belts",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Belts",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 89,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 69,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-2",
+          "count": 59,
+          "targetCount": 10,
+          "targetName": "Baby & Toddler Clothing",
+          "targetFullName": "Apparel & Accessories > Clothing > Baby & Toddler Clothing"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 49,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 46,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-8",
+          "count": 21,
+          "targetCount": 13,
+          "targetName": "Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-5",
+      "sourceName": "Handbags, Wallets & Cases",
+      "sourceFullName": "Apparel & Accessories > Handbags, Wallets & Cases",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 140,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "count": 77,
+          "targetCount": 38,
+          "targetName": "Pants",
+          "targetFullName": "Apparel & Accessories > Clothing > Pants"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 28,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 11,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-5-5",
+      "sourceName": "Wallets & Money Clips",
+      "sourceFullName": "Apparel & Accessories > Handbags, Wallets & Cases > Wallets & Money Clips",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 85,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 80,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 67,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 67,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 45,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-2-18",
+          "count": 2,
+          "targetCount": 6,
+          "targetName": "Headwear",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Headwear"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-7-5",
+      "sourceName": "Shoe Inserts",
+      "sourceFullName": "Apparel & Accessories > Shoe Accessories > Shoe Inserts",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 104,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "count": 77,
+          "targetCount": 23,
+          "targetName": "Sneakers",
+          "targetFullName": "Apparel & Accessories > Shoes > Sneakers"
+        },
+        {
+          "targetCategoryId": "aa-6-8",
+          "count": 72,
+          "targetCount": 10,
+          "targetName": "Necklaces",
+          "targetFullName": "Apparel & Accessories > Jewelry > Necklaces"
+        },
+        {
+          "targetCategoryId": "aa-1-19",
+          "count": 68,
+          "targetCount": 1,
+          "targetName": "Tuxedos",
+          "targetFullName": "Apparel & Accessories > Clothing > Suits > Tuxedos"
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 42,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 19,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "aa-7-6",
+      "sourceName": "Shoelaces",
+      "sourceFullName": "Apparel & Accessories > Shoe Accessories > Shoelaces",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "aa-1-10",
+          "count": 106,
+          "targetCount": 117,
+          "targetName": "Outerwear",
+          "targetFullName": "Apparel & Accessories > Clothing > Outerwear"
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "count": 97,
+          "targetCount": 143,
+          "targetName": "Athletic Shoes",
+          "targetFullName": "Apparel & Accessories > Shoes > Athletic Shoes"
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "count": 58,
+          "targetCount": 69,
+          "targetName": "Activewear",
+          "targetFullName": "Apparel & Accessories > Clothing > Activewear"
+        },
+        {
+          "targetCategoryId": "aa-1-13",
+          "count": 50,
+          "targetCount": 139,
+          "targetName": "Clothing Tops",
+          "targetFullName": "Apparel & Accessories > Clothing > Clothing Tops"
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "count": 43,
+          "targetCount": 59,
+          "targetName": "Hats",
+          "targetFullName": "Apparel & Accessories > Clothing Accessories > Hats"
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "count": 29,
+          "targetCount": 41,
+          "targetName": "Socks",
+          "targetFullName": "Apparel & Accessories > Clothing > Socks"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "ae-2",
+      "sourceName": "Art & Crafting Materials",
+      "sourceFullName": "Arts & Entertainment > Hobbies & Creative Arts > Arts & Crafts > Art & Crafting Materials",
+      "sourceCount": 1,
+      "results": []
+    },
+    {
+      "sourceCategoryId": "el-6",
+      "sourceName": "Desktop Computers",
+      "sourceFullName": "Electronics > Computers > Desktop Computers",
+      "sourceCount": 1,
+      "results": []
+    },
+    {
+      "sourceCategoryId": "fr-15-6",
+      "sourceName": "Outdoor Tables",
+      "sourceFullName": "Furniture > Outdoor Furniture > Outdoor Tables",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "fr-7-2",
+          "count": 80,
+          "targetCount": 1,
+          "targetName": "Bean Bag Chairs",
+          "targetFullName": "Furniture > Chairs > Bean Bag Chairs"
+        },
+        {
+          "targetCategoryId": "fr-22",
+          "count": 68,
+          "targetCount": 2,
+          "targetName": "Sofas",
+          "targetFullName": "Furniture > Sofas"
+        },
+        {
+          "targetCategoryId": "fr-4-13",
+          "count": 67,
+          "targetCount": 1,
+          "targetName": "Storage Chests",
+          "targetFullName": "Furniture > Cabinets & Storage > Storage Chests"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "fr-22-4",
+      "sourceName": "Loveseat Sofas",
+      "sourceFullName": "Furniture > Sofas > Loveseat Sofas",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "fr-22",
+          "count": 137,
+          "targetCount": 2,
+          "targetName": "Sofas",
+          "targetFullName": "Furniture > Sofas"
+        },
+        {
+          "targetCategoryId": "fr-15-6",
+          "count": 68,
+          "targetCount": 1,
+          "targetName": "Outdoor Tables",
+          "targetFullName": "Furniture > Outdoor Furniture > Outdoor Tables"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "fr-4-13",
+      "sourceName": "Storage Chests",
+      "sourceFullName": "Furniture > Cabinets & Storage > Storage Chests",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "fr-22",
+          "count": 126,
+          "targetCount": 2,
+          "targetName": "Sofas",
+          "targetFullName": "Furniture > Sofas"
+        },
+        {
+          "targetCategoryId": "fr-7-1",
+          "count": 75,
+          "targetCount": 1,
+          "targetName": "Armchairs",
+          "targetFullName": "Furniture > Chairs > Armchairs, Recliners & Sleeper Chairs > Armchairs"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "fr-7-1",
+      "sourceName": "Armchairs",
+      "sourceFullName": "Furniture > Chairs > Armchairs, Recliners & Sleeper Chairs > Armchairs",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "fr-15-6",
+          "count": 75,
+          "targetCount": 1,
+          "targetName": "Outdoor Tables",
+          "targetFullName": "Furniture > Outdoor Furniture > Outdoor Tables"
+        },
+        {
+          "targetCategoryId": "fr-22",
+          "count": 72,
+          "targetCount": 2,
+          "targetName": "Sofas",
+          "targetFullName": "Furniture > Sofas"
+        },
+        {
+          "targetCategoryId": "fr-4-13",
+          "count": 61,
+          "targetCount": 1,
+          "targetName": "Storage Chests",
+          "targetFullName": "Furniture > Cabinets & Storage > Storage Chests"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "fr-7-2",
+      "sourceName": "Bean Bag Chairs",
+      "sourceFullName": "Furniture > Chairs > Bean Bag Chairs",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "fr-7-1",
+          "count": 74,
+          "targetCount": 1,
+          "targetName": "Armchairs",
+          "targetFullName": "Furniture > Chairs > Armchairs, Recliners & Sleeper Chairs > Armchairs"
+        },
+        {
+          "targetCategoryId": "fr-22",
+          "count": 65,
+          "targetCount": 2,
+          "targetName": "Sofas",
+          "targetFullName": "Furniture > Sofas"
+        },
+        {
+          "targetCategoryId": "fr-22-4",
+          "count": 60,
+          "targetCount": 1,
+          "targetName": "Loveseat Sofas",
+          "targetFullName": "Furniture > Sofas > Loveseat Sofas"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "gc",
+      "sourceName": "Gift Cards",
+      "sourceFullName": "Gift Cards",
+      "sourceCount": 1,
+      "results": []
+    },
+    {
+      "sourceCategoryId": "ha-2",
+      "sourceName": "Lumber & Sheet Stock",
+      "sourceFullName": "Hardware > Building Materials > Lumber & Sheet Stock",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "ha-3",
+          "count": 80,
+          "targetCount": 1,
+          "targetName": "Garden Borders & Edging",
+          "targetFullName": "Hardware > Fencing & Barriers > Garden Borders & Edging"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "ha-3",
+      "sourceName": "Garden Borders & Edging",
+      "sourceFullName": "Hardware > Fencing & Barriers > Garden Borders & Edging",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "ha-2",
+          "count": 80,
+          "targetCount": 1,
+          "targetName": "Lumber & Sheet Stock",
+          "targetFullName": "Hardware > Building Materials > Lumber & Sheet Stock"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "hg",
+      "sourceName": "Home & Garden",
+      "sourceFullName": "Home & Garden",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "hg-3-64",
+          "count": 74,
+          "targetCount": 2,
+          "targetName": "Throw Pillows",
+          "targetFullName": "Home & Garden > Decor > Throw Pillows"
+        },
+        {
+          "targetCategoryId": "hg-3-40",
+          "count": 69,
+          "targetCount": 1,
+          "targetName": "Candles",
+          "targetFullName": "Home & Garden > Decor > Home Fragrances > Candles"
+        },
+        {
+          "targetCategoryId": "hg-12-6",
+          "count": 59,
+          "targetCount": 1,
+          "targetName": "Watering & Irrigation",
+          "targetFullName": "Home & Garden > Lawn & Garden > Watering & Irrigation"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "hg-12-6",
+      "sourceName": "Watering & Irrigation",
+      "sourceFullName": "Home & Garden > Lawn & Garden > Watering & Irrigation",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "hg-3-40",
+          "count": 80,
+          "targetCount": 1,
+          "targetName": "Candles",
+          "targetFullName": "Home & Garden > Decor > Home Fragrances > Candles"
+        },
+        {
+          "targetCategoryId": "hg-3-33",
+          "count": 70,
+          "targetCount": 1,
+          "targetName": "Flags & Windsocks",
+          "targetFullName": "Home & Garden > Decor > Flags & Windsocks"
+        },
+        {
+          "targetCategoryId": "hg-3-64",
+          "count": 62,
+          "targetCount": 2,
+          "targetName": "Throw Pillows",
+          "targetFullName": "Home & Garden > Decor > Throw Pillows"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "hg-13-5",
+      "sourceName": "Lamps",
+      "sourceFullName": "Home & Garden > Lighting > Lamps",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "hg-3-64",
+          "count": 74,
+          "targetCount": 2,
+          "targetName": "Throw Pillows",
+          "targetFullName": "Home & Garden > Decor > Throw Pillows"
+        },
+        {
+          "targetCategoryId": "hg",
+          "count": 69,
+          "targetCount": 1,
+          "targetName": "Home & Garden",
+          "targetFullName": "Home & Garden"
+        },
+        {
+          "targetCategoryId": "hg-3-32",
+          "count": 64,
+          "targetCount": 1,
+          "targetName": "Flag & Windsock Accessories",
+          "targetFullName": "Home & Garden > Decor > Flag & Windsock Accessories"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "hg-15-1",
+      "sourceName": "Bed Sheets",
+      "sourceFullName": "Home & Garden > Linens & Bedding > Bedding > Bed Sheets",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "hg-3-64",
+          "count": 136,
+          "targetCount": 2,
+          "targetName": "Throw Pillows",
+          "targetFullName": "Home & Garden > Decor > Throw Pillows"
+        },
+        {
+          "targetCategoryId": "hg-3-33",
+          "count": 80,
+          "targetCount": 1,
+          "targetName": "Flags & Windsocks",
+          "targetFullName": "Home & Garden > Decor > Flags & Windsocks"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "hg-3-32",
+      "sourceName": "Flag & Windsock Accessories",
+      "sourceFullName": "Home & Garden > Decor > Flag & Windsock Accessories",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "hg-3-40",
+          "count": 75,
+          "targetCount": 1,
+          "targetName": "Candles",
+          "targetFullName": "Home & Garden > Decor > Home Fragrances > Candles"
+        },
+        {
+          "targetCategoryId": "hg-12-1",
+          "count": 73,
+          "targetCount": 4,
+          "targetName": "Gardening",
+          "targetFullName": "Home & Garden > Lawn & Garden > Gardening"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "hg-3-33",
+      "sourceName": "Flags & Windsocks",
+      "sourceFullName": "Home & Garden > Decor > Flags & Windsocks",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "hg-13-5",
+          "count": 80,
+          "targetCount": 1,
+          "targetName": "Lamps",
+          "targetFullName": "Home & Garden > Lighting > Lamps"
+        },
+        {
+          "targetCategoryId": "hg-12-1",
+          "count": 76,
+          "targetCount": 4,
+          "targetName": "Gardening",
+          "targetFullName": "Home & Garden > Lawn & Garden > Gardening"
+        },
+        {
+          "targetCategoryId": "hg-3-32",
+          "count": 68,
+          "targetCount": 1,
+          "targetName": "Flag & Windsock Accessories",
+          "targetFullName": "Home & Garden > Decor > Flag & Windsock Accessories"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "hg-3-40",
+      "sourceName": "Candles",
+      "sourceFullName": "Home & Garden > Decor > Home Fragrances > Candles",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "hg",
+          "count": 74,
+          "targetCount": 1,
+          "targetName": "Home & Garden",
+          "targetFullName": "Home & Garden"
+        },
+        {
+          "targetCategoryId": "hg-12-6",
+          "count": 74,
+          "targetCount": 1,
+          "targetName": "Watering & Irrigation",
+          "targetFullName": "Home & Garden > Lawn & Garden > Watering & Irrigation"
+        },
+        {
+          "targetCategoryId": "hg-12-1",
+          "count": 66,
+          "targetCount": 4,
+          "targetName": "Gardening",
+          "targetFullName": "Home & Garden > Lawn & Garden > Gardening"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "lb-7",
+      "sourceName": "Fanny Packs",
+      "sourceFullName": "Luggage & Bags > Fanny Packs",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "lb-1",
+          "count": 131,
+          "targetCount": 9,
+          "targetName": "Hiking Backpacks",
+          "targetFullName": "Luggage & Bags > Backpacks > Hiking Backpacks"
+        },
+        {
+          "targetCategoryId": "lb-13",
+          "count": 80,
+          "targetCount": 2,
+          "targetName": "Tote Bags",
+          "targetFullName": "Luggage & Bags > Tote Bags"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "me-1",
+      "sourceName": "Books",
+      "sourceFullName": "Media > Books",
+      "sourceCount": 1,
+      "results": []
+    },
+    {
+      "sourceCategoryId": "sg-1-20",
+      "sourceName": "Tennis Shoes",
+      "sourceFullName": "Sporting Goods > Athletics > Tennis > Tennis Shoes",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-2",
+          "count": 132,
+          "targetCount": 69,
+          "targetName": "Camping & Hiking",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking"
+        },
+        {
+          "targetCategoryId": "sg-4-7",
+          "count": 78,
+          "targetCount": 6,
+          "targetName": "Golf Shoes",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Golf > Golf Shoes"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "sg-4",
+      "sourceName": "Outdoor Recreation",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-2",
+          "count": 137,
+          "targetCount": 69,
+          "targetName": "Camping & Hiking",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking"
+        },
+        {
+          "targetCategoryId": "sg-4-10",
+          "count": 65,
+          "targetCount": 28,
+          "targetName": "Hydration System Accessories",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "sg-4-1",
+      "sourceName": "Boating & Water Sports",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Boating & Water Sports",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-2",
+          "count": 134,
+          "targetCount": 69,
+          "targetName": "Camping & Hiking",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking"
+        },
+        {
+          "targetCategoryId": "sg-4-9",
+          "count": 80,
+          "targetCount": 2,
+          "targetName": "Hunting & Shooting",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hunting & Shooting"
+        },
+        {
+          "targetCategoryId": "sg-4-11",
+          "count": 55,
+          "targetCount": 5,
+          "targetName": "Hydration Systems",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hydration Systems"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "sg-4-14",
+      "sourceName": "Badminton",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Outdoor Games > Badminton",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-2",
+          "count": 172,
+          "targetCount": 69,
+          "targetName": "Camping & Hiking",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking"
+        },
+        {
+          "targetCategoryId": "sg-4-7",
+          "count": 66,
+          "targetCount": 6,
+          "targetName": "Golf Shoes",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Golf > Golf Shoes"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "sg-4-17",
+      "sourceName": "Winter Sports & Activities",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Winter Sports & Activities",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-2",
+          "count": 218,
+          "targetCount": 69,
+          "targetName": "Camping & Hiking",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "sg-4-3",
+      "sourceName": "Climbing Apparel & Accessories",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Climbing > Climbing Apparel & Accessories",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-2",
+          "count": 157,
+          "targetCount": 69,
+          "targetName": "Camping & Hiking",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking"
+        },
+        {
+          "targetCategoryId": "sg-4-10",
+          "count": 62,
+          "targetCount": 28,
+          "targetName": "Hydration System Accessories",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories"
+        }
+      ]
+    },
+    {
+      "sourceCategoryId": "sg-4-4",
+      "sourceName": "Bicycle Parts",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Cycling > Bicycle Parts",
+      "sourceCount": 1,
+      "results": [
+        {
+          "targetCategoryId": "sg-4-10",
+          "count": 74,
+          "targetCount": 28,
+          "targetName": "Hydration System Accessories",
+          "targetFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories"
+        }
+      ]
+    }
+  ]
+}

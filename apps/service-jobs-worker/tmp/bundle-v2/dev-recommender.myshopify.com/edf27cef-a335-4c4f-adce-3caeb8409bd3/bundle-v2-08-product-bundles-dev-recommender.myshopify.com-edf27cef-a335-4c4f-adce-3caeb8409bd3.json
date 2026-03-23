@@ -1,0 +1,126 @@
+{
+  "runId": "edf27cef-a335-4c4f-adce-3caeb8409bd3",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-07T15:19:45.973Z",
+  "generatedAt": "2026-02-07T15:19:55.253Z",
+  "summary": {
+    "totalProducts": 1,
+    "withCategory": 1,
+    "productsWithBundles": 1,
+    "bundlesBuilt": 3,
+    "bundlesFailed": 0,
+    "avgBundlesPerProduct": 3,
+    "avgTargetsPerBundle": 3,
+    "avgFallbackAttempts": 0,
+    "graphPickProbability": 0.7,
+    "templateTargets": 3,
+    "bundlesPerProductTarget": 3
+  },
+  "bundles": [
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 1,
+      "templateId": "aa-1-13-8-p1",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-1",
+          "productId": "8689732845758",
+          "title": "ESSENTIAL LIGHTWARM",
+          "source": "pool",
+          "weight": 0.6897,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "productId": "8689681498302",
+          "title": "ACS + OG",
+          "source": "pool",
+          "weight": 0.5407,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "productId": "8689763778750",
+          "title": "GRAVEL KNIT",
+          "source": "pool",
+          "weight": 0.1407,
+          "tier": 1
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 2,
+      "templateId": "aa-1-13-8-p2",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-8-8",
+          "productId": "8689689493694",
+          "title": "CROSS EVR",
+          "source": "pool",
+          "weight": 0.3214,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "productId": "8689759617214",
+          "title": "COFFEE RUNNER",
+          "source": "pool",
+          "weight": 0.4897,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "productId": "8689701748926",
+          "title": "PATROL PLAY J",
+          "source": "pool",
+          "weight": 0.3324,
+          "tier": 1
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 3,
+      "templateId": "aa-1-13-8-p3",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-18",
+          "productId": "8689762173118",
+          "title": "XA SONIC",
+          "source": "pool",
+          "weight": 0,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "productId": "8689701716158",
+          "title": "XA PRO V8 J",
+          "source": "pool",
+          "weight": 0.2993,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "productId": "8689778131134",
+          "title": "OUTERPATH BASE",
+          "source": "pool",
+          "weight": 0.3393,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    }
+  ]
+}

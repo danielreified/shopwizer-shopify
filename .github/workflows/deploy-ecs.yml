@@ -1,0 +1,96 @@
+name: Deploy ECS Service
+
+on:
+  workflow_dispatch:
+    inputs:
+      service:
+        description: 'Service to deploy'
+        required: true
+        type: choice
+        options:
+          - app-remix
+          - service-events
+          - service-enrich
+          - service-px
+          - service-jobs-worker
+          - service-analytics
+          - service-category-embeddings
+
+env:
+  AWS_REGION: us-east-1
+  TURBO_TELEMETRY_DISABLED: '1'
+  ECS_CLUSTER: dev-ue1-shopwizer-ecs
+  VERSION: dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - uses: ./.github/actions/setup
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - uses: aws-actions/amazon-ecr-login@v2
+
+      - run: pnpm --filter @repo/prisma run generate
+      - run: pnpm turbo run build
+
+      - name: Set service config
+        id: config
+        run: |
+          case "${{ inputs.service }}" in
+            app-remix)
+              echo "ecr_repo=dev-ue1-shopwizer-app-remix" >> "$GITHUB_OUTPUT"
+              echo "ecs_service=dev-ue1-shopwizer-app-remix-svc" >> "$GITHUB_OUTPUT"
+              ;;
+            service-events)
+              echo "ecr_repo=dev-ue1-shopwizer-service-events" >> "$GITHUB_OUTPUT"
+              echo "ecs_service=dev-ue1-shopwizer-events-svc" >> "$GITHUB_OUTPUT"
+              ;;
+            service-enrich)
+              echo "ecr_repo=dev-ue1-shopwizer-service-enrich" >> "$GITHUB_OUTPUT"
+              echo "ecs_service=dev-ue1-shopwizer-enrich-svc" >> "$GITHUB_OUTPUT"
+              ;;
+            service-px)
+              echo "ecr_repo=dev-ue1-shopwizer-service-px" >> "$GITHUB_OUTPUT"
+              echo "ecs_service=dev-ue1-shopwizer-px-worker-svc" >> "$GITHUB_OUTPUT"
+              ;;
+            service-jobs-worker)
+              echo "ecr_repo=dev-ue1-shopwizer-service-jobs-worker" >> "$GITHUB_OUTPUT"
+              echo "ecs_service=dev-ue1-shopwizer-jobs-worker-svc" >> "$GITHUB_OUTPUT"
+              ;;
+            service-analytics)
+              echo "ecr_repo=dev-ue1-shopwizer-service-analytics" >> "$GITHUB_OUTPUT"
+              echo "ecs_service=dev-ue1-shopwizer-analytics-svc" >> "$GITHUB_OUTPUT"
+              ;;
+            service-category-embeddings)
+              echo "ecr_repo=dev-ue1-shopwizer-service-category-embeddings" >> "$GITHUB_OUTPUT"
+              echo "ecs_service=dev-ue1-shopwizer-category-embeddings-svc" >> "$GITHUB_OUTPUT"
+              ;;
+          esac
+
+      - name: Docker build
+        env:
+          SERVICE_NAME: ${{ inputs.service }}
+          ECR_REPO: ${{ steps.config.outputs.ecr_repo }}
+        run: pnpm --filter "./apps/${{ inputs.service }}" run docker:build
+
+      - name: Docker push
+        env:
+          SERVICE_NAME: ${{ inputs.service }}
+          ECR_REPO: ${{ steps.config.outputs.ecr_repo }}
+          AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
+        run: pnpm --filter "./apps/${{ inputs.service }}" run docker:push
+
+      - name: ECS deploy
+        env:
+          SERVICE_NAME: ${{ steps.config.outputs.ecs_service }}
+        run: pnpm --filter "./apps/${{ inputs.service }}" run docker:deploy

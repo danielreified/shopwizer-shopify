@@ -1,0 +1,31 @@
+# ---- keep these in context (important)
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!packages/**
+!apps/service-px/**
+
+# ---- general junk
+**/node_modules
+**/.turbo
+**/.next
+**/dist
+**/coverage
+**/*.log
+**/*.tmp
+**/.DS_Store
+**/*.tsbuildinfo
+
+# git/CI/editor
+.git
+.gitignore
+.vscode
+.idea
+
+# env files
+.env
+.env.local
+.env.*.local
+
+# local data
+data/

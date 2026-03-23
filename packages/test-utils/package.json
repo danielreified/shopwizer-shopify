@@ -1,0 +1,26 @@
+{
+  "name": "@repo/test-utils",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./mock-prisma": "./src/mock-prisma.ts",
+    "./mock-sqs": "./src/mock-sqs.ts",
+    "./fixtures": "./src/fixtures/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "vitest-mock-extended": "^3.1.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "*",
+    "@prisma/client": "6.18.0",
+    "eslint": "^8.57.0",
+    "vitest": "^4.0.18",
+    "typescript": "^5.5.4"
+  }
+}

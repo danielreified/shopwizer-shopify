@@ -1,0 +1,342 @@
+{
+  "runId": "68fcf0e7-9dc4-41ea-9b87-1bc8edc9883d",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-06T11:53:11.997Z",
+  "generatedAt": "2026-02-06T11:53:23.410Z",
+  "summary": {
+    "totalFailures": 41,
+    "noCategory": 3,
+    "noTemplate": 38,
+    "noCandidates": 0
+  },
+  "failures": [
+    {
+      "productId": "8617410396350",
+      "title": "Wooden Outdoor Table",
+      "categoryId": "fr-15-6",
+      "categoryName": "Outdoor Tables",
+      "categoryFullName": "Furniture > Outdoor Furniture > Outdoor Tables",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410199742",
+      "title": "Clay Plant Pot",
+      "categoryId": "hg-12-1",
+      "categoryName": "Gardening",
+      "categoryFullName": "Home & Garden > Lawn & Garden > Gardening",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410560190",
+      "title": "Biodegradable cardboard pots",
+      "categoryId": "hg-12-1-16",
+      "categoryName": "Pots & Planters",
+      "categoryFullName": "Home & Garden > Lawn & Garden > Gardening > Pots & Planters",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410232510",
+      "title": "Copper Light",
+      "categoryId": "hg-13-5",
+      "categoryName": "Lamps",
+      "categoryFullName": "Home & Garden > Lighting > Lamps",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689678811326",
+      "title": "GIFT CARD",
+      "categoryId": "gc",
+      "categoryName": "Gift Cards",
+      "categoryFullName": "Gift Cards",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410429118",
+      "title": "Brown Throw Pillows",
+      "categoryId": "hg-3-64",
+      "categoryName": "Throw Pillows",
+      "categoryFullName": "Home & Garden > Decor > Throw Pillows",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689753718974",
+      "title": "RYAN SANDES BOOK - RUN.RISK.REWARD.",
+      "categoryId": "me-1",
+      "categoryName": "Books",
+      "categoryFullName": "Media > Books",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410461886",
+      "title": "White Ceramic Pot",
+      "categoryId": "hg-12-1-16",
+      "categoryName": "Pots & Planters",
+      "categoryFullName": "Home & Garden > Lawn & Garden > Gardening > Pots & Planters",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410724030",
+      "title": "Knitted Throw Pillows",
+      "categoryId": "hg-3-64",
+      "categoryName": "Throw Pillows",
+      "categoryFullName": "Home & Garden > Decor > Throw Pillows",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410592958",
+      "title": "Grey Sofa",
+      "categoryId": "fr-22",
+      "categoryName": "Sofas",
+      "categoryFullName": "Furniture > Sofas",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410363582",
+      "title": "Pink Armchair 2",
+      "categoryId": "fr-7-1-1",
+      "categoryName": "Armchairs",
+      "categoryFullName": "Furniture > Chairs > Armchairs, Recliners & Sleeper Chairs > Armchairs",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410789566",
+      "title": "Black Beanbag",
+      "categoryId": "fr-7-2",
+      "categoryName": "Bean Bag Chairs",
+      "categoryFullName": "Furniture > Chairs > Bean Bag Chairs",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410298046",
+      "title": "Antique Drawers",
+      "categoryId": "fr-4-13",
+      "categoryName": "Storage Chests",
+      "categoryFullName": "Furniture > Cabinets & Storage > Storage Chests",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410265278",
+      "title": "Cream Sofa",
+      "categoryId": "fr-22",
+      "categoryName": "Sofas",
+      "categoryFullName": "Furniture > Sofas",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410691262",
+      "title": "Yellow Sofa",
+      "categoryId": "fr-22-4",
+      "categoryName": "Loveseat Sofas",
+      "categoryFullName": "Furniture > Sofas > Loveseat Sofas",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410330814",
+      "title": "White Bed Clothes",
+      "categoryId": "hg-15-1-2",
+      "categoryName": "Bed Sheets",
+      "categoryFullName": "Home & Garden > Linens & Bedding > Bedding > Bed Sheets",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689681170622",
+      "title": "GENESIS",
+      "categoryId": "sg-4-14-1",
+      "categoryName": "Badminton",
+      "categoryFullName": "Sporting Goods > Outdoor Recreation > Outdoor Games > Badminton",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410625726",
+      "title": "Wooden outdoor slats",
+      "categoryId": "ha-2-10",
+      "categoryName": "Lumber & Sheet Stock",
+      "categoryFullName": "Hardware > Building Materials > Lumber & Sheet Stock",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689721606334",
+      "title": "CHROMA",
+      "categoryId": "ae-2-1-2",
+      "categoryName": "Art & Crafting Materials",
+      "categoryFullName": "Arts & Entertainment > Hobbies & Creative Arts > Arts & Crafts > Art & Crafting Materials",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410527422",
+      "title": "Gardening hand trowel",
+      "categoryId": "hg-12-1",
+      "categoryName": "Gardening",
+      "categoryFullName": "Home & Garden > Lawn & Garden > Gardening",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689677729982",
+      "title": "QUEST 4D FORCES 2 EN",
+      "categoryId": "sg-4-17",
+      "categoryName": "Winter Sports & Activities",
+      "categoryFullName": "Sporting Goods > Outdoor Recreation > Winter Sports & Activities",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689752604862",
+      "title": "SOFT VALVE COVER",
+      "categoryId": "sg-4-4-2",
+      "categoryName": "Bicycle Parts",
+      "categoryFullName": "Sporting Goods > Outdoor Recreation > Cycling > Bicycle Parts",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689697783998",
+      "title": "REELAX MOC 6.0",
+      "categoryId": "sg-4",
+      "categoryName": "Outdoor Recreation",
+      "categoryFullName": "Sporting Goods > Outdoor Recreation",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689683595454",
+      "title": "AERO BLAZE 3 GRVL",
+      "categoryId": "sg-1",
+      "categoryName": "Athletics",
+      "categoryFullName": "Sporting Goods > Athletics",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410756798",
+      "title": "Vanilla candle",
+      "categoryId": "hg-3-40-2",
+      "categoryName": "Candles",
+      "categoryFullName": "Home & Garden > Decor > Home Fragrances > Candles",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410494654",
+      "title": "Yellow watering can",
+      "categoryId": "hg-12-6",
+      "categoryName": "Watering & Irrigation",
+      "categoryFullName": "Home & Garden > Lawn & Garden > Watering & Irrigation",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8623575498942",
+      "title": "Galaxy Earrings 22222",
+      "categoryId": "el-6-3",
+      "categoryName": "Desktop Computers",
+      "categoryFullName": "Electronics > Computers > Desktop Computers",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689735172286",
+      "title": "GRAVEL SPEEDCROSS 2IN1 5\"",
+      "categoryId": null,
+      "categoryName": null,
+      "categoryFullName": null,
+      "reason": "no_category"
+    },
+    {
+      "productId": "8689737826494",
+      "title": "BONATTI TRAIL",
+      "categoryId": "sg-1",
+      "categoryName": "Athletics",
+      "categoryFullName": "Sporting Goods > Athletics",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689682579646",
+      "title": "AERO BLAZE 3 GRVL",
+      "categoryId": "sg-1",
+      "categoryName": "Athletics",
+      "categoryFullName": "Sporting Goods > Athletics",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689692606654",
+      "title": "TECHAMPHIBIAN 5",
+      "categoryId": "sg-4-1",
+      "categoryName": "Boating & Water Sports",
+      "categoryFullName": "Sporting Goods > Outdoor Recreation > Boating & Water Sports",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689692541118",
+      "title": "DRX DEFY GRVL",
+      "categoryId": null,
+      "categoryName": null,
+      "categoryFullName": null,
+      "reason": "no_category"
+    },
+    {
+      "productId": "8689735991486",
+      "title": "ACS 2",
+      "categoryId": "lb-9-8",
+      "categoryName": "Travel Pouches",
+      "categoryFullName": "Luggage & Bags > Luggage Accessories > Travel Pouches",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689686872254",
+      "title": "XT-PATHWAY 2 SATIN",
+      "categoryId": "sg-4-3-3",
+      "categoryName": "Climbing Apparel & Accessories",
+      "categoryFullName": "Sporting Goods > Outdoor Recreation > Climbing > Climbing Apparel & Accessories",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689695752382",
+      "title": "GLIDE MAX TR",
+      "categoryId": "sg-1",
+      "categoryName": "Athletics",
+      "categoryFullName": "Sporting Goods > Athletics",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689735303358",
+      "title": "ACS 2",
+      "categoryId": "lb-9-8",
+      "categoryName": "Travel Pouches",
+      "categoryFullName": "Luggage & Bags > Luggage Accessories > Travel Pouches",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689764270270",
+      "title": "PULSE RACE FLAG",
+      "categoryId": "hg-3-33",
+      "categoryName": "Flags & Windsocks",
+      "categoryFullName": "Home & Garden > Decor > Flags & Windsocks",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410658494",
+      "title": "Wooden Fence",
+      "categoryId": "ha-3-5",
+      "categoryName": "Garden Borders & Edging",
+      "categoryFullName": "Hardware > Fencing & Barriers > Garden Borders & Edging",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689788715198",
+      "title": "PULSE RACE FLAG",
+      "categoryId": "hg-3-32",
+      "categoryName": "Flag & Windsock Accessories",
+      "categoryFullName": "Home & Garden > Decor > Flag & Windsock Accessories",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8617410822334",
+      "title": "Bedside Table",
+      "categoryId": "hg",
+      "categoryName": "Home & Garden",
+      "categoryFullName": "Home & Garden",
+      "reason": "no_template"
+    },
+    {
+      "productId": "8689779736766",
+      "title": "OUTLINE",
+      "categoryId": null,
+      "categoryName": null,
+      "categoryFullName": null,
+      "reason": "no_category"
+    }
+  ]
+}

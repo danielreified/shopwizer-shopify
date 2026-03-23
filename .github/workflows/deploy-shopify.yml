@@ -1,0 +1,34 @@
+name: Deploy Shopify App
+
+on:
+  workflow_dispatch:
+
+env:
+  TURBO_TELEMETRY_DISABLED: '1'
+  SHOPIFY_CLI_PARTNERS_TOKEN: ${{ secrets.SHOPIFY_CLI_PARTNERS_TOKEN }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8.15.6
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Copy dev Shopify config
+        run: cp apps/app-remix/shopify.app.shopwizer-dev.tpl apps/app-remix/shopify.app.toml
+
+      - name: Deploy to Shopify
+        working-directory: apps/app-remix
+        run: pnpm shopify app deploy --force

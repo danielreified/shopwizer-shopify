@@ -1,0 +1,65 @@
+# ---------------------------------------------------------
+# 🧠 Python / FastAPI / ML project ignore file
+# ---------------------------------------------------------
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Unit test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+junit*.xml
+
+# Model artifacts
+models/*.json
+models/*.pkl
+models/*.bin
+*.onnx
+
+# Training data
+train/*.csv
+train/*.parquet
+data/
+datasets/
+tmp/
+output/
+logs/
+
+# Environment files
+.env
+.env.*.local
+*.env
+*.envrc
+
+# Jupyter / experiments
+*.ipynb_checkpoints
+*.ipynb
+notebooks/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# NodeJS (pnpm)
+node_modules/
+.pnpm-store/
+dist/
+build/
+
+# Docker / CI artifacts
+*.log
+*.pid
+docker-compose.override.yml
+__docker_build__/

@@ -1,0 +1,405 @@
+/* sw-modal.css - Quick Buy Modal Styles */
+
+/* ============================
+   BACKDROP & CONTAINER
+   ============================ */
+.sw-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: sw-modal-fade-in 0.2s ease-out;
+}
+
+@keyframes sw-modal-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sw-modal__container {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: sw-modal-slide-up 0.3s ease-out;
+}
+
+@keyframes sw-modal-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================
+   CLOSE BUTTON
+   ============================ */
+.sw-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.sw-modal__close:hover {
+  background: #f5f5f5;
+  transform: scale(1.05);
+}
+
+.sw-modal__close svg {
+  width: 20px;
+  height: 20px;
+  color: #333;
+}
+
+/* ============================
+   IMAGE SECTION
+   ============================ */
+.sw-modal__image {
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.sw-modal__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================
+   DETAILS SECTION
+   ============================ */
+.sw-modal__details {
+  padding: 32px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sw-modal__vendor {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666;
+}
+
+.sw-modal__title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  color: #111;
+}
+
+/* ============================
+   PRICE
+   ============================ */
+.sw-modal__price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.sw-modal__price-current {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+.sw-modal__price-compare {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* ============================
+   OPTION SELECTORS
+   ============================ */
+.sw-modal__option {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sw-modal__option-label {
+  font-size: 14px;
+  color: #333;
+}
+
+.sw-modal__option-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sw-modal__option-btn {
+  min-width: 44px;
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.sw-modal__option-btn:hover:not(.is-disabled) {
+  border-color: #111;
+}
+
+.sw-modal__option-btn.is-selected {
+  border-color: #111;
+  background: #111;
+  color: #fff;
+}
+
+.sw-modal__option-btn.is-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* Color Swatches */
+.sw-modal__option-btn.is-swatch {
+  width: 44px;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.sw-modal__option-btn.is-swatch.is-selected {
+  border-width: 2px;
+  background: #fff;
+}
+
+.sw-modal__swatch {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ============================
+   AVAILABILITY
+   ============================ */
+.sw-modal__availability {
+  font-size: 14px;
+}
+
+.sw-modal__in-stock {
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sw-modal__in-stock svg {
+  flex-shrink: 0;
+}
+
+.sw-modal__sold-out {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+/* ============================
+   QUANTITY SELECTOR
+   ============================ */
+.sw-modal__quantity {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.sw-modal__qty-btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.sw-modal__qty-btn:hover {
+  background: #f5f5f5;
+}
+
+.sw-modal__qty-input {
+  width: 50px;
+  height: 44px;
+  border: none;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  text-align: center;
+  font-size: 16px;
+  -moz-appearance: textfield;
+}
+
+.sw-modal__qty-input::-webkit-inner-spin-button,
+.sw-modal__qty-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* ============================
+   ADD TO CART BUTTON
+   ============================ */
+.sw-modal__add-btn {
+  width: 100%;
+  height: 52px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.sw-modal__add-btn:hover:not(:disabled) {
+  background: #333;
+}
+
+.sw-modal__add-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.sw-modal__add-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.sw-modal__add-btn.is-success {
+  background: #16a34a;
+}
+
+/* Button Spinner */
+.sw-modal__btn-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: sw-spin 0.6s linear infinite;
+}
+
+@keyframes sw-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================
+   LOADING & ERROR STATES
+   ============================ */
+.sw-modal__loading {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.sw-modal__spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #eee;
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: sw-spin 0.8s linear infinite;
+}
+
+.sw-modal__error {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #dc2626;
+  font-size: 16px;
+}
+
+/* ============================
+   MOBILE BOTTOM SHEET
+   ============================ */
+@media (max-width: 768px) {
+  .sw-modal__backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .sw-modal__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 45vh auto;
+    max-height: 95vh;
+    border-radius: 20px 20px 0 0;
+    animation: sw-modal-slide-up-mobile 0.3s ease-out;
+  }
+
+  @keyframes sw-modal-slide-up-mobile {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .sw-modal__image {
+    max-height: 45vh;
+  }
+
+  .sw-modal__details {
+    padding: 24px;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+
+  .sw-modal__loading,
+  .sw-modal__error {
+    grid-column: 1;
+    min-height: 200px;
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "@repo/service-jobs-worker",
+  "packageManager": "pnpm@8.15.6",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "node ../../scripts/esbuild-service.mjs",
+    "docker:build": "../../scripts/docker/build.sh",
+    "docker:push": "../../scripts/docker/push.sh",
+    "docker:deploy": "../../scripts/docker/deploy-ecs.sh",
+    "ecs:start": "../../scripts/ecs/service.sh start service-jobs-worker",
+    "ecs:stop": "../../scripts/ecs/service.sh stop service-jobs-worker",
+    "ecs:status": "../../scripts/ecs/service.sh status service-jobs-worker",
+    "ecs:logs": "../../scripts/ecs/service.sh logs service-jobs-worker",
+    "trigger:sqs": "tsx ../../scripts/trigger-sqs.ts JOB_QUEUE_URL",
+    "bundle:v2": "BUNDLE_V2_DRY_RUN=false tsx scripts/run-bundle-v2.ts",
+    "bundle:v2:dev-recommender": "BUNDLE_V2_DRY_RUN=false tsx scripts/run-bundle-v2.ts dev-recommender.myshopify.com",
+    "bundle:v2:single": "BUNDLE_V2_DRY_RUN=false tsx scripts/run-bundle-v2-single.ts",
+    "bundle:v2:preview": "tsx scripts/preview-bundle-v2.ts",
+    "bundle:v2:preview:dev-recommender": "tsx scripts/preview-bundle-v2.ts dev-recommender.myshopify.com",
+    "bundle:v2:compare": "tsx scripts/compare-bundle-v2.ts",
+    "bundle:v2:compare:dev-recommender": "tsx scripts/compare-bundle-v2.ts dev-recommender.myshopify.com",
+    "bundle:v2:compare:html": "tsx scripts/compare-bundle-v2-html.ts",
+    "bundle:v2:compare:html:dev-recommender": "tsx scripts/compare-bundle-v2-html.ts dev-recommender.myshopify.com",
+    "features:seed": "tsx scripts/seed-product-features.ts",
+    "features:seed:dev-recommender": "tsx scripts/seed-product-features.ts dev-recommender.myshopify.com",
+    "graphs:seed": "tsx scripts/seed-graphs.ts",
+    "graphs:seed:dev-recommender": "tsx scripts/seed-graphs.ts dev-recommender.myshopify.com",
+    "trigger:trending": "pnpm trigger:sqs TRENDING '{\"shopId\":\"https://test2227-2.myshopify.com\",\"force\":true}'",
+    "trigger:best-seller": "pnpm trigger:sqs BEST_SELLER '{\"shopId\":\"https://test2227-2.myshopify.com\",\"force\":true}'",
+    "trigger:currency": "pnpm trigger:sqs CURRENCY",
+    "test": "vitest run",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.878.0",
+    "@prisma/client": "6.18.0",
+    "@repo/event-toolkit": "*",
+    "@repo/prisma": "*",
+    "@repo/logger": "workspace:*",
+    "dotenv": "^17.2.1"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "*",
+    "eslint": "^8.57.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.4"
+  }
+}

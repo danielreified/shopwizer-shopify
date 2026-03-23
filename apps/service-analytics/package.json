@@ -1,0 +1,42 @@
+{
+  "name": "@repo/service-analytics",
+  "packageManager": "pnpm@8.15.6",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "node ../../scripts/esbuild-service.mjs",
+    "docker:build": "../../scripts/docker/build.sh",
+    "docker:push": "../../scripts/docker/push.sh",
+    "docker:deploy": "../../scripts/docker/deploy-ecs.sh",
+    "ecs:start": "../../scripts/ecs/service.sh start service-analytics",
+    "ecs:stop": "../../scripts/ecs/service.sh stop service-analytics",
+    "ecs:status": "../../scripts/ecs/service.sh status service-analytics",
+    "ecs:logs": "../../scripts/ecs/service.sh logs service-analytics",
+    "trigger:sqs": "tsx ../../scripts/trigger-sqs.ts ANALYTICS_QUEUE_URL",
+    "trigger:feature-hourly": "pnpm trigger:sqs FEATURE_HOURLY",
+    "trigger:feature-validate-daily": "pnpm trigger:sqs FEATURE_VALIDATE_DAILY",
+    "trigger:rail-hourly": "pnpm trigger:sqs RAIL_HOURLY",
+    "trigger:rail-validate-daily": "pnpm trigger:sqs RAIL_VALIDATE_DAILY",
+    "trigger:category-graph-90d": "pnpm trigger:sqs CATEGORY_GRAPH_REBUILD_90D",
+    "trigger:product-graph-90d": "pnpm trigger:sqs PRODUCT_GRAPH_REBUILD_90D",
+    "test": "vitest run",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@aws-sdk/client-athena": "^3.910.0",
+    "@aws-sdk/client-s3": "^3.878.0",
+    "@prisma/client": "6.18.0",
+    "@repo/event-toolkit": "*",
+    "@repo/prisma": "*",
+    "dotenv": "^17.2.1",
+    "@repo/logger": "workspace:*"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-sqs": "^3.637.0",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "*",
+    "eslint": "^8.57.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.4"
+  }
+}

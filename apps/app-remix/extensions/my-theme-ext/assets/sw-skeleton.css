@@ -1,0 +1,29 @@
+/* Skeleton Card */
+.sw-skel-card {
+    animation: recoPulse 1.2s ease-in-out infinite;
+  }
+  
+  .sw-skel-media {
+    width: 100%;
+    background: #eee;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+  }
+  
+  .sw-skel-line {
+    height: 12px;
+    background: #eee;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+  
+  .sw-skel-line.short {
+    width: 60%;
+  }
+  
+  /* Pulse animation */
+  @keyframes recoPulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+  

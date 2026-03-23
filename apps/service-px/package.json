@@ -1,0 +1,35 @@
+{
+  "name": "@repo/service-px",
+  "packageManager": "pnpm@8.15.6",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "node ../../scripts/esbuild-service.mjs",
+    "docker:build": "../../scripts/docker/build.sh",
+    "docker:push": "../../scripts/docker/push.sh",
+    "docker:deploy": "../../scripts/docker/deploy-ecs.sh",
+    "ecs:start": "../../scripts/ecs/service.sh start service-px",
+    "ecs:stop": "../../scripts/ecs/service.sh stop service-px",
+    "ecs:status": "../../scripts/ecs/service.sh status service-px",
+    "ecs:logs": "../../scripts/ecs/service.sh logs service-px",
+    "test": "vitest run",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.878.0",
+    "@prisma/client": "6.18.0",
+    "@repo/event-toolkit": "*",
+    "@repo/prisma": "*",
+    "@repo/logger": "workspace:*",
+    "dotenv": "^17.2.1",
+    "lz-string": "^1.5.0",
+    "parquets": "^0.10.10"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "*",
+    "eslint": "^8.57.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.4"
+  }
+}

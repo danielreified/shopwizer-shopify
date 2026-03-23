@@ -1,0 +1,11 @@
+{
+  "inputDir": "/Users/daniellourie/Projects/shopwise/platform/packages/shopify-category-generator/data",
+  "outputDir": "/Users/daniellourie/Projects/shopwise/platform/packages/shopify-category-generator/outputs/run-2025-12-20_20-10-46",
+  "fileCount": 26,
+  "nodeCount": 10710,
+  "roots": 26,
+  "leaves": 8610,
+  "depthRange": [0, 7],
+  "missingChildRefs": 0,
+  "generatedAt": "2025-12-20T18:10:46.133Z"
+}

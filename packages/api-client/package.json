@@ -1,0 +1,45 @@
+{
+  "name": "@repo/api-client",
+  "version": "0.0.1",
+  "description": "Rate-limited API clients for Shopify GraphQL and OpenAI",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./shopify": {
+      "import": "./dist/shopify/index.mjs",
+      "require": "./dist/shopify/index.js",
+      "types": "./dist/shopify/index.d.ts"
+    },
+    "./openai": {
+      "import": "./dist/openai/index.mjs",
+      "require": "./dist/openai/index.js",
+      "types": "./dist/openai/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "openai": "^4.77.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "^8.57.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

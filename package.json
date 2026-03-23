@@ -1,0 +1,53 @@
+{
+  "name": "shopwise-platform",
+  "version": "1.0.0-rc.1",
+  "private": true,
+  "packageManager": "pnpm@8.15.6",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "dev:focus": "./scripts/dev-focus.sh",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,cjs,mjs,json,css,scss,md,yaml,yml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,cjs,mjs,json,css,scss,md,yaml,yml}\"",
+    "typecheck": "turbo run check-types",
+    "db:generate": "turbo run generate --filter=@repo/prisma",
+    "db:migrate": "turbo run migrate:deploy --filter=@repo/prisma",
+    "db:studio": "pnpm --filter @repo/prisma run studio",
+    "db:reset": "pnpm --filter @repo/prisma run db:reset",
+    "db:tunnel:start": "bash -c './scripts/db-tunnel.sh $0 start'",
+    "db:tunnel:stop": "bash -c './scripts/db-tunnel.sh $0 stop'",
+    "db:tunnel:status": "bash -c './scripts/db-tunnel.sh $0 status'",
+    "test": "turbo run test",
+    "test:watch": "vitest --watch",
+    "test:coverage": "turbo run test -- --coverage",
+    "test:e2e": "pnpm --filter e2e test",
+    "test:e2e:ui": "pnpm --filter e2e test:ui",
+    "claude:tmux": "./scripts/claude-tmux.sh",
+    "npm:clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' + && rm -rf pnpm-lock.yaml",
+    "npm:reinstall": "pnpm run clean && pnpm install --force && pnpm -r rebuild",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.2",
+    "@types/node": "^24.3.0",
+    "@vitest/coverage-v8": "^4.0.18",
+    "@vitest/ui": "^4.0.18",
+    "esbuild": "^0.24.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "semantic-release": "^24.2.9",
+    "tailwindcss": "^4.1.11",
+    "turbo": "^2.5.5",
+    "vitest": "^4.0.18",
+    "vitest-mock-extended": "^3.1.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "18.3.1",
+      "react-dom": "18.3.1"
+    }
+  }
+}

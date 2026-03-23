@@ -1,0 +1,21 @@
+{
+  "name": "@repo/my-web-pixel",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --format=esm --outfile=dist/main.js --minify",
+    "dev": "esbuild src/index.ts --bundle --format=esm --outfile=dist/main.js --watch",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@shopify/web-pixels-extension": "^2.10.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.3",
+    "typescript": "^5.4.0",
+    "rimraf": "^6.0.1"
+  }
+}

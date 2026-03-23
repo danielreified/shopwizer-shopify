@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopwizer — Site Slices</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+  :root {
+    --cream: #E3DAC9;
+    --cream-light: #F0EBE3;
+    --cream-dark: #D4C9B5;
+    --black: #141414;
+    --black-soft: #1A1A1A;
+    --gray-950: #181818;
+    --gray-900: #1E1E1E;
+    --gray-800: #282828;
+    --gray-700: #444;
+    --gray-500: #666;
+    --gray-400: #888;
+    --gray-300: #aaa;
+    --gray-200: #ccc;
+    --accent: #8B7355;
+    --sage: #7A8B6F;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ===== SLICE SEPARATOR ===== */
+  .slice-divider {
+    padding: 60px 80px;
+    border-top: 1px solid rgba(227,218,201,0.06);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .slice-divider .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-700);
+    letter-spacing: 2px;
+  }
+  .slice-divider .label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: var(--gray-500);
+    text-transform: uppercase;
+  }
+  .slice-divider .line {
+    flex: 1;
+    height: 1px;
+    background: rgba(227,218,201,0.06);
+  }
+
+  /* ============================================================ */
+  /* SLICE 1: HERO — "YOUR PRODUCTS, BETTER ARRANGED"             */
+  /* Full-width fashion editorial hero with product grid overlay   */
+  /* ============================================================ */
+  .hero-slice {
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    padding: 140px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 28px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+  .hero-nav .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero-nav .nav-logo svg { width: 28px; height: 28px; }
+  .hero-nav .nav-logo span {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--cream);
+  }
+  .hero-nav .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .hero-nav .nav-links li {
+    font-size: 13px;
+    color: var(--gray-400);
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  .hero-nav .nav-links li:hover { color: var(--cream); }
+  .hero-nav .nav-cta {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--black);
+    background: var(--cream);
+    padding: 10px 24px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  .hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 68px;
+    line-height: 1.05;
+    margin-bottom: 28px;
+    max-width: 560px;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--cream-dark);
+  }
+
+  .hero-body {
+    font-size: 17px;
+    color: var(--gray-300);
+    line-height: 1.7;
+    max-width: 440px;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .btn-primary {
+    background: var(--cream);
+    color: var(--black);
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 32px rgba(227,218,201,0.15);
+  }
+  .btn-ghost {
+    color: var(--gray-300);
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(227,218,201,0.12);
+    border-radius: 8px;
+    background: none;
+    cursor: pointer;
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .btn-ghost:hover {
+    border-color: rgba(227,218,201,0.3);
+    color: var(--cream);
+  }
+
+  .hero-stats {
+    margin-top: 64px;
+    display: flex;
+    gap: 48px;
+  }
+  .hero-stat .stat-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--cream);
+    letter-spacing: -0.5px;
+  }
+  .hero-stat .stat-label {
+    font-size: 11px;
+    color: var(--gray-500);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    gap: 3px;
+  }
+  .hero-image-grid .img-cell {
+    overflow: hidden;
+    position: relative;
+  }
+  .hero-image-grid .img-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85) saturate(0.9);
+    transition: transform 0.6s ease, filter 0.6s ease;
+  }
+  .hero-image-grid .img-cell:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.95) saturate(1);
+  }
+  .hero-image-grid .img-cell .img-tag {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    padding: 6px 12px;
+    border-radius: 4px;
+  }
+  .hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to top, var(--black), transparent);
+    z-index: 1;
+  }
+
+  /* ============================================================ */
+  /* SLICE 2: BUNDLE BUILDER — Fashion bundle showcase             */
+  /* Shows a "customers also bought" bundle with real products     */
+  /* ============================================================ */
+  .bundle-slice {
+    padding: 120px 80px;
+    background: var(--gray-950);
+  }
+
+  .bundle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+  }
+  .bundle-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    line-height: 1.1;
+  }
+  .bundle-header .bundle-tag {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--sage);
+    text-transform: uppercase;
+    border: 1px solid rgba(122,139,111,0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+  }
+
+  .bundle-container {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr 48px 1fr 60px auto;
+    align-items: center;
+    gap: 0;
+  }
+
+  .bundle-product {
+    background: var(--gray-900);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(227,218,201,0.04);
+    transition: border-color 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+  .bundle-product:hover {
+    border-color: rgba(227,218,201,0.12);
+    transform: translateY(-4px);
+  }
+  .bundle-product .product-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.92) saturate(0.9);
+  }
+  .bundle-product .product-info {
+    padding: 20px 24px;
+  }
+  .bundle-product .product-brand {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    margin-bottom: 6px;
+  }
+  .bundle-product .product-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--cream);
+  }
+  .bundle-product .product-price {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--gray-300);
+  }
+  .bundle-product .product-match {
+    margin-top: 12px;
+    font-size: 11px;
+    color: var(--sage);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .bundle-product .product-match .match-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--sage);
+  }
+
+  .bundle-plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--gray-700);
+    font-weight: 300;
+  }
+
+  .bundle-equals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+  }
+  .bundle-equals span {
+    font-size: 20px;
+    color: var(--gray-500);
+    font-weight: 300;
+  }
+
+  .bundle-summary {
+    background: var(--gray-900);
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid rgba(122,139,111,0.15);
+    min-width: 220px;
+  }
+  .bundle-summary .summary-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    margin-bottom: 16px;
+  }
+  .bundle-summary .summary-original {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--gray-500);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+  .bundle-summary .summary-price {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .bundle-summary .summary-save {
+    font-size: 12px;
+    color: var(--sage);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+  .bundle-summary .summary-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--cream);
+    color: var(--black);
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .bundle-summary .summary-btn:hover { transform: translateY(-1px); }
+  .bundle-summary .summary-attach {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-500);
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  /* ============================================================ */
+  /* SLICE 3: MERCHANDISING GRID — AI-curated product grid        */
+  /* Shows "recommended for you" with smart product layout        */
+  /* ============================================================ */
+  .merch-slice {
+    padding: 120px 80px;
+    background: var(--cream-light);
+    color: var(--black);
+  }
+
+  .merch-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+  }
+  .merch-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--black);
+    line-height: 1.1;
+  }
+  .merch-header p {
+    font-size: 15px;
+    color: var(--gray-500);
+    max-width: 380px;
+    text-align: right;
+    line-height: 1.6;
+  }
+
+  .merch-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
+
+  .merch-card {
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  .merch-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  }
+  .merch-card.featured {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .merch-card .card-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.9);
+  }
+  .merch-card.featured .card-image {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+  .merch-card .card-body {
+    padding: 16px 20px;
+  }
+  .merch-card.featured .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    padding: 40px 28px 28px;
+    color: white;
+  }
+  .merch-card.featured {
+    position: relative;
+    overflow: hidden;
+  }
+  .merch-card.featured .card-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .merch-card.featured .card-body {
+    position: relative;
+    margin-top: 360px;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 60%, transparent);
+    padding: 60px 28px 28px;
+    z-index: 1;
+  }
+
+  .merch-card .card-brand {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    margin-bottom: 4px;
+  }
+  .merch-card.featured .card-brand { color: rgba(255,255,255,0.5); }
+  .merch-card .card-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 6px;
+  }
+  .merch-card.featured .card-name {
+    font-size: 18px;
+    color: white;
+  }
+  .merch-card .card-price {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--gray-500);
+  }
+  .merch-card.featured .card-price { color: rgba(255,255,255,0.6); }
+  .merch-card .card-score {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .score-bar {
+    width: 48px;
+    height: 3px;
+    background: rgba(0,0,0,0.08);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .score-bar .fill {
+    height: 100%;
+    border-radius: 2px;
+    background: var(--sage);
+  }
+  .merch-card.featured .score-bar { background: rgba(255,255,255,0.15); }
+  .merch-card.featured .card-score { color: rgba(255,255,255,0.5); }
+
+  .merch-insight {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 32px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  }
+  .merch-insight svg { width: 32px; height: 32px; flex-shrink: 0; }
+  .merch-insight .insight-text {
+    font-size: 14px;
+    color: var(--gray-500);
+    line-height: 1.5;
+  }
+  .merch-insight .insight-text strong {
+    color: var(--black);
+    font-weight: 600;
+  }
+
+  /* ============================================================ */
+  /* SLICE 4: SOCIAL PROOF / RESULTS BAR                          */
+  /* ============================================================ */
+  .results-slice {
+    padding: 80px;
+    background: var(--black);
+    border-top: 1px solid rgba(227,218,201,0.06);
+    border-bottom: 1px solid rgba(227,218,201,0.06);
+  }
+  .results-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+  .result-item .result-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 56px;
+    color: var(--cream);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .result-item .result-label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--gray-500);
+    text-transform: uppercase;
+  }
+
+  /* ============================================================ */
+  /* SLICE 5: CROSS-SELL WIDGET — In-store recommendation          */
+  /* ============================================================ */
+  .widget-slice {
+    padding: 120px 80px;
+    background: var(--black);
+  }
+
+  .widget-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .widget-text h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+  .widget-text p {
+    font-size: 16px;
+    color: var(--gray-300);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 460px;
+  }
+  .widget-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .widget-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--gray-300);
+  }
+  .widget-features li .feat-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cream);
+    flex-shrink: 0;
+  }
+
+  .widget-preview {
+    background: var(--gray-900);
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid rgba(227,218,201,0.06);
+  }
+  .widget-preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .widget-preview-header h4 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .widget-preview-header .powered {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--gray-700);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .widget-preview-header .powered svg { width: 12px; height: 12px; }
+
+  .widget-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .widget-item {
+    display: flex;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--gray-800);
+    align-items: center;
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+  .widget-item:hover { background: rgba(227,218,201,0.06); }
+  .widget-item img {
+    width: 64px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    filter: saturate(0.85);
+  }
+  .widget-item .item-info { flex: 1; }
+  .widget-item .item-name {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+  .widget-item .item-price {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--gray-400);
+  }
+  .widget-item .item-match {
+    font-size: 10px;
+    color: var(--sage);
+    margin-top: 4px;
+  }
+  .widget-item .item-add {
+    padding: 8px 16px;
+    border: 1px solid rgba(227,218,201,0.12);
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--cream);
+    background: none;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .widget-item .item-add:hover {
+    background: rgba(227,218,201,0.08);
+    border-color: rgba(227,218,201,0.25);
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow { animation: fadeIn 0.8s ease 0.2s both; }
+  .hero-title { animation: fadeIn 0.8s ease 0.4s both; }
+  .hero-body { animation: fadeIn 0.8s ease 0.55s both; }
+  .hero-actions { animation: fadeIn 0.8s ease 0.7s both; }
+  .hero-stats { animation: fadeIn 0.8s ease 0.85s both; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- SLICE 1: HERO                                                 -->
+<!-- ============================================================ -->
+<section class="hero-slice">
+  <nav class="hero-nav">
+    <div class="nav-logo">
+      <svg viewBox="-170 -170 340 340">
+        <g transform="rotate(45)">
+          <path d="M -3,-115 C -40,-115 -80,-100 -95,-85 C -100,-80 -115,-40 -115,-3 L -40,0 Q 0,0 0,-40 Z" fill="#E3DAC9"/>
+          <path d="M 115,-3 C 115,-40 100,-80 85,-95 C 80,-100 40,-115 3,-115 L 0,-40 Q 0,0 40,0 Z" fill="#E3DAC9"/>
+          <path d="M 3,115 C 40,115 80,100 95,85 C 100,80 115,40 115,3 L 40,0 Q 0,0 0,40 Z" fill="#E3DAC9"/>
+          <path d="M -115,3 C -115,40 -100,80 -85,95 C -80,100 -40,115 -3,115 L 0,40 Q 0,0 -40,0 Z" fill="#E3DAC9"/>
+        </g>
+      </svg>
+      <span>shopwizer</span>
+    </div>
+    <ul class="nav-links">
+      <li>Product</li>
+      <li>Pricing</li>
+      <li>Docs</li>
+      <li>Blog</li>
+    </ul>
+    <button class="nav-cta">Start free trial</button>
+  </nav>
+
+  <div class="hero-left">
+    <div class="hero-eyebrow">Shopify Merchandising</div>
+    <h1 class="hero-title">Your products, <em>better</em> arranged.</h1>
+    <p class="hero-body">Shopwizer analyzes purchase patterns, browsing behavior, and inventory to place the right products in front of the right customers — automatically.</p>
+    <div class="hero-actions">
+      <button class="btn-primary">Start free trial</button>
+      <button class="btn-ghost">Watch demo</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="stat-num">+23%</div>
+        <div class="stat-label">Avg. AOV lift</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">4.2×</div>
+        <div class="stat-label">Bundle attach rate</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">14 days</div>
+        <div class="stat-label">To measurable results</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-image-grid">
+      <div class="img-cell">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&h=750&fit=crop&q=80" alt="Fashion editorial 1" loading="lazy">
+        <span class="img-tag">Trending now</span>
+      </div>
+      <div class="img-cell">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=750&fit=crop&q=80" alt="Fashion editorial 2" loading="lazy">
+        <span class="img-tag">New arrivals</span>
+      </div>
+      <div class="img-cell">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=750&fit=crop&q=80" alt="Fashion editorial 3" loading="lazy">
+        <span class="img-tag">Curated</span>
+      </div>
+      <div class="img-cell">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=750&fit=crop&q=80" alt="Fashion editorial 4" loading="lazy">
+        <span class="img-tag">Best sellers</span>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+  </div>
+</section>
+
+<div class="slice-divider">
+  <span class="num">02</span>
+  <span class="label">Smart Bundles</span>
+  <span class="line"></span>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLICE 2: BUNDLE BUILDER                                       -->
+<!-- ============================================================ -->
+<section class="bundle-slice">
+  <div class="bundle-header">
+    <h2>Bundles that<br>sell themselves</h2>
+    <span class="bundle-tag">↑ 31% attach rate</span>
+  </div>
+
+  <div class="bundle-container">
+    <!-- Product 1 -->
+    <div class="bundle-product">
+      <img class="product-img" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=530&fit=crop&q=80" alt="Wool overcoat" loading="lazy">
+      <div class="product-info">
+        <div class="product-brand">Studio Collection</div>
+        <div class="product-name">Wool Overcoat</div>
+        <div class="product-price">$289</div>
+        <div class="product-match"><span class="match-dot"></span> Primary item</div>
+      </div>
+    </div>
+
+    <div class="bundle-plus">+</div>
+
+    <!-- Product 2 -->
+    <div class="bundle-product">
+      <img class="product-img" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=530&fit=crop&q=80" alt="Cashmere scarf" loading="lazy">
+      <div class="product-info">
+        <div class="product-brand">Studio Collection</div>
+        <div class="product-name">Cashmere Scarf</div>
+        <div class="product-price">$95</div>
+        <div class="product-match"><span class="match-dot"></span> 78% co-purchase</div>
+      </div>
+    </div>
+
+    <div class="bundle-plus">+</div>
+
+    <!-- Product 3 -->
+    <div class="bundle-product">
+      <img class="product-img" src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=400&h=530&fit=crop&q=80" alt="Leather gloves" loading="lazy">
+      <div class="product-info">
+        <div class="product-brand">Studio Collection</div>
+        <div class="product-name">Leather Gloves</div>
+        <div class="product-price">$68</div>
+        <div class="product-match"><span class="match-dot"></span> 54% co-purchase</div>
+      </div>
+    </div>
+
+    <div class="bundle-equals"><span>=</span></div>
+
+    <!-- Bundle Summary -->
+    <div class="bundle-summary">
+      <div class="summary-label">Bundle price</div>
+      <div class="summary-original">$452.00</div>
+      <div class="summary-price">$389</div>
+      <div class="summary-save">Save $63 (14%)</div>
+      <button class="summary-btn">Add bundle to cart</button>
+      <div class="summary-attach">31% of customers add this</div>
+    </div>
+  </div>
+</section>
+
+<div class="slice-divider">
+  <span class="num">03</span>
+  <span class="label">Merchandising Grid</span>
+  <span class="line"></span>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLICE 3: MERCHANDISING GRID                                   -->
+<!-- ============================================================ -->
+<section class="merch-slice">
+  <div class="merch-header">
+    <h2>Curated for <em style="font-family: DM Serif Display; font-style: italic;">each</em> customer</h2>
+    <p>Shopwizer rearranges your product grid based on what each visitor is most likely to buy.</p>
+  </div>
+
+  <div class="merch-grid">
+    <!-- Featured large card -->
+    <div class="merch-card featured">
+      <img class="card-image" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&h=1000&fit=crop&q=80" alt="Featured product" loading="lazy">
+      <div class="card-body">
+        <div class="card-brand">Maison Moderne</div>
+        <div class="card-name">Tailored Blazer — Oatmeal</div>
+        <div class="card-price">$345</div>
+        <div class="card-score">
+          <div class="score-bar"><div class="fill" style="width: 94%"></div></div>
+          94% match
+        </div>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1434389677669-e08b4cda3a99?w=400&h=530&fit=crop&q=80" alt="Product" loading="lazy">
+      <div class="card-body">
+        <div class="card-brand">Studio</div>
+        <div class="card-name">Silk Midi Skirt</div>
+        <div class="card-price">$185</div>
+        <div class="card-score">
+          <div class="score-bar"><div class="fill" style="width: 87%"></div></div>
+          87% match
+        </div>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=530&fit=crop&q=80" alt="Product" loading="lazy">
+      <div class="card-body">
+        <div class="card-brand">Essentials</div>
+        <div class="card-name">Cotton Turtleneck</div>
+        <div class="card-price">$89</div>
+        <div class="card-score">
+          <div class="score-bar"><div class="fill" style="width: 82%"></div></div>
+          82% match
+        </div>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=530&fit=crop&q=80" alt="Product" loading="lazy">
+      <div class="card-body">
+        <div class="card-brand">Artisan</div>
+        <div class="card-name">Leather Tote Bag</div>
+        <div class="card-price">$240</div>
+        <div class="card-score">
+          <div class="score-bar"><div class="fill" style="width: 76%"></div></div>
+          76% match
+        </div>
+      </div>
+    </div>
+
+    <div class="merch-card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=530&fit=crop&q=80" alt="Product" loading="lazy">
+      <div class="card-body">
+        <div class="card-brand">Sole</div>
+        <div class="card-name">Suede Ankle Boots</div>
+        <div class="card-price">$265</div>
+        <div class="card-score">
+          <div class="score-bar"><div class="fill" style="width: 71%"></div></div>
+          71% match
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="merch-insight">
+    <svg viewBox="-170 -170 340 340">
+      <g transform="rotate(45)">
+        <path d="M -3,-115 C -40,-115 -80,-100 -95,-85 C -100,-80 -115,-40 -115,-3 L -40,0 Q 0,0 0,-40 Z" fill="#141414"/>
+        <path d="M 115,-3 C 115,-40 100,-80 85,-95 C 80,-100 40,-115 3,-115 L 0,-40 Q 0,0 40,0 Z" fill="#141414"/>
+        <path d="M 3,115 C 40,115 80,100 95,85 C 100,80 115,40 115,3 L 40,0 Q 0,0 0,40 Z" fill="#141414"/>
+        <path d="M -115,3 C -115,40 -100,80 -85,95 C -80,100 -40,115 -3,115 L 0,40 Q 0,0 -40,0 Z" fill="#141414"/>
+      </g>
+    </svg>
+    <div class="insight-text"><strong>Shopwizer insight:</strong> This visitor browsed blazers and midi skirts in the last 7 days. Grid reordered to show highest-converting items first — projected <strong>+34% conversion lift</strong> vs. default sort.</div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLICE 4: RESULTS BAR                                          -->
+<!-- ============================================================ -->
+<section class="results-slice">
+  <div class="results-inner">
+    <div class="result-item">
+      <div class="result-num">+23%</div>
+      <div class="result-label">Average order value</div>
+    </div>
+    <div class="result-item">
+      <div class="result-num">3.8×</div>
+      <div class="result-label">Return on spend</div>
+    </div>
+    <div class="result-item">
+      <div class="result-num">2,400+</div>
+      <div class="result-label">Shopify stores</div>
+    </div>
+    <div class="result-item">
+      <div class="result-num">14 days</div>
+      <div class="result-label">To first results</div>
+    </div>
+  </div>
+</section>
+
+<div class="slice-divider">
+  <span class="num">05</span>
+  <span class="label">Cross-Sell Widget</span>
+  <span class="line"></span>
+</div>
+
+<!-- ============================================================ -->
+<!-- SLICE 5: CROSS-SELL WIDGET                                    -->
+<!-- ============================================================ -->
+<section class="widget-slice">
+  <div class="widget-layout">
+    <div class="widget-text">
+      <h2>The widget your customers don't ignore</h2>
+      <p>Most "recommended products" widgets get scrolled past. Shopwizer's recommendations are based on real purchase correlation data — not random products from the same category.</p>
+      <ul class="widget-features">
+        <li><span class="feat-dot"></span> Trained on your actual purchase history</li>
+        <li><span class="feat-dot"></span> Updates in real-time as inventory changes</li>
+        <li><span class="feat-dot"></span> Inherits your theme's design automatically</li>
+        <li><span class="feat-dot"></span> A/B tested against your existing setup</li>
+      </ul>
+    </div>
+
+    <div class="widget-preview">
+      <div class="widget-preview-header">
+        <h4>Customers also bought</h4>
+        <span class="powered">
+          <svg viewBox="-170 -170 340 340">
+            <g transform="rotate(45)">
+              <path d="M -3,-115 C -40,-115 -80,-100 -95,-85 C -100,-80 -115,-40 -115,-3 L -40,0 Q 0,0 0,-40 Z" fill="#666"/>
+              <path d="M 115,-3 C 115,-40 100,-80 85,-95 C 80,-100 40,-115 3,-115 L 0,-40 Q 0,0 40,0 Z" fill="#666"/>
+              <path d="M 3,115 C 40,115 80,100 95,85 C 100,80 115,40 115,3 L 40,0 Q 0,0 0,40 Z" fill="#666"/>
+              <path d="M -115,3 C -115,40 -100,80 -85,95 C -80,100 -40,115 -3,115 L 0,40 Q 0,0 -40,0 Z" fill="#666"/>
+            </g>
+          </svg>
+          Powered by Shopwizer
+        </span>
+      </div>
+
+      <div class="widget-items">
+        <div class="widget-item">
+          <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=128&h=160&fit=crop&q=80" alt="Scarf" loading="lazy">
+          <div class="item-info">
+            <div class="item-name">Cashmere Wrap Scarf</div>
+            <div class="item-price">$95</div>
+            <div class="item-match">78% of buyers add this</div>
+          </div>
+          <button class="item-add">+ Add</button>
+        </div>
+        <div class="widget-item">
+          <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=128&h=160&fit=crop&q=80" alt="Gloves" loading="lazy">
+          <div class="item-info">
+            <div class="item-name">Leather Gloves — Black</div>
+            <div class="item-price">$68</div>
+            <div class="item-match">54% of buyers add this</div>
+          </div>
+          <button class="item-add">+ Add</button>
+        </div>
+        <div class="widget-item">
+          <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=128&h=160&fit=crop&q=80" alt="Bag" loading="lazy">
+          <div class="item-info">
+            <div class="item-name">Leather Crossbody Bag</div>
+            <div class="item-price">$240</div>
+            <div class="item-match">41% of buyers add this</div>
+          </div>
+          <button class="item-add">+ Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

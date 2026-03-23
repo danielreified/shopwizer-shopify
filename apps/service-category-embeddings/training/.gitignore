@@ -1,0 +1,15 @@
+# Training data (large files)
+*.jsonl.gz
+*.jsonl
+*.gz
+*.pkl
+*.txt
+training_dataset.json
+category_sentences.pkl
+sentences.pkl
+
+# Data directory entirely
+data/
+
+# Keep the mapping (it's small and useful)
+# category_map.json

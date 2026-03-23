@@ -1,0 +1,47 @@
+{
+  "family": "${ECS_SERVICE_FAMILY_NAME}",
+  "executionRoleArn": "${ECS_SERVICE_EXECUTION_ARN}",
+  "taskRoleArn": "${ECS_SERVICE_CONTAINER_TASK_ARN}",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "containerDefinitions": [
+    {
+      "name": "${ECS_SERVICE_CONTAINER_NAME}",
+      "image": "registry.gitlab.com/shopwise/platform/service-products:${ECS_SERVICE_IMAGE_VERSION}",
+      "essential": true,
+      "healthCheck": {
+        "command": ["CMD-SHELL", "curl -f http://localhost:3000/health || exit 1"],
+        "interval": 60,
+        "timeout": 10,
+        "retries": 4,
+        "startPeriod": 100
+      },
+      "repositoryCredentials": {
+        "credentialsParameter": "${ECS_SERVICE_GITLAB_CREDENTIALS}"
+      },
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "secrets": [
+        {
+          "name": "XXX",
+          "valueFrom": "${XXX}"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "${ECS_SERVICE_LOG_GROUP}",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs-stream"
+        }
+      }
+    }
+  ]
+}

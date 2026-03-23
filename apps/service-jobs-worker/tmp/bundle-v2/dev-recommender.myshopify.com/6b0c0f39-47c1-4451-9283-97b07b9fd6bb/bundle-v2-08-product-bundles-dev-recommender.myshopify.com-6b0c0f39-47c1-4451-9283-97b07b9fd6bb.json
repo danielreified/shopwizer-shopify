@@ -1,0 +1,126 @@
+{
+  "runId": "6b0c0f39-47c1-4451-9283-97b07b9fd6bb",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-07T16:11:13.514Z",
+  "generatedAt": "2026-02-07T16:11:23.101Z",
+  "summary": {
+    "totalProducts": 1,
+    "withCategory": 1,
+    "productsWithBundles": 1,
+    "bundlesBuilt": 3,
+    "bundlesFailed": 0,
+    "avgBundlesPerProduct": 3,
+    "avgTargetsPerBundle": 3,
+    "avgFallbackAttempts": 0,
+    "graphPickProbability": 0.7,
+    "templateTargets": 3,
+    "bundlesPerProductTarget": 3
+  },
+  "bundles": [
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 1,
+      "templateId": "aa-1-13-8-p4",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-12",
+          "productId": "8689733664958",
+          "title": "WAYFARER ZIP OFF",
+          "source": "pool",
+          "weight": 0.4386,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689765286078",
+          "title": "BONATTI TRAIL",
+          "source": "pool",
+          "weight": 0.7255,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "productId": "8689763778750",
+          "title": "GRAVEL KNIT",
+          "source": "pool",
+          "weight": 0.1407,
+          "tier": 1
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 2,
+      "templateId": "aa-1-13-8-p2",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-2-17",
+          "productId": "8689756176574",
+          "title": "ADJUSTABLE",
+          "source": "pool",
+          "weight": 0.5697,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "productId": "8689732845758",
+          "title": "ESSENTIAL LIGHTWARM",
+          "source": "pool",
+          "weight": 0.6897,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "productId": "8689734385854",
+          "title": "CROSS RUN",
+          "source": "pool",
+          "weight": 0.2566,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 3,
+      "templateId": "aa-1-13-8-p5",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689779966142",
+          "title": "GRAVEL FULL SEND",
+          "source": "pool",
+          "weight": 0.3738,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-18",
+          "productId": "8689759617214",
+          "title": "COFFEE RUNNER",
+          "source": "pool",
+          "weight": 0.4897,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "productId": "8689689395390",
+          "title": "XT-EVR",
+          "source": "pool",
+          "weight": 0.3779,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    }
+  ]
+}

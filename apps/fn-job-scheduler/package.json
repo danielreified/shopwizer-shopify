@@ -1,0 +1,29 @@
+{
+  "name": "@repo/fn-job-scheduler",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsx ../../scripts/lambda/build.ts --name fn-job-scheduler",
+    "clean": "rm -rf .lambda",
+    "local": "DEBUG=1 IS_LOCAL=true tsx src/index.ts",
+    "lambda:upload": "../../scripts/lambda/upload.sh",
+    "lambda:deploy": "../../scripts/lambda/deploy.sh",
+    "test": "vitest run",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.955.0",
+    "@aws-sdk/client-sqs": "^3.637.0",
+    "@prisma/client": "6.18.0",
+    "@repo/logger": "workspace:*"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@types/aws-lambda": "^8.10.152",
+    "@types/node": "^24.3.0",
+    "esbuild": "^0.25.9",
+    "eslint": "^8.57.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}

@@ -1,0 +1,6 @@
+name = "App Remix"
+roles = ["frontend", "backend"]
+webhooks_path = "/webhooks/app/uninstalled"
+
+[commands]
+dev = "npm exec react-router dev"

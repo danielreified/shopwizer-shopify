@@ -1,0 +1,6 @@
+packages:
+  - 'apps/*'
+  - 'apps/*/extensions/*'
+  - 'apps/app-remix/extensions/*'
+  - 'packages/*'
+  - 'e2e'

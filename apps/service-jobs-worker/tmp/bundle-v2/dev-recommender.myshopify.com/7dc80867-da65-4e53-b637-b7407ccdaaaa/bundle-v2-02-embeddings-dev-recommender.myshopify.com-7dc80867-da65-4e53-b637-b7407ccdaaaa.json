@@ -1,0 +1,857 @@
+{
+  "runId": "7dc80867-da65-4e53-b637-b7407ccdaaaa",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-07T15:26:01.231Z",
+  "generatedAt": "2026-02-07T15:26:06.162Z",
+  "summary": {
+    "totalSources": 105,
+    "successCount": 0,
+    "errorCount": 105,
+    "avgResults": 0,
+    "topN": 40,
+    "timeoutMs": 5000,
+    "concurrency": 5
+  },
+  "embeddings": [
+    {
+      "sourceCategoryId": "aa-8-1",
+      "sourceName": "Athletic Shoes",
+      "sourceFullName": "Apparel & Accessories > Shoes > Athletic Shoes",
+      "sourceCount": 143,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-10",
+      "sourceName": "Outerwear",
+      "sourceFullName": "Apparel & Accessories > Clothing > Outerwear",
+      "sourceCount": 76,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-2",
+      "sourceName": "Camping & Hiking",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Camping & Hiking",
+      "sourceCount": 69,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-13",
+      "sourceName": "Clothing Tops",
+      "sourceFullName": "Apparel & Accessories > Clothing > Clothing Tops",
+      "sourceCount": 93,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-2-17",
+      "sourceName": "Hats",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Hats",
+      "sourceCount": 46,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-14",
+      "sourceName": "Shorts",
+      "sourceFullName": "Apparel & Accessories > Clothing > Shorts",
+      "sourceCount": 45,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-10-2",
+      "sourceName": "Coats & Jackets",
+      "sourceFullName": "Apparel & Accessories > Clothing > Outerwear > Coats & Jackets",
+      "sourceCount": 41,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-1",
+      "sourceName": "Activewear",
+      "sourceFullName": "Apparel & Accessories > Clothing > Activewear",
+      "sourceCount": 37,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-18",
+      "sourceName": "Socks",
+      "sourceFullName": "Apparel & Accessories > Clothing > Socks",
+      "sourceCount": 36,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-13-8",
+      "sourceName": "T-Shirts",
+      "sourceFullName": "Apparel & Accessories > Clothing > Clothing Tops > T-Shirts",
+      "sourceCount": 34,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-12",
+      "sourceName": "Pants",
+      "sourceFullName": "Apparel & Accessories > Clothing > Pants",
+      "sourceCount": 33,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-8-8",
+      "sourceName": "Sneakers",
+      "sourceFullName": "Apparel & Accessories > Shoes > Sneakers",
+      "sourceCount": 23,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-8",
+      "sourceName": "Shoes",
+      "sourceFullName": "Apparel & Accessories > Shoes",
+      "sourceCount": 13,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-10",
+      "sourceName": "Hydration System Accessories",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories",
+      "sourceCount": 12,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-1-2",
+      "sourceName": "Activewear Tops",
+      "sourceFullName": "Apparel & Accessories > Clothing > Activewear > Activewear Tops",
+      "sourceCount": 10,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-1-7",
+      "sourceName": "Activewear Sweatshirts & Hoodies",
+      "sourceFullName": "Apparel & Accessories > Clothing > Activewear > Activewear Sweatshirts & Hoodies",
+      "sourceCount": 10,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-6-8",
+      "sourceName": "Necklaces",
+      "sourceFullName": "Apparel & Accessories > Jewelry > Necklaces",
+      "sourceCount": 10,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "lb-1-15",
+      "sourceName": "Hiking Backpacks",
+      "sourceFullName": "Luggage & Bags > Backpacks > Hiking Backpacks",
+      "sourceCount": 9,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-1-1",
+      "sourceName": "Activewear Pants",
+      "sourceFullName": "Apparel & Accessories > Clothing > Activewear > Activewear Pants",
+      "sourceCount": 8,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-13-7",
+      "sourceName": "Shirts",
+      "sourceFullName": "Apparel & Accessories > Clothing > Clothing Tops > Shirts",
+      "sourceCount": 7,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-2-17-2",
+      "sourceName": "Beanies",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Hats > Beanies",
+      "sourceCount": 6,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-2-18",
+      "sourceName": "Headwear",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Headwear",
+      "sourceCount": 6,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-8-6",
+      "sourceName": "Sandals",
+      "sourceFullName": "Apparel & Accessories > Shoes > Sandals",
+      "sourceCount": 6,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-10-5",
+      "sourceName": "Hydration Packs",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories > Hydration Packs",
+      "sourceCount": 6,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-2",
+      "sourceName": "Baby & Toddler Clothing",
+      "sourceFullName": "Apparel & Accessories > Clothing > Baby & Toddler Clothing",
+      "sourceCount": 5,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-6-3",
+      "sourceName": "Bracelets",
+      "sourceFullName": "Apparel & Accessories > Jewelry > Bracelets",
+      "sourceCount": 5,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-10-9",
+      "sourceName": "Hydration Vests",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories > Hydration Vests",
+      "sourceCount": 5,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-11",
+      "sourceName": "Hydration Systems",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Hydration Systems",
+      "sourceCount": 5,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-1-6",
+      "sourceName": "Sports Bras",
+      "sourceFullName": "Apparel & Accessories > Clothing > Activewear > Sports Bras",
+      "sourceCount": 4,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-2-9",
+      "sourceName": "Baby & Toddler Tops",
+      "sourceFullName": "Apparel & Accessories > Clothing > Baby & Toddler Clothing > Baby & Toddler Tops",
+      "sourceCount": 4,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-1",
+      "sourceName": "Athletics",
+      "sourceFullName": "Sporting Goods > Athletics",
+      "sourceCount": 4,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-10-3",
+      "sourceName": "Hydration Belts",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories > Hydration Belts",
+      "sourceCount": 4,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-7-15",
+      "sourceName": "Golf Shoes",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Golf > Golf Shoes",
+      "sourceCount": 4,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-2-17-14",
+      "sourceName": "Trucker Hats",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Hats > Trucker Hats",
+      "sourceCount": 3,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-6-6",
+      "sourceName": "Earrings",
+      "sourceFullName": "Apparel & Accessories > Jewelry > Earrings",
+      "sourceCount": 3,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-8-7",
+      "sourceName": "Slippers",
+      "sourceFullName": "Apparel & Accessories > Shoes > Slippers",
+      "sourceCount": 3,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-12-8",
+      "sourceName": "Leggings",
+      "sourceFullName": "Apparel & Accessories > Clothing > Pants > Leggings",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-18-2",
+      "sourceName": "Athletic Socks",
+      "sourceFullName": "Apparel & Accessories > Clothing > Socks > Athletic Socks",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-18-5",
+      "sourceName": "Footie Socks",
+      "sourceFullName": "Apparel & Accessories > Clothing > Socks > Footie Socks",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1",
+      "sourceName": "Clothing",
+      "sourceFullName": "Apparel & Accessories > Clothing",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-2-14-8",
+      "sourceName": "Headbands",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Hair Accessories > Headbands",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-2-17-1",
+      "sourceName": "Baseball Caps",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Hats > Baseball Caps",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-7-2",
+      "sourceName": "Gaiters",
+      "sourceFullName": "Apparel & Accessories > Shoe Accessories > Gaiters",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-8-2",
+      "sourceName": "Baby & Toddler Shoes",
+      "sourceFullName": "Apparel & Accessories > Shoes > Baby & Toddler Shoes",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "fr-22",
+      "sourceName": "Sofas",
+      "sourceFullName": "Furniture > Sofas",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "hg-12-1",
+      "sourceName": "Gardening",
+      "sourceFullName": "Home & Garden > Lawn & Garden > Gardening",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "hg-12-1-16",
+      "sourceName": "Pots & Planters",
+      "sourceFullName": "Home & Garden > Lawn & Garden > Gardening > Pots & Planters",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "hg-3-64",
+      "sourceName": "Throw Pillows",
+      "sourceFullName": "Home & Garden > Decor > Throw Pillows",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "lb-13",
+      "sourceName": "Tote Bags",
+      "sourceFullName": "Luggage & Bags > Tote Bags",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "lb-9-8",
+      "sourceName": "Travel Pouches",
+      "sourceFullName": "Luggage & Bags > Luggage Accessories > Travel Pouches",
+      "sourceCount": 2,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa",
+      "sourceName": "Apparel & Accessories",
+      "sourceFullName": "Apparel & Accessories",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-11",
+      "sourceName": "Outfit Sets",
+      "sourceFullName": "Apparel & Accessories > Clothing > Outfit Sets",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-12-11",
+      "sourceName": "Trousers",
+      "sourceFullName": "Apparel & Accessories > Clothing > Pants > Trousers",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-12-3",
+      "sourceName": "Chinos",
+      "sourceFullName": "Apparel & Accessories > Clothing > Pants > Chinos",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-12-4",
+      "sourceName": "Jeans",
+      "sourceFullName": "Apparel & Accessories > Clothing > Pants > Jeans",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-13-1",
+      "sourceName": "Blouses",
+      "sourceFullName": "Apparel & Accessories > Clothing > Clothing Tops > Blouses",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-13-12",
+      "sourceName": "Sweaters",
+      "sourceFullName": "Apparel & Accessories > Clothing > Clothing Tops > Sweaters",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-13-13",
+      "sourceName": "Hoodies",
+      "sourceFullName": "Apparel & Accessories > Clothing > Clothing Tops > Hoodies",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-13-14",
+      "sourceName": "Sweatshirts",
+      "sourceFullName": "Apparel & Accessories > Clothing > Clothing Tops > Sweatshirts",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-13-6",
+      "sourceName": "Polos",
+      "sourceFullName": "Apparel & Accessories > Clothing > Clothing Tops > Polos",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-18-3",
+      "sourceName": "Crew Socks",
+      "sourceFullName": "Apparel & Accessories > Clothing > Socks > Crew Socks",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-19-3",
+      "sourceName": "Tuxedos",
+      "sourceFullName": "Apparel & Accessories > Clothing > Suits > Tuxedos",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-1-2-4",
+      "sourceName": "Baby & Toddler Outerwear",
+      "sourceFullName": "Apparel & Accessories > Clothing > Baby & Toddler Clothing > Baby & Toddler Outerwear",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-2-13",
+      "sourceName": "Gloves & Mittens",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Gloves & Mittens",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-2-17-10",
+      "sourceName": "Snapback Caps",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Hats > Snapback Caps",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-2-17-15",
+      "sourceName": "Visors",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Hats > Visors",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-2-6",
+      "sourceName": "Belts",
+      "sourceFullName": "Apparel & Accessories > Clothing Accessories > Belts",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-5",
+      "sourceName": "Handbags, Wallets & Cases",
+      "sourceFullName": "Apparel & Accessories > Handbags, Wallets & Cases",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-5-4",
+      "sourceName": "Handbags",
+      "sourceFullName": "Apparel & Accessories > Handbags, Wallets & Cases > Handbags",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-5-4-16",
+      "sourceName": "Satchel Bags",
+      "sourceFullName": "Apparel & Accessories > Handbags, Wallets & Cases > Handbags > Satchel Bags",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-5-5",
+      "sourceName": "Wallets & Money Clips",
+      "sourceFullName": "Apparel & Accessories > Handbags, Wallets & Cases > Wallets & Money Clips",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-7-5",
+      "sourceName": "Shoe Inserts",
+      "sourceFullName": "Apparel & Accessories > Shoe Accessories > Shoe Inserts",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-7-6",
+      "sourceName": "Shoelaces",
+      "sourceFullName": "Apparel & Accessories > Shoe Accessories > Shoelaces",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "aa-8-2-4",
+      "sourceName": "Baby & Toddler Athletic Shoes",
+      "sourceFullName": "Apparel & Accessories > Shoes > Baby & Toddler Shoes > Baby & Toddler Athletic Shoes",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "ae-2-1-2",
+      "sourceName": "Art & Crafting Materials",
+      "sourceFullName": "Arts & Entertainment > Hobbies & Creative Arts > Arts & Crafts > Art & Crafting Materials",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "fr-15-6",
+      "sourceName": "Outdoor Tables",
+      "sourceFullName": "Furniture > Outdoor Furniture > Outdoor Tables",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "el-6-3",
+      "sourceName": "Desktop Computers",
+      "sourceFullName": "Electronics > Computers > Desktop Computers",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "fr-22-4",
+      "sourceName": "Loveseat Sofas",
+      "sourceFullName": "Furniture > Sofas > Loveseat Sofas",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "fr-4-13",
+      "sourceName": "Storage Chests",
+      "sourceFullName": "Furniture > Cabinets & Storage > Storage Chests",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "fr-7-1-1",
+      "sourceName": "Armchairs",
+      "sourceFullName": "Furniture > Chairs > Armchairs, Recliners & Sleeper Chairs > Armchairs",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "fr-7-2",
+      "sourceName": "Bean Bag Chairs",
+      "sourceFullName": "Furniture > Chairs > Bean Bag Chairs",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "gc",
+      "sourceName": "Gift Cards",
+      "sourceFullName": "Gift Cards",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "ha-2-10",
+      "sourceName": "Lumber & Sheet Stock",
+      "sourceFullName": "Hardware > Building Materials > Lumber & Sheet Stock",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "ha-3-5",
+      "sourceName": "Garden Borders & Edging",
+      "sourceFullName": "Hardware > Fencing & Barriers > Garden Borders & Edging",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "hg",
+      "sourceName": "Home & Garden",
+      "sourceFullName": "Home & Garden",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "hg-12-6",
+      "sourceName": "Watering & Irrigation",
+      "sourceFullName": "Home & Garden > Lawn & Garden > Watering & Irrigation",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "hg-13-5",
+      "sourceName": "Lamps",
+      "sourceFullName": "Home & Garden > Lighting > Lamps",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "hg-15-1-2",
+      "sourceName": "Bed Sheets",
+      "sourceFullName": "Home & Garden > Linens & Bedding > Bedding > Bed Sheets",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "hg-3-32",
+      "sourceName": "Flag & Windsock Accessories",
+      "sourceFullName": "Home & Garden > Decor > Flag & Windsock Accessories",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "hg-3-33",
+      "sourceName": "Flags & Windsocks",
+      "sourceFullName": "Home & Garden > Decor > Flags & Windsocks",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "hg-3-40-2",
+      "sourceName": "Candles",
+      "sourceFullName": "Home & Garden > Decor > Home Fragrances > Candles",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "lb-7",
+      "sourceName": "Fanny Packs",
+      "sourceFullName": "Luggage & Bags > Fanny Packs",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "me-1",
+      "sourceName": "Books",
+      "sourceFullName": "Media > Books",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-1-20-9",
+      "sourceName": "Tennis Shoes",
+      "sourceFullName": "Sporting Goods > Athletics > Tennis > Tennis Shoes",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4",
+      "sourceName": "Outdoor Recreation",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-1",
+      "sourceName": "Boating & Water Sports",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Boating & Water Sports",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-10-6",
+      "sourceName": "Hydration System Flasks",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Hydration System Accessories > Hydration System Flasks",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-14-1",
+      "sourceName": "Badminton",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Outdoor Games > Badminton",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-17",
+      "sourceName": "Winter Sports & Activities",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Winter Sports & Activities",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-3-3",
+      "sourceName": "Climbing Apparel & Accessories",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Climbing > Climbing Apparel & Accessories",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-7",
+      "sourceName": "Golf",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Golf",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-4-2",
+      "sourceName": "Bicycle Parts",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Cycling > Bicycle Parts",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-7-11",
+      "sourceName": "Golf Gloves",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Golf > Golf Gloves",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-9",
+      "sourceName": "Hunting & Shooting",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Hunting & Shooting",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    },
+    {
+      "sourceCategoryId": "sg-4-9-1",
+      "sourceName": "Archery",
+      "sourceFullName": "Sporting Goods > Outdoor Recreation > Hunting & Shooting > Archery",
+      "sourceCount": 1,
+      "results": [],
+      "error": "fetch failed"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "@repo/prisma",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    }
+  },
+  "types": "./src/index.ts",
+  "files": [
+    "src",
+    "dist",
+    "prisma"
+  ],
+  "prisma": {
+    "schema": "./prisma/schema.prisma"
+  },
+  "scripts": {
+    "generate": "prisma generate --schema prisma/schema.prisma",
+    "build": "pnpm run generate",
+    "migrate:create": "pnpm exec prisma migrate dev --name",
+    "migrate:deploy": "prisma migrate deploy",
+    "postinstall": "pnpm run generate",
+    "seed:plans": "ts-node prisma/seed-plans.ts",
+    "seed:plans:custom": "ts-node prisma/seed-custom-plans.ts",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@prisma/client": "6.18.0",
+    "prisma": "6.18.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/node": "^22.2.0",
+    "eslint": "^8.57.0",
+    "ts-node": "^10.9.1",
+    "typescript": "5.5.4"
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,126 @@
+{
+  "runId": "ed99ebf5-441d-4ea7-9459-ea4f9db7eb49",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-07T16:03:56.965Z",
+  "generatedAt": "2026-02-07T16:04:04.593Z",
+  "summary": {
+    "totalProducts": 1,
+    "withCategory": 1,
+    "productsWithBundles": 1,
+    "bundlesBuilt": 3,
+    "bundlesFailed": 0,
+    "avgBundlesPerProduct": 3,
+    "avgTargetsPerBundle": 3,
+    "avgFallbackAttempts": 0,
+    "graphPickProbability": 0.7,
+    "templateTargets": 3,
+    "bundlesPerProductTarget": 3
+  },
+  "bundles": [
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 1,
+      "templateId": "aa-1-13-8-p3",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689714299070",
+          "title": "BONATTI WATERPROOF",
+          "source": "pool",
+          "weight": 0.3241,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "productId": "8689740251326",
+          "title": "SHAKEOUT",
+          "source": "pool",
+          "weight": 0.3876,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "productId": "8689739661502",
+          "title": "RACE",
+          "source": "pool",
+          "weight": 0.7379,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 2,
+      "templateId": "aa-1-13-8-p1",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-8-8",
+          "productId": "8689686937790",
+          "title": "XT-EVR",
+          "source": "pool",
+          "weight": 0.6303,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "productId": "8689701748926",
+          "title": "PATROL PLAY J",
+          "source": "pool",
+          "weight": 0.3324,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689740415166",
+          "title": "KABRU 1/4 ZIP",
+          "source": "pool",
+          "weight": 0.7959,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 3,
+      "templateId": "aa-1-13-8-p2",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "productId": "8689701716158",
+          "title": "XA PRO V8 J",
+          "source": "pool",
+          "weight": 0.2993,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689703190718",
+          "title": "OUTLINE DOWN",
+          "source": "pool",
+          "weight": 0.4234,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "productId": "8689745494206",
+          "title": "BONATTI WATERPROOF",
+          "source": "pool",
+          "weight": 0.651,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    }
+  ]
+}

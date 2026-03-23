@@ -1,0 +1,20 @@
+/* Base container + wrapper */
+.sw-reco,
+.sw-rec-root,
+.sw-rec__wrapper {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Section heading spacing (used by Section + Heading components) */
+.sw_rec_heading {
+  margin: 0 0 var(--grid-heading-spacing-bottom, 8px);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .reco__track {
+    scroll-snap-type: none;
+  }
+}

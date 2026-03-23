@@ -1,0 +1,52 @@
+export const MOCK_SHOP = {
+  id: 'shop-001',
+  domain: 'test-shop.myshopify.com',
+  name: 'Test Shop',
+  currency: 'USD',
+  plan: 'BASIC',
+  trialEndsAt: new Date('2025-12-31'),
+} as const;
+
+export const MOCK_PRODUCT = {
+  id: 1234567890,
+  gid: 'gid://shopify/Product/1234567890',
+  handle: 'test-product',
+  title: 'Test Product',
+  vendor: 'Test Vendor',
+  status: 'active',
+  productType: 'Shoes',
+  tags: ['tag1', 'tag2'],
+  descriptionHtml: '<p>Test description</p>',
+  variants: [
+    {
+      gid: 'gid://shopify/ProductVariant/111',
+      id: '111',
+      title: 'Default',
+      sku: 'TEST-001',
+      barcode: null,
+      position: 1,
+      price: '29.99',
+      priceUsd: '29.99',
+      selectedOptions: [],
+      imageId: null,
+      imageUrl: null,
+      inventoryQuantity: 10,
+      inventoryItemId: null,
+    },
+  ],
+  images: [
+    {
+      gid: 'gid://shopify/ProductImage/222',
+      id: '222',
+      url: 'https://cdn.shopify.com/test.jpg',
+      alt: 'Test image',
+      width: 800,
+      height: 600,
+    },
+  ],
+  options: [{ name: 'Size', values: ['S', 'M', 'L'] }],
+  featuredImage: 'https://cdn.shopify.com/test.jpg',
+  colorBases: [],
+  collectionHandles: [],
+  category: null,
+} as const;

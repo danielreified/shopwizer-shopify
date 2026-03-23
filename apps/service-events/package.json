@@ -1,0 +1,40 @@
+{
+  "name": "@repo/service-events",
+  "packageManager": "pnpm@8.15.6",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "node ../../scripts/esbuild-service.mjs",
+    "docker:build": "../../scripts/docker/build.sh",
+    "docker:push": "../../scripts/docker/push.sh",
+    "docker:deploy": "../../scripts/docker/deploy-ecs.sh",
+    "ecs:start": "../../scripts/ecs/service.sh start service-events",
+    "ecs:stop": "../../scripts/ecs/service.sh stop service-events",
+    "ecs:status": "../../scripts/ecs/service.sh status service-events",
+    "ecs:logs": "../../scripts/ecs/service.sh logs service-events",
+    "test": "vitest run",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.637.0",
+    "@prisma/client": "6.18.0",
+    "@repo/api-client": "*",
+    "@repo/ddb": "*",
+    "@repo/event-contracts": "*",
+    "@repo/event-toolkit": "*",
+    "@repo/prisma": "*",
+    "color-name-list": "^13.7.0",
+    "culori": "^4.0.2",
+    "dotenv": "^17.2.1",
+    "fuse.js": "^7.1.0",
+    "zod": "^4.1.3",
+    "@repo/logger": "workspace:*"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "*",
+    "eslint": "^8.57.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.4"
+  }
+}

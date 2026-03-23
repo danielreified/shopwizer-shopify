@@ -1,0 +1,11 @@
+{
+  "rootPath": "src",
+  "fixturesDir": ["components", "pages"],
+  "plugins": ["react-cosmos-plugin-vite"],
+  "decorators": ["./.cosmos/provider.decorator.jsx"],
+  "globalImports": ["./src/styles/tailwind.css", "@shopify/polaris/build/esm/styles.css"],
+  "vite": {
+    "configPath": "./vite.config.ts",
+    "port": 5050
+  }
+}

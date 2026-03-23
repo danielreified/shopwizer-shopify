@@ -1,0 +1,108 @@
+/* --------------------------------------------------------------
+   CAROUSEL BASE
+-------------------------------------------------------------- */
+.sw-carousel {
+    display: flex;
+    overflow-x: auto;
+  
+    gap: var(--gap-grid-x, 16px);
+  
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    /* scroll-behavior removed - handled by JS to avoid drag conflicts */
+  
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    right: 50%;
+    margin-right: -50vw;
+  
+    /* Left/right gutter computed by JS */
+    padding-inline-start: var(--actual-gutter-left, 40px);
+    padding-inline-end: var(--actual-gutter-left, 40px);
+  
+    cursor: grab;
+    user-select: none;
+    
+    /* Prevent browser touch handling conflicts during drag */
+    touch-action: pan-y pinch-zoom;
+  }
+  
+  /* hide scrollbars */
+  .sw-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* dragging */
+  .sw-carousel.is-dragging {
+    cursor: grabbing;
+      scroll-behavior: auto !important;
+  }
+  
+  /* Disable pointer events on links during drag to allow carousel drag */
+  .sw-carousel.is-dragging .sw-card a,
+  .sw-carousel.is-dragging .sw-card__media,
+  .sw-carousel.is-dragging .sw-card__body,
+  .sw-carousel.is-dragging .sw-card__title,
+  .sw-carousel.is-dragging .sw-card__price {
+    pointer-events: none;
+  }
+
+  /* Keep wishlist button interactive during drag */
+  .sw-carousel.is-dragging .sw-card__wishlist,
+  .sw-carousel.is-dragging .sw-card__wishlist * {
+    pointer-events: auto !important;
+  }
+  
+  /* prevent selecting inside */
+  .sw-carousel * {
+    user-select: none;
+  }
+  
+  /* prevent default dragging of images */
+  .sw-carousel img {
+    -webkit-user-drag: none;
+    user-drag: none;
+  }
+  
+  /* Default card width when carousel on desktop */
+  .sw-carousel > .sw-grid__item {
+    flex: 0 0 280px;
+  }
+  
+  /* Tablet adjustments */
+  @media (max-width: 1023px) {
+    .sw-carousel {
+      gap: 16px;
+      padding-inline-start: var(--actual-gutter-left, 24px);
+      padding-inline-end: var(--actual-gutter-left, 24px);
+    }
+  
+    .sw-carousel > .sw-grid__item {
+      --_cards: calc(var(--mobile-cols, 1) + 1.5);
+      flex: 0 0 calc((100vw - 48px - (var(--_cards) - 1) * 16px) / var(--_cards));
+    }
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 749px) {
+    .sw-carousel {
+      gap: 12px;
+      padding-inline-start: var(--actual-gutter-left, 16px);
+      padding-inline-end: var(--actual-gutter-left, 16px);
+    }
+  
+    .sw-carousel > .sw-grid__item {
+      --_cards: calc(var(--mobile-cols, 1) + 0.2);
+      flex: 0 0 calc((100vw - 32px - (var(--_cards) - 1) * 12px) / var(--_cards));
+    }
+  }
+  
+  /* reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .sw-carousel {
+      scroll-behavior: auto;
+    }
+  }
+  

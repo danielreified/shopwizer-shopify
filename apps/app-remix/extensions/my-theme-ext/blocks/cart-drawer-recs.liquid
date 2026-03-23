@@ -1,0 +1,92 @@
+{% comment %}
+  Cart Drawer Recommendations - App Embed Block
+  This block is enabled globally and auto-detects the theme's cart drawer.
+{% endcomment %}
+
+{{ 'sw-base.css' | asset_url | stylesheet_tag }}
+{{ 'sw-card.css' | asset_url | stylesheet_tag }}
+{{ 'sw-carousel.css' | asset_url | stylesheet_tag }}
+{{ 'sw-heading.css' | asset_url | stylesheet_tag }}
+{{ 'sw-drawer-recs.css' | asset_url | stylesheet_tag }}
+
+{% comment %} Custom Stylesheet Editor (Granular) - Per-Theme CSS {% endcomment %}
+<link rel="stylesheet" href="/apps/sw/styles.css?shop={{ shop.permanent_domain }}&key=global&theme={{ theme.id }}&v={{ "now" | date: "%N" }}">
+<link rel="stylesheet" href="/apps/sw/styles.css?shop={{ shop.permanent_domain }}&key=product-rail&theme={{ theme.id }}&v={{ "now" | date: "%N" }}">
+<link rel="stylesheet" href="/apps/sw/styles.css?shop={{ shop.permanent_domain }}&key=cart-drawer&theme={{ theme.id }}&v={{ "now" | date: "%N" }}">
+
+<script
+  type="module"
+  src="{{ 'cart-drawer-recs.js' | asset_url }}"
+  data-shop="{{ shop.permanent_domain }}"
+  data-money-format="{{ shop.money_format | json | escape }}"
+  data-heading-title="{{ block.settings.heading_title }}"
+  data-products-to-show="{{ block.settings.products_to_show }}"
+  data-selector="{{ block.settings.custom_selector }}"
+  data-show-reviews="{{ block.settings.show_reviews }}"
+  data-image-ratio="{{ block.settings.image_ratio }}"
+  data-show-price="{{ block.settings.show_price }}"
+></script>
+
+
+{% schema %}
+{
+  "name": "Cart Drawer Recs",
+  "target": "body",
+  "settings": [
+    {
+      "type": "header",
+      "content": "General"
+    },
+    {
+      "type": "text",
+      "id": "heading_title",
+      "label": "Title",
+      "default": "You might also like"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "label": "Products to show",
+      "min": 2,
+      "max": 6,
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "Card Settings"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image aspect ratio",
+      "default": "1/1",
+      "options": [
+        { "value": "1/1", "label": "Square" },
+        { "value": "4/5", "label": "Portrait" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show price",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reviews",
+      "label": "Show review stars",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "text",
+      "id": "custom_selector",
+      "label": "Custom injection selector",
+      "info": "Leave blank for auto-detection. Example: '.cart-drawer__footer'"
+    }
+  ]
+}
+{% endschema %}

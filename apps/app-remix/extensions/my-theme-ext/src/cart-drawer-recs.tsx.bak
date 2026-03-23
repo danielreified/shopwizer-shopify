@@ -1,0 +1,379 @@
+/** @jsxImportSource preact */
+import { h, render } from "preact";
+import { useState, useEffect } from "preact/hooks";
+import { fetchProductByHandle } from "./core/fetch/product";
+import { publishViewed, publishClicked } from "./core/analytics/index";
+import { QuickBuyModal } from "./ui/QuickBuyModal";
+import { themeBridge } from "./core/theme/themeBridge";
+
+// ============================================================
+// TYPES
+// ============================================================
+
+interface DrawerSettings {
+    shop: string;
+    moneyFormat: string;
+    headingTitle: string;
+    productsToShow: number;
+    customSelector: string;
+    showPrice: boolean;
+    imageRatio: string;
+}
+
+interface RecommendedProduct {
+    id: string;
+    handle: string;
+    title: string;
+    url: string;
+    price: string;
+    compareAtPrice: string | null;
+    imageUrl: string | null;
+}
+
+// ============================================================
+// CONSTANTS
+// ============================================================
+
+const DRAWER_SELECTORS = [
+    // Horizon 2025
+    "cart-drawer-component .cart-drawer__summary",
+    "cart-drawer-component .cart-drawer__content",
+    "cart-drawer-component .cart-drawer__inner",
+    // Dawn classic
+    "cart-drawer .drawer__inner",
+    "cart-drawer .drawer__footer",
+    "#CartDrawer .drawer__inner",
+    // Generic
+    ".cart-drawer__inner",
+    ".cart-drawer__summary",
+    ".drawer--cart .drawer__inner",
+    "[data-cart-drawer-footer]",
+    ".cart-drawer",
+];
+
+const DRAWER_OPEN_SELECTORS = [
+    // Horizon 2025 - dialog with open attribute
+    "cart-drawer-component dialog[open]",
+    "cart-drawer-component .cart-drawer__dialog[open]",
+    // Dawn classic
+    "cart-drawer.active",
+    "cart-drawer.is-open",
+    "#CartDrawer.active",
+    ".drawer--cart.is-open",
+];
+
+// ============================================================
+// UTILITIES
+// ============================================================
+
+function debounce<T extends (...args: any[]) => void>(fn: T, ms: number): T {
+    let timeout: ReturnType<typeof setTimeout>;
+    return ((...args: any[]) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => fn(...args), ms);
+    }) as T;
+}
+
+function formatMoney(cents: number, format: string): string {
+    const amount = (cents / 100).toFixed(2);
+    return format
+        .replace(/^["']|["']$/g, '')
+        .replace("{{amount}}", amount)
+        .replace("{{amount_no_decimals}}", Math.round(cents / 100).toString())
+        .replace("{{amount_with_comma_separator}}", amount.replace(".", ","));
+}
+
+// ============================================================
+// WIDGET COMPONENT
+// ============================================================
+
+function CartDrawerWidget({ settings, cartProductIds }: { settings: DrawerSettings; cartProductIds: string[] }) {
+    const [products, setProducts] = useState<RecommendedProduct[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [slateId, setSlateId] = useState<string | null>(null);
+    const [quickBuyProduct, setQuickBuyProduct] = useState<RecommendedProduct | null>(null);
+
+    // Fetch recommendations
+    useEffect(() => {
+        if (cartProductIds.length === 0) {
+            setProducts([]);
+            setLoading(false);
+            return;
+        }
+
+        setLoading(true);
+
+        fetch(`/apps/sw/recs/${settings.shop}/cart?ids=${cartProductIds.join(",")}`)
+            .then(res => res.ok ? res.json() : Promise.reject())
+            .then(async (data) => {
+                setSlateId(data.slate_id || null);
+
+                const handles = (data.results || []).slice(0, settings.productsToShow).map((r: any) => r.handle);
+                const fetched = await Promise.all(handles.map(async (handle: string) => {
+                    const product = await fetchProductByHandle(handle);
+                    if (!product) return null;
+
+                    return {
+                        id: String(product.id),
+                        handle: product.handle,
+                        title: product.title,
+                        url: `/products/${product.handle}`,
+                        price: formatMoney(product.price || 0, settings.moneyFormat),
+                        compareAtPrice: product.compare_at_price ? formatMoney(product.compare_at_price, settings.moneyFormat) : null,
+                        imageUrl: product.images?.[0] || product.featured_image || null,
+                    } as RecommendedProduct;
+                }));
+
+                setProducts(fetched.filter(Boolean) as RecommendedProduct[]);
+            })
+            .catch(() => setProducts([]))
+            .finally(() => setLoading(false));
+    }, [cartProductIds.join(","), settings.shop, settings.productsToShow]);
+
+    // Track view
+    useEffect(() => {
+        if (!loading && products.length > 0 && slateId) {
+            publishViewed({ rail: "cart_drawer", placement: "cart_drawer", slateId });
+        }
+    }, [loading, products.length, slateId]);
+
+    // Quick buy handler
+    const handleQuickBuy = async (e: Event, product: RecommendedProduct) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        try {
+            const prodData = await fetch(`/products/${product.handle}.js`).then(r => r.json());
+
+            // Multiple variants -> show modal
+            if (prodData.variants?.length > 1) {
+                setQuickBuyProduct(product);
+                return;
+            }
+
+            // Single variant -> add directly
+            const res = await fetch("/cart/add.js", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ items: [{ id: prodData.variants[0].id, quantity: 1 }] })
+            });
+
+            if (res.ok) {
+                if (slateId) {
+                    publishClicked({ rail: "cart_drawer", placement: "cart_drawer", productId: product.id, slateId, action: 'quick_buy_add' });
+                }
+                const cartData = await res.clone().json();
+                themeBridge.notifyCartUpdate();
+            }
+        } catch {
+            setQuickBuyProduct(product);
+        }
+    };
+
+    // Loading state
+    if (loading) {
+        return (
+            <div className="sw-drawer-recs sw-drawer-recs--loading">
+                <div className="sw-drawer-recs__title">{settings.headingTitle}</div>
+                <div className="sw-drawer-recs__grid">
+                    {Array.from({ length: settings.productsToShow }).map((_, i) => (
+                        <div key={i} className="sw-drawer-recs__item sw-drawer-recs__item--skeleton">
+                            <div className="sw-drawer-recs__image-wrap sw-skel-shimmer" />
+                            <div className="sw-drawer-recs__info"><div className="sw-skel-line sw-skel-shimmer" /></div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+    }
+
+    // Empty state
+    if (products.length === 0) return null;
+
+    // Render products
+    return (
+        <div className="sw-drawer-recs">
+            <div className="sw-drawer-recs__title">{settings.headingTitle}</div>
+            <div className="sw-drawer-recs__grid">
+                {products.map((product) => (
+                    <a
+                        key={product.handle}
+                        href={product.url}
+                        className="sw-drawer-recs__item"
+                        onClick={() => slateId && publishClicked({ rail: "cart_drawer", placement: "cart_drawer", productId: product.id, slateId })}
+                    >
+                        <div className="sw-drawer-recs__image-wrap" style={{ "--aspect-ratio": settings.imageRatio } as any}>
+                            {product.imageUrl && <img src={`${product.imageUrl}&width=200`} alt={product.title} loading="lazy" />}
+                            <button className="sw-drawer-recs__quick-buy" onClick={(e) => handleQuickBuy(e, product)} aria-label="Add to cart">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                                    <line x1="3" y1="6" x2="21" y2="6" />
+                                    <path d="M16 10a4 4 0 0 1-8 0" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div className="sw-drawer-recs__info">
+                            <div className="sw-drawer-recs__product-title">{product.title}</div>
+                            {settings.showPrice && (
+                                <div className="sw-drawer-recs__price-wrap">
+                                    <span className="sw-drawer-recs__price">{product.price}</span>
+                                    {product.compareAtPrice && <span className="sw-drawer-recs__compare-price">{product.compareAtPrice}</span>}
+                                </div>
+                            )}
+                        </div>
+                    </a>
+                ))}
+            </div>
+
+            {quickBuyProduct && (
+                <QuickBuyModal
+                    product={{ handle: quickBuyProduct.handle, id: parseInt(quickBuyProduct.id, 10), title: quickBuyProduct.title }}
+                    moneyFormat={settings.moneyFormat}
+                    onClose={() => setQuickBuyProduct(null)}
+                    onAddToCart={(variantId, qty) => {
+                        if (slateId) publishClicked({ rail: "cart_drawer", placement: "cart_drawer", productId: quickBuyProduct.id, variantId, quantity: qty, action: 'quick_buy_add' });
+                    }}
+                />
+            )}
+        </div>
+    );
+}
+
+// ============================================================
+// WATCHER CLASS
+// ============================================================
+
+class CartDrawerWatcher {
+    private settings: DrawerSettings;
+    private observer: MutationObserver | null = null;
+    private container: HTMLElement | null = null;
+    private lastCartIds: string = "";
+    private debouncedCheck: () => void;
+
+    constructor(settings: DrawerSettings) {
+        this.settings = settings;
+        this.debouncedCheck = debounce(() => this.checkAndMount(), 150);
+        this.start();
+    }
+
+    private start() {
+        // Watch for drawer visibility changes
+        this.observer = new MutationObserver((mutations) => {
+            const isOurChange = mutations.every(m => (m.target as HTMLElement).closest?.("#sw-cart-drawer-recs"));
+            if (!isOurChange) this.debouncedCheck();
+        });
+
+        this.observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+            attributes: true,
+            attributeFilter: ["class", "open"],
+        });
+
+        // Listen for cart events
+        document.addEventListener("shopwise:cart:changed", () => this.debouncedCheck());
+        document.addEventListener("cart:refresh", () => this.debouncedCheck());
+        document.addEventListener("cart:updated", () => this.debouncedCheck());
+
+        // Initial check
+        setTimeout(this.debouncedCheck, 500);
+    }
+
+    private isDrawerOpen(): boolean {
+        return DRAWER_OPEN_SELECTORS.some(sel => document.querySelector(sel));
+    }
+
+    private findMountPoint(): HTMLElement | null {
+        if (this.settings.customSelector) {
+            const custom = document.querySelector(this.settings.customSelector);
+            if (custom) return custom as HTMLElement;
+        }
+
+        for (const selector of DRAWER_SELECTORS) {
+            const el = document.querySelector(selector);
+            if (el) return el as HTMLElement;
+        }
+
+        return null;
+    }
+
+    private async checkAndMount() {
+        // Drawer not open -> cleanup
+        if (!this.isDrawerOpen()) {
+            if (this.container) {
+                render(null, this.container);
+                this.container = null;
+            }
+            return;
+        }
+
+        const target = this.findMountPoint();
+        if (!target) return;
+
+        // Get cart items
+        const cart = await fetch("/cart.js").then(r => r.json()).catch(() => ({ items: [] }));
+        const cartIds = [...new Set((cart.items || []).map((i: any) => String(i.product_id)))].join(",");
+
+        // Empty cart -> cleanup
+        if (!cartIds) {
+            if (this.container) {
+                render(null, this.container);
+                this.container = null;
+            }
+            return;
+        }
+
+        // No change -> skip
+        if (cartIds === this.lastCartIds && this.container) return;
+        this.lastCartIds = cartIds;
+
+        // Create or find container
+        let container = document.getElementById("sw-cart-drawer-recs");
+        if (!container) {
+            container = document.createElement("div");
+            container.id = "sw-cart-drawer-recs";
+            target.appendChild(container);
+        }
+        this.container = container;
+
+        // Render
+        render(<CartDrawerWidget settings={this.settings} cartProductIds={cartIds.split(",")} />, container);
+    }
+
+    public destroy() {
+        this.observer?.disconnect();
+        document.removeEventListener("shopwise:cart:changed", this.debouncedCheck);
+        document.removeEventListener("cart:refresh", this.debouncedCheck);
+        document.removeEventListener("cart:updated", this.debouncedCheck);
+        if (this.container) render(null, this.container);
+    }
+}
+
+// ============================================================
+// INIT
+// ============================================================
+
+function init() {
+    const script = document.querySelector('script[src*="cart-drawer-recs"]');
+    if (!script) return;
+
+    const settings: DrawerSettings = {
+        shop: script.getAttribute("data-shop") || "",
+        moneyFormat: script.getAttribute("data-money-format") || "${{amount}}",
+        headingTitle: script.getAttribute("data-heading-title") || "You might also like",
+        productsToShow: parseInt(script.getAttribute("data-products-to-show") || "3", 10),
+        customSelector: script.getAttribute("data-selector") || "",
+        showPrice: script.getAttribute("data-show-price") !== "false",
+        imageRatio: script.getAttribute("data-image-ratio") || "1/1",
+    };
+
+    if (!settings.shop) return;
+
+    new CartDrawerWatcher(settings);
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+} else {
+    init();
+}

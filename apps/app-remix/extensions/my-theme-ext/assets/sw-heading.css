@@ -1,0 +1,93 @@
+/* Base heading styles */
+.sw-heading {
+  margin: 0 0 var(--heading-spacing-desktop, 16px);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: var(--heading-alignment, left);
+}
+
+@media (max-width: 749px) {
+  .sw-heading {
+    margin-bottom: var(--heading-spacing-mobile, 12px);
+  }
+}
+
+/* ----------------------------------------
+   SIZE VARIANTS
+   Desktop -> Tablet -> Mobile scaling
+---------------------------------------- */
+
+/* XLARGE: 40px -> 32px -> 28px */
+.sw-heading--xlarge {
+  font-size: 2.5rem;
+}
+@media (max-width: 1023px) {
+  .sw-heading--xlarge {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 749px) {
+  .sw-heading--xlarge {
+    font-size: 1.75rem;
+  }
+}
+
+/* LARGE: 32px -> 28px -> 24px */
+.sw-heading--large {
+  font-size: 2rem;
+}
+@media (max-width: 1023px) {
+  .sw-heading--large {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 749px) {
+  .sw-heading--large {
+    font-size: 1.5rem;
+  }
+}
+
+/* MEDIUM: 24px -> 22px -> 20px */
+.sw-heading--medium {
+  font-size: 1.5rem;
+}
+@media (max-width: 1023px) {
+  .sw-heading--medium {
+    font-size: 1.375rem;
+  }
+}
+@media (max-width: 749px) {
+  .sw-heading--medium {
+    font-size: 1.25rem;
+  }
+}
+
+/* SMALL: 20px -> 18px -> 16px */
+.sw-heading--small {
+  font-size: 1.25rem;
+}
+@media (max-width: 1023px) {
+  .sw-heading--small {
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 749px) {
+  .sw-heading--small {
+    font-size: 1rem;
+  }
+}
+
+/* XSMALL: 16px -> 15px -> 14px */
+.sw-heading--xsmall {
+  font-size: 1rem;
+}
+@media (max-width: 1023px) {
+  .sw-heading--xsmall {
+    font-size: 0.9375rem;
+  }
+}
+@media (max-width: 749px) {
+  .sw-heading--xsmall {
+    font-size: 0.875rem;
+  }
+}

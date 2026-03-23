@@ -1,0 +1,13 @@
+{
+  "runId": "42344e29-807e-470e-b3fe-4fe05e8f4a90",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-07T15:26:51.028Z",
+  "generatedAt": "2026-02-07T15:27:03.986Z",
+  "summary": {
+    "totalFailures": 0,
+    "noCategory": 0,
+    "noTemplate": 0,
+    "noCandidates": 0
+  },
+  "failures": []
+}

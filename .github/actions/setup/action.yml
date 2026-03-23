@@ -1,0 +1,23 @@
+name: 'Setup'
+description: 'Install pnpm + Node.js, restore turbo cache, install dependencies'
+
+runs:
+  using: 'composite'
+  steps:
+    - uses: pnpm/action-setup@v4
+      with:
+        version: 8.15.6
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: pnpm
+
+    - uses: actions/cache@v4
+      with:
+        path: .turbo/
+        key: turbo-${{ runner.os }}-${{ github.sha }}
+        restore-keys: turbo-${{ runner.os }}-
+
+    - run: pnpm install --frozen-lockfile
+      shell: bash

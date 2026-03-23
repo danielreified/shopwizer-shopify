@@ -1,0 +1,113 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["pnpm-lock.yaml", "turbo.json", ".env*"],
+  "tasks": {
+    "generate": {
+      "cache": false,
+      "outputs": [".prisma/**", "node_modules/.prisma/**"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*", "tsconfig.json", "next.config.*", "vite.config.*"],
+      "outputs": [
+        "packages/prisma/dist/**",
+        "dist/**",
+        ".next/**",
+        ".lambda/**",
+        "out/**",
+        "build/**",
+        "extensions/**/dist/**",
+        "!.next/cache/**"
+      ],
+      "env": [
+        "DATABASE_URL",
+        "SHOPIFY_API_KEY",
+        "SHOPIFY_API_SECRET",
+        "AWS_ACCESS_KEY_ID",
+        "AWS_SECRET_ACCESS_KEY",
+        "AWS_REGION"
+      ]
+    },
+    "dev": {
+      "dependsOn": ["^build"],
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^lint"],
+      "inputs": ["$TURBO_DEFAULT$"]
+    },
+    "format": {
+      "inputs": ["$TURBO_DEFAULT$"],
+      "cache": false
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"],
+      "inputs": ["$TURBO_DEFAULT$"]
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "inputs": ["$TURBO_DEFAULT$", "vitest.config.*", "test/**"],
+      "outputs": ["coverage/**"],
+      "env": ["NODE_ENV"]
+    },
+    "test:e2e": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "env": ["APP_URL", "SHOPIFY_TEST_SHOP_URL"]
+    },
+    "db:generate": {
+      "cache": false,
+      "outputs": []
+    },
+    "db:migrate": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:deploy": {
+      "cache": false
+    },
+    "docker:build": {
+      "dependsOn": [],
+      "inputs": [
+        "Dockerfile",
+        "container.tpl.json",
+        "scripts/deploy*.sh",
+        "dist/**",
+        ".next/**",
+        ".lambda/**"
+      ],
+      "outputs": [],
+      "env": [
+        "CI_REGISTRY",
+        "CI_REGISTRY_IMAGE",
+        "CI_REGISTRY_USER",
+        "CI_REGISTRY_PASSWORD",
+        "VERSION"
+      ]
+    },
+    "docker:push": {
+      "dependsOn": ["docker:build"],
+      "outputs": [],
+      "env": [
+        "CI_REGISTRY",
+        "CI_REGISTRY_IMAGE",
+        "CI_REGISTRY_USER",
+        "CI_REGISTRY_PASSWORD",
+        "VERSION"
+      ]
+    },
+    "deploy:site": {
+      "dependsOn": ["build"],
+      "outputs": []
+    },
+    "deploy:lambda": {
+      "dependsOn": ["build"],
+      "outputs": []
+    },
+    "deploy:docker": {
+      "dependsOn": ["docker:push"],
+      "outputs": []
+    }
+  }
+}

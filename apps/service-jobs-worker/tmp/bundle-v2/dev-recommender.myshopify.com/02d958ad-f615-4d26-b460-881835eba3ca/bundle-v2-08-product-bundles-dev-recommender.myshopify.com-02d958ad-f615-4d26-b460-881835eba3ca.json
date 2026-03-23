@@ -1,0 +1,126 @@
+{
+  "runId": "02d958ad-f615-4d26-b460-881835eba3ca",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-07T16:06:06.976Z",
+  "generatedAt": "2026-02-07T16:06:17.414Z",
+  "summary": {
+    "totalProducts": 1,
+    "withCategory": 1,
+    "productsWithBundles": 1,
+    "bundlesBuilt": 3,
+    "bundlesFailed": 0,
+    "avgBundlesPerProduct": 3,
+    "avgTargetsPerBundle": 3,
+    "avgFallbackAttempts": 0,
+    "graphPickProbability": 0.7,
+    "templateTargets": 3,
+    "bundlesPerProductTarget": 3
+  },
+  "bundles": [
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 1,
+      "templateId": "aa-1-13-8-p4",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "productId": "8689700929726",
+          "title": "SPEEDCROSS J",
+          "source": "pool",
+          "weight": 0.1159,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "productId": "8689746772158",
+          "title": "FIVE PANEL",
+          "source": "pool",
+          "weight": 0.0814,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-12",
+          "productId": "8689733435582",
+          "title": "BONATTI TRAIL",
+          "source": "pool",
+          "weight": 0.6579,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 2,
+      "templateId": "aa-1-13-8-p1",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-8-8",
+          "productId": "8689686937790",
+          "title": "XT-EVR",
+          "source": "pool",
+          "weight": 0.6303,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "productId": "8689779900606",
+          "title": "CROSS MULTI 7\"",
+          "source": "pool",
+          "weight": 0.1724,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689728094398",
+          "title": "INSULATED REVERSIBLE",
+          "source": "pool",
+          "weight": 0.6566,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 3,
+      "templateId": "aa-1-13-8-p3",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689729994942",
+          "title": "RUNLIFE",
+          "source": "pool",
+          "weight": 0.6166,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-8-1",
+          "productId": "8689701716158",
+          "title": "XA PRO V8 J",
+          "source": "pool",
+          "weight": 0.2993,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "productId": "8689738121406",
+          "title": "SENSE AERO",
+          "source": "pool",
+          "weight": 0.3379,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    }
+  ]
+}

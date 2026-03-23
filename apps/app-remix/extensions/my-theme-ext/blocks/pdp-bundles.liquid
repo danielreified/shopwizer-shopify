@@ -1,0 +1,102 @@
+{% unless template contains 'product' %}
+  {% comment %} Hide this block on all non-product pages {% endcomment %}
+{% else %}
+
+<div
+  id="shopwise-reco-{{ block.id }}"
+  class="sw-reco"
+  data-placement="pdp"
+  data-recommender="bundles"
+  data-money-format="{{ shop.money_format }}"
+  data-shop="{{ shop.permanent_domain }}"
+
+  data-products-to-show="{{ block.settings.limit }}"
+  data-show-vendor="false"
+  data-show-price="true"
+  data-show-compare-price="true"
+  data-show-sale-badge="true"
+  data-show-wishlist="false"
+  data-show-reviews="{{ block.settings.show_reviews | default: 'false' }}"
+  data-image-ratio="1/1"
+  data-card-border-style="solid"
+  data-card-radius="8"
+
+  data-heading-title="{{ block.settings.heading_title }}"
+  data-heading-size="small"
+  data-heading-tag="h3"
+  data-heading-alignment="left"
+  data-heading-spacing-desktop="12"
+  data-heading-spacing-mobile="8"
+
+  data-desktop-layout="{{ block.settings.layout | default: 'stack' }}"
+  data-desktop-columns="1"
+  data-desktop-gap-x="12"
+  data-desktop-gap-y="12"
+  data-desktop-pad-top="16"
+  data-desktop-pad-bottom="16"
+  data-desktop-text-align="left"
+
+  data-mobile-layout="{{ block.settings.layout | default: 'stack' }}"
+  data-mobile-columns="1"
+  data-mobile-gap="8"
+  data-mobile-pad-top="12"
+  data-mobile-pad-bottom="12"
+  data-mobile-text-align="left"
+
+  data-product-id="{{ product.id }}"
+  data-product-handle="{{ product.handle }}"
+></div>
+
+{% endunless %}
+
+{{ 'sw-bundle.css' | asset_url | stylesheet_tag }}
+
+{% comment %} Custom Stylsheet Editor (Granular) - Per-Theme CSS {% endcomment %}
+<link rel="stylesheet" href="/apps/sw/styles.css?shop={{ shop.permanent_domain }}&key=global&theme={{ theme.id }}&v={{ "now" | date: "%N" }}">
+<link rel="stylesheet" href="/apps/sw/styles.css?shop={{ shop.permanent_domain }}&key=pdp-bundles&theme={{ theme.id }}&v={{ "now" | date: "%N" }}">
+
+{% schema %}
+{
+  "name": "Bundle Recommendations",
+  "target": "section",
+  "javascript": "pdp-bundles.js",
+
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "stack",
+      "options": [
+        { "value": "stack", "label": "Stack" },
+        { "value": "carousel", "label": "Carousel" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "limit",
+      "label": "Products to show",
+      "min": 1,
+      "max": 5,
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading_title",
+      "label": "Title",
+      "default": "Complete the Look"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reviews",
+      "label": "Show reviews",
+      "default": true
+    }
+  ]
+}
+{% endschema %}
+

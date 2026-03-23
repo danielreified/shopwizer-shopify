@@ -1,0 +1,11 @@
+import { defineConfig, mergeConfig } from 'vitest/config';
+import shared from '../../packages/typescript-config/vitest.shared';
+
+export default mergeConfig(
+  shared,
+  defineConfig({
+    test: {
+      root: '.',
+    },
+  }),
+);

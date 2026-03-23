@@ -1,0 +1,16 @@
+/* Section wrapper for each widget */
+.sw-section {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding-top: var(--pad-top-desktop, 24px);
+  padding-bottom: var(--pad-bottom-desktop, 24px);
+}
+
+@media (max-width: 749px) {
+  .sw-section {
+    padding-top: var(--pad-top-mobile, 16px);
+    padding-bottom: var(--pad-bottom-mobile, 16px);
+  }
+}

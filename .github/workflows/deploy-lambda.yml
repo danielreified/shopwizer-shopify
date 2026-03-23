@@ -1,0 +1,74 @@
+name: Deploy Lambda Function
+
+on:
+  workflow_dispatch:
+    inputs:
+      function:
+        description: 'Lambda function to deploy'
+        required: true
+        type: choice
+        options:
+          - fn-bulk-products
+          - fn-email
+          - fn-job-scheduler
+
+env:
+  AWS_REGION: us-east-1
+  TURBO_TELEMETRY_DISABLED: '1'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - run: pnpm --filter @repo/prisma run generate
+      - run: pnpm turbo run build
+
+      - name: Set function config
+        id: config
+        run: |
+          case "${{ inputs.function }}" in
+            fn-bulk-products)
+              echo "lambda_function=dev-ue1-shopwizer-products-ingest" >> "$GITHUB_OUTPUT"
+              echo "s3_bucket=dev-ue1-shopwizer-lambda-artifacts" >> "$GITHUB_OUTPUT"
+              echo "s3_key=fn-bulk-products.zip" >> "$GITHUB_OUTPUT"
+              echo "zip_name=fn-bulk-products" >> "$GITHUB_OUTPUT"
+              ;;
+            fn-email)
+              echo "lambda_function=dev-ue1-shopwizer-email-sender" >> "$GITHUB_OUTPUT"
+              echo "s3_bucket=dev-ue1-shopwizer-lambda-artifacts" >> "$GITHUB_OUTPUT"
+              echo "s3_key=fn-email.zip" >> "$GITHUB_OUTPUT"
+              echo "zip_name=fn-email" >> "$GITHUB_OUTPUT"
+              ;;
+            fn-job-scheduler)
+              echo "lambda_function=dev-ue1-shopwizer-job-scheduler" >> "$GITHUB_OUTPUT"
+              echo "s3_bucket=dev-ue1-shopwizer-lambda-artifacts" >> "$GITHUB_OUTPUT"
+              echo "s3_key=fn-job-scheduler.zip" >> "$GITHUB_OUTPUT"
+              echo "zip_name=fn-job-scheduler" >> "$GITHUB_OUTPUT"
+              ;;
+          esac
+
+      - name: Upload to S3
+        env:
+          LAMBDA_FUNCTION: ${{ steps.config.outputs.lambda_function }}
+          S3_BUCKET: ${{ steps.config.outputs.s3_bucket }}
+          S3_KEY: ${{ steps.config.outputs.s3_key }}
+          ZIP_NAME: ${{ steps.config.outputs.zip_name }}
+        run: pnpm --filter "./apps/${{ inputs.function }}" run lambda:upload
+
+      - name: Deploy Lambda
+        env:
+          LAMBDA_FUNCTION: ${{ steps.config.outputs.lambda_function }}
+          S3_BUCKET: ${{ steps.config.outputs.s3_bucket }}
+          S3_KEY: ${{ steps.config.outputs.s3_key }}
+          ZIP_NAME: ${{ steps.config.outputs.zip_name }}
+        run: pnpm --filter "./apps/${{ inputs.function }}" run lambda:deploy

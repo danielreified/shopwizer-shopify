@@ -1,0 +1,126 @@
+{
+  "runId": "957bb877-259c-4ac6-a1a6-df7bba7f8de3",
+  "shopId": "dev-recommender.myshopify.com",
+  "startedAt": "2026-02-07T14:31:17.889Z",
+  "generatedAt": "2026-02-07T14:31:28.214Z",
+  "summary": {
+    "totalProducts": 1,
+    "withCategory": 1,
+    "productsWithBundles": 1,
+    "bundlesBuilt": 3,
+    "bundlesFailed": 0,
+    "avgBundlesPerProduct": 3,
+    "avgTargetsPerBundle": 3,
+    "avgFallbackAttempts": 0,
+    "graphPickProbability": 0.7,
+    "templateTargets": 3,
+    "bundlesPerProductTarget": 3
+  },
+  "bundles": [
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 1,
+      "templateId": "aa-1-13-8-p5",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-8-1",
+          "productId": "8689701716158",
+          "title": "XA PRO V8 J",
+          "source": "pool",
+          "weight": 0.2993,
+          "tier": 1
+        },
+        {
+          "targetCategoryId": "aa-1-14",
+          "productId": "8689780490430",
+          "title": "SENSE AERO 5\"",
+          "source": "pool",
+          "weight": 0.5793,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-10",
+          "productId": "8689736220862",
+          "title": "SNOWSTORM",
+          "source": "pool",
+          "weight": 0.6372,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 2,
+      "templateId": "aa-1-13-8-p1",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-1-12",
+          "productId": "8689733435582",
+          "title": "BONATTI TRAIL",
+          "source": "pool",
+          "weight": 0.6579,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-8-8",
+          "productId": "8689686937790",
+          "title": "XT-EVR",
+          "source": "pool",
+          "weight": 0.6303,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "productId": "8689739792574",
+          "title": "CROSS RUN",
+          "source": "pool",
+          "weight": 0.4759,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    },
+    {
+      "productId": "8689791140030",
+      "title": "WOLWESPRUIT",
+      "categoryId": "aa-1-13-8",
+      "bundleIndex": 3,
+      "templateId": "aa-1-13-8-p2",
+      "templateSource": "primary",
+      "targets": [
+        {
+          "targetCategoryId": "aa-8-8",
+          "productId": "8689691197630",
+          "title": "XT-EVR",
+          "source": "pool",
+          "weight": 0.2593,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-1-1",
+          "productId": "8689733370046",
+          "title": "RUNLIFE",
+          "source": "pool",
+          "weight": 0.8303,
+          "tier": 3
+        },
+        {
+          "targetCategoryId": "aa-2-17",
+          "productId": "8689738776766",
+          "title": "CONTOUR HAT",
+          "source": "pool",
+          "weight": 0.1738,
+          "tier": 3
+        }
+      ],
+      "fallbackAttempts": 0
+    }
+  ]
+}
