@@ -4,7 +4,7 @@ A Shopify analytics and recommendation platform that uses AI-powered product enr
 
 ## Overview
 
-For a full breakdown of the system architecture, AI/ML pipeline, data flow, and service design, see the [platform overview doc](https://client-reified-public.s3.eu-central-1.amazonaws.com/showpizer-doc.pdf).
+For a full breakdown of the system architecture, AI/ML pipeline, data flow, and service design, see the [Platform Overview](https://client-reified-public.s3.eu-central-1.amazonaws.com/showpizer-doc.pdf).
 
 ## Prerequisites
 
