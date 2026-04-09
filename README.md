@@ -2,6 +2,10 @@
 
 A Shopify analytics and recommendation platform that uses AI-powered product enrichment, ML ranking, and real-time event processing to deliver personalized product recommendations to Shopify stores. Built as a **pnpm + Turbo monorepo** deployed on AWS.
 
+## Overview
+
+For a full breakdown of the system architecture, AI/ML pipeline, data flow, and service design, see the [platform overview doc](https://client-reified-public.s3.eu-central-1.amazonaws.com/showpizer-doc.pdf).
+
 ## Prerequisites
 
 | Dependency | Version | Install |
