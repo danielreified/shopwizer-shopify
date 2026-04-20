@@ -39,7 +39,6 @@ For a full breakdown of the system architecture, AI/ML pipeline, data flow, and 
 | Turbo 2.5 | Monorepo build orchestration with caching |
 | Docker | Multi-stage container builds for ECS |
 | Terraform | Infrastructure as Code (29 AWS modules) |
-| GitHub Actions | CI/CD: lint, typecheck, test, build, deploy |
 | Semantic Release | Automated versioning and changelog |
 
 ## Monorepo Structure
@@ -256,17 +255,6 @@ All AWS infrastructure is defined in `terraform/` using Terraform with Terramate
 | CI/CD | ecr, codebuild |
 | Observability | cloudwatch_log, betterstack_logs |
 | Security | acm_certs |
-
-### CI/CD Pipelines (GitHub Actions)
-
-| Workflow | Trigger | What it does |
-|---|---|---|
-| `ci.yml` | Push / PR to main | Lint, typecheck, build, test |
-| `deploy-ecs.yml` | Manual dispatch | Build Docker, push ECR, deploy ECS service |
-| `deploy-lambda.yml` | Manual dispatch | Bundle, upload S3, deploy Lambda function |
-| `deploy-site.yml` | Manual dispatch | Build Next.js, sync S3, invalidate CloudFront |
-| `deploy-shopify.yml` | Manual dispatch | Deploy Shopify app extensions |
-| `migrate.yml` | Manual dispatch | Run Prisma migrations via CodeBuild |
 
 ### Docker Build Pattern
 
